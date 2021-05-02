@@ -1,6 +1,7 @@
 ﻿using System;
 using CarClass;
 using NivelAccesDate;
+using System.Collections.Generic;
 using System.Collections;
 
 
@@ -12,6 +13,9 @@ namespace InterfataUtilizator
         {
             IStocareData adminCars = StocareFactory.GetAdministratorStocare();
             ArrayList cars = adminCars.GetCars();
+            List<Car> list_cars;
+            ArrayList carSearch = null;
+            //MARCA - MODEL - AN - CAPACITATE CILINDRICA - PUTERE - COMBUSTIBIL - CUTIE - CAROSERIE - CULOARE - PRET - NUME VAN - NUME CUMP - DATA TRANZACTIE - OPTIUNI 
 
             while (true)
             {
@@ -19,9 +23,12 @@ namespace InterfataUtilizator
                 Console.WriteLine("A. Afisare masini");
                 Console.WriteLine("B. Afisare masini tabel");
                 Console.WriteLine("C. Creare si Adaugare");
+                Console.WriteLine("F. Cautare/Modificare autoturism");
+                Console.WriteLine("T. TEST");
                 Console.WriteLine("X. Inchidere program");
                 Console.WriteLine("Alegeti o optiune\n");
                 var key = Console.ReadKey(true).Key;
+
                 switch (key)
                 {
                     case ConsoleKey.A:
@@ -29,6 +36,21 @@ namespace InterfataUtilizator
                         break;
                     case ConsoleKey.B:
                         AfisareInformatiiTabel(cars);
+                        break;
+                    case ConsoleKey.T:
+                        Car masinaTest = new Car("Audi,A4,2010,2200,150,DIESEL,MANUALA,BERLINA,NEGRU,7500,JON SNOW,POSEIDON KAN,25.4.2018,ABS,SERVODIRECTIE,NAVIGATIE,SENZORI PLOAIE,SENZORI PARCARE");
+                        masinaTest.ShowCar();
+                        Console.WriteLine(masinaTest.ConvertToString());
+                        Console.WriteLine(masinaTest.ConvertToString_File());
+                        masinaTest = Car.ReadCarInfo();
+                        masinaTest.ShowCar();
+                        Console.WriteLine(masinaTest.ConvertToString());
+                        Console.WriteLine(masinaTest.ConvertToString_File());
+                        AfisareInformatiiTabel(cars);
+                        break;
+                    case ConsoleKey.F:
+                        list_cars = Car.CautareMarca(cars);
+                        AfisareInformatiiTabel(list_cars);
                         break;
                     case ConsoleKey.C:
                         Car newCarCreated = Car.ReadCarInfo();
@@ -65,6 +87,21 @@ namespace InterfataUtilizator
         }
 
         public static void AfisareInformatiiTabel(ArrayList info)
+        {
+            Console.WriteLine("Informatii masini:");
+            if (info.Count == 0)
+            {
+                Console.WriteLine("- NONE -");
+                return;
+            }
+
+            for (int i = 0; i < info.Count; i++)
+            {
+                Console.WriteLine("\nINDEX: " + (i + 1));
+                ((Car)info[i]).ShowCar();
+            }
+        }
+        public static void AfisareInformatiiTabel(List<Car> info)
         {
             Console.WriteLine("Informatii masini:");
             if (info.Count == 0)
