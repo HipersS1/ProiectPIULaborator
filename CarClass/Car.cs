@@ -173,7 +173,9 @@ namespace CarClass
         #endregion
 
         #region Cautare/Modificare
-
+        /// <summary>
+        /// Metoda efectueaza cautarea dupa o marca de autoturism. </summary>
+        /// <returns>Returneaza List<Car> ce contine autoturismele avand marca specificata.</returns>
         public static List<Car> CautareMarca(ArrayList list_Masini)
         {
             List<Car> list_MarcaCautata = new List<Car>();
@@ -232,12 +234,15 @@ namespace CarClass
                 Console.WriteLine("\nPress any key...");
             }
         }
-        //
-
+        
+        /// <summary>
+        /// Utilizeaza o lista cu autoturisme si permite modificarea datelor ale acestora.
+        /// </summary>
         public static List<Car> ModificareDateAutoturism(List<Car> list_Autoturisme)
         {
             bool modificaDate = false;
             bool isTrue = true;
+            
             while (isTrue)
             {
                 Console.WriteLine("Doriti sa modificati un autoturism? [Y/N]");
@@ -257,7 +262,10 @@ namespace CarClass
                         break;
                 }
                 if(isTrue)
+                {
                     Console.WriteLine("\nPress any key...");
+                    Console.ReadKey();
+                }
             }
 
             if(modificaDate)
@@ -265,10 +273,11 @@ namespace CarClass
                 Console.Write("Introduceti indexul autoturismului: ");
                 if (int.TryParse(Console.ReadLine(), out int indexAutoturism))
                 {
-                    indexAutoturism -= 1; //Reduc cu 1 pentru a putea lucra cu indexuri de la 0 - Max
+                    indexAutoturism -= 1;//Reduc cu 1 pentru a putea lucra cu indexuri de la 0 - Max
+                    int intParseInput;
                     if (indexAutoturism < list_Autoturisme.Count)
                     {
-                        while(true)
+                        while (true)
                         {
                             Console.Clear();
                             Console.WriteLine("Panou modificare date autoturism");
@@ -284,22 +293,36 @@ namespace CarClass
                             Console.WriteLine("C - Nume cumparator");
                             Console.WriteLine("T - Data tranzactie");
                             Console.WriteLine("O - Optiuni");
-                            Console.WriteLine("ESC - Iesire panou");
+                            Console.WriteLine("ESC - Iesire panou\n\n");
+                            Console.WriteLine(list_Autoturisme[indexAutoturism].ConvertToString());
+                            
                             var key = Console.ReadKey(true).Key;
-                            switch(key)
+                            switch (key)
                             {
                                 case ConsoleKey.D1:
                                     Console.Write("Introduceti modelul: ");
                                     list_Autoturisme[indexAutoturism].Model = Console.ReadLine().ToUpper().Trim();
                                     break;
                                 case ConsoleKey.D2:
-                                    throw new NotImplementedException();
+                                    Console.Write("Introduceti anul fabricatiei: ");
+                                    if (int.TryParse(Console.ReadLine(), out intParseInput))
+                                        list_Autoturisme[indexAutoturism].AnFabricatie = intParseInput;
+                                    else
+                                        Console.WriteLine("Introducere incorecta");
                                     break;
                                 case ConsoleKey.D3:
-                                    throw new NotImplementedException();
+                                    Console.Write("Introduceti capacitatea cilindrica: ");
+                                    if (int.TryParse(Console.ReadLine(), out intParseInput))
+                                        list_Autoturisme[indexAutoturism].CapacitateCilindrica = intParseInput;
+                                    else
+                                        Console.WriteLine("Introducere incorecta");
                                     break;
                                 case ConsoleKey.D4:
-                                    throw new NotImplementedException();
+                                    Console.Write("Introduceti puterea [CP]: ");
+                                    if (int.TryParse(Console.ReadLine(), out intParseInput))
+                                        list_Autoturisme[indexAutoturism].Putere = intParseInput;
+                                    else
+                                        Console.WriteLine("Introducere incorecta");
                                     break;
                                 case ConsoleKey.D5:
                                     Console.Write("Introduceti tipul de combustibil: ");
@@ -318,12 +341,16 @@ namespace CarClass
                                     list_Autoturisme[indexAutoturism].Culoare = Console.ReadLine().ToUpper().Trim();
                                     break;
                                 case ConsoleKey.V:
+                                    throw new NotImplementedException();
                                     break;
                                 case ConsoleKey.C:
+                                    throw new NotImplementedException();
                                     break;
                                 case ConsoleKey.T:
+                                    throw new NotImplementedException();
                                     break;
                                 case ConsoleKey.O:
+                                    throw new NotImplementedException();
                                     break;
                                 case ConsoleKey.Escape:
                                     return list_Autoturisme;
@@ -334,7 +361,7 @@ namespace CarClass
                     }
                 }
                 else
-                    throw new NotImplementedException();
+                    return list_Autoturisme;
             }
 
             return list_Autoturisme;

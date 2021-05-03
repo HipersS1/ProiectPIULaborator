@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using CarClass;
 
@@ -34,6 +35,35 @@ namespace NivelAccesDate
                 throw new Exception("Eroare generica. Mesaj: " + eGen.Message);
             }
         }
+
+        public void RewriteCars(List<Car> listOfCars)
+        {
+            try
+            {
+                File.Delete(NumeFisier);
+                using (StreamWriter swFisierText = new StreamWriter(NumeFisier, true))
+                {
+                    foreach (var car in listOfCars)
+                    {
+                        swFisierText.WriteLine(car.ConvertToString_File());
+
+                    }
+                }
+            }
+            catch (IOException eIO)
+            {
+                throw new Exception("Eroare la deschiderea fisierului. Mesaj: " + eIO.Message);
+            }
+            catch (Exception eGen)
+            {
+                throw new Exception("Eroare generica. Mesaj: " + eGen.Message);
+            }
+            foreach (var car in listOfCars)
+            {
+                
+            }
+        }
+
 
         public ArrayList GetCars()
         {

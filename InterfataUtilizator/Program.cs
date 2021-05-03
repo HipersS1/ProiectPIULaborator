@@ -13,8 +13,7 @@ namespace InterfataUtilizator
         {
             IStocareData adminCars = StocareFactory.GetAdministratorStocare();
             ArrayList cars = adminCars.GetCars();
-            List<Car> list_cars;
-            ArrayList carSearch = null;
+            List<Car> lista_cu_autoturisme;
             //MARCA - MODEL - AN - CAPACITATE CILINDRICA - PUTERE - COMBUSTIBIL - CUTIE - CAROSERIE - CULOARE - PRET - NUME VAN - NUME CUMP - DATA TRANZACTIE - OPTIUNI 
 
             while (true)
@@ -38,6 +37,7 @@ namespace InterfataUtilizator
                         AfisareInformatiiTabel(cars);
                         break;
                     case ConsoleKey.T:
+                        /*
                         Car masinaTest = new Car("Audi,A4,2010,2200,150,DIESEL,MANUALA,BERLINA,NEGRU,7500,JON SNOW,POSEIDON KAN,25.4.2018,ABS,SERVODIRECTIE,NAVIGATIE,SENZORI PLOAIE,SENZORI PARCARE");
                         masinaTest.ShowCar();
                         Console.WriteLine(masinaTest.ConvertToString());
@@ -47,10 +47,18 @@ namespace InterfataUtilizator
                         Console.WriteLine(masinaTest.ConvertToString());
                         Console.WriteLine(masinaTest.ConvertToString_File());
                         AfisareInformatiiTabel(cars);
+                        */
                         break;
                     case ConsoleKey.F:
-                        list_cars = Car.CautareMarca(cars);
-                        AfisareInformatiiTabel(list_cars);
+                        lista_cu_autoturisme = Car.CautareMarca(cars);
+                        AfisareInformatiiTabel(lista_cu_autoturisme);
+                        Car.ModificareDateAutoturism(lista_cu_autoturisme);
+                        lista_cu_autoturisme.RemoveRange(0, lista_cu_autoturisme.Count);
+                        foreach(var car in cars)
+                        {
+                            lista_cu_autoturisme.Add((Car)car);
+                        }
+                        adminCars.RewriteCars(lista_cu_autoturisme);
                         break;
                     case ConsoleKey.C:
                         Car newCarCreated = Car.ReadCarInfo();
