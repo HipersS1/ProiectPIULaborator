@@ -48,6 +48,7 @@ namespace InterfataUtilizator
                         Console.WriteLine(masinaTest.ConvertToString_File());
                         AfisareInformatiiTabel(cars);
                         */
+                        Car.CitireTipCombustibil();
                         break;
                     case ConsoleKey.F:
                         lista_cu_autoturisme = Car.CautareMarca(cars);

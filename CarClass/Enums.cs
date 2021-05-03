@@ -22,4 +22,13 @@ namespace CarClass
         ///
     };
 
+    public enum TipCombustibil
+    {
+        BENZINA = 1,
+        DIESEL = 2,
+        GPL = 3,
+        HIBRID = 4,
+        ELECTRIC = 5,
+        BENZINA_GPL = 6,
+    };
 }

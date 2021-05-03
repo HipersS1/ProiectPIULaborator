@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections;
+using System.Threading;
 
 /*
 La un târg de mașini trebuie înregistrate toate mașinile care au fost vândute (cumpărate).
@@ -371,7 +372,7 @@ namespace CarClass
         #endregion
 
 
-
+        #region Citire Date Autoturism
         public static Car ReadCarInfo()
         {
             string carInfo = string.Empty;
@@ -391,13 +392,17 @@ namespace CarClass
             Console.Write("Putere: ");
             carInfo = carInfo + Console.ReadLine().Trim() + ",";          //Putere
             Console.Write("Combustibil: ");
-            carInfo = carInfo + Console.ReadLine().ToUpper().Trim() + ",";//Combustibil
+            carInfo += Car.CitireTipCombustibil() + ",";
+
+            //carInfo = carInfo + Console.ReadLine().ToUpper().Trim() + ",";//Combustibil
             Console.Write("Cutie de viteze: ");
             carInfo = carInfo + Console.ReadLine().ToUpper().Trim() + ",";//Cutie
 
             //Info afisare masina
             Console.Write("Caroserie: ");
-            carInfo = carInfo + Console.ReadLine().ToUpper().Trim() + ",";//Pret
+            carInfo += Car.CitireTipCaroserie() + ",";
+
+            //carInfo = carInfo + Console.ReadLine().ToUpper().Trim() + ",";//Pret
             Console.Write("Culoare: ");
             carInfo = carInfo + Console.ReadLine().ToUpper().Trim() + ",";//Culoare
             Console.Write("Pret: ");
@@ -427,6 +432,55 @@ namespace CarClass
             Car newCar = new Car(carInfo);
             return newCar;
         }
+
+        public static string CitireTipCombustibil()
+        {
+            string inputCombustibil;
+            var tipCombustibil = Enum.GetNames(typeof(TipCombustibil));
+
+            foreach (var numeCombustibil in tipCombustibil)
+            {
+                Console.Write(numeCombustibil + " ");
+            }
+            Console.Write("\nIntroduceti tipul de combustibil: ");
+
+            while (true)
+            {
+                inputCombustibil = Console.ReadLine().ToUpper().Trim();
+                foreach(var elem in tipCombustibil)
+                {
+                    if (inputCombustibil == elem)
+                        return inputCombustibil;
+                }
+                Console.Write("Reintroduceti tipul de combustibil: ");
+            }
+        }
+
+        public static string CitireTipCaroserie()
+        {
+            string inputCaroserie;
+            var tipCaroserie = Enum.GetNames(typeof(TipCaroserie));
+
+            foreach (var numbeCombustibil in tipCaroserie)
+            {
+                Console.Write(numbeCombustibil + " ");
+            }
+            Console.Write("\nIntroduceti tipul de caroserie: ");
+
+            while (true)
+            {
+                inputCaroserie = Console.ReadLine().ToUpper().Trim();
+                foreach (var elem in tipCaroserie)
+                {
+                    if (inputCaroserie == elem)
+                        return inputCaroserie;
+                }
+                Console.Write("Reintroduceti tipul de caroserie: ");
+            }
+        }
+
+        #endregion
+
         public static Car PriceCompare(Car a, Car b)
         {
             if (a.Pret > b.Pret)
