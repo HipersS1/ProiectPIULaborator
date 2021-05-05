@@ -54,12 +54,16 @@ namespace InterfataUtilizator
                         lista_cu_autoturisme = Car.CautareMarca(cars);
                         AfisareInformatiiTabel(lista_cu_autoturisme);
                         Car.ModificareDateAutoturism(lista_cu_autoturisme);
-                        lista_cu_autoturisme.RemoveRange(0, lista_cu_autoturisme.Count);
-                        foreach(var car in cars)
+                        if(lista_cu_autoturisme != null)
                         {
-                            lista_cu_autoturisme.Add((Car)car);
+                            lista_cu_autoturisme.RemoveRange(0, lista_cu_autoturisme.Count);
+                            foreach (var car in cars)
+                            {
+                                lista_cu_autoturisme.Add((Car)car);
+                            }
+                            adminCars.RewriteCars(lista_cu_autoturisme);
                         }
-                        adminCars.RewriteCars(lista_cu_autoturisme);
+                        
                         break;
                     case ConsoleKey.C:
                         Car newCarCreated = Car.ReadCarInfo();
@@ -81,6 +85,8 @@ namespace InterfataUtilizator
 
         public static void AfisareInformatii(ArrayList info)
         {
+            if (info == null)
+                return;
             Console.WriteLine("Informatii masini:");
             if (info.Count == 0)
             {
@@ -97,6 +103,9 @@ namespace InterfataUtilizator
 
         public static void AfisareInformatiiTabel(ArrayList info)
         {
+            if (info == null)
+                return;
+
             Console.WriteLine("Informatii masini:");
             if (info.Count == 0)
             {
@@ -112,6 +121,9 @@ namespace InterfataUtilizator
         }
         public static void AfisareInformatiiTabel(List<Car> info)
         {
+            if (info == null)
+                return;
+
             Console.WriteLine("Informatii masini:");
             if (info.Count == 0)
             {

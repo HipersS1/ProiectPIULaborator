@@ -181,37 +181,52 @@ namespace CarClass
         {
             List<Car> list_MarcaCautata = new List<Car>();
             string cautare_Marca;
+            bool marcaGasita = false;
             Console.Write("Introduceti marca: ");
             cautare_Marca = Console.ReadLine().ToUpper().Trim();
             foreach(Car masina in list_Masini)
             {
                 if(masina.Marca == cautare_Marca)
                 {
-                    list_MarcaCautata.Add(masina);
+                    list_MarcaCautata.Add(masina);/////probleme
+                    marcaGasita = true;
                 }
             }
-            //Verific daca utilizatorul doreste o cautare avansata dupa modelul masinii
-            if (CautareDupaModel(cautare_Marca))
-                return CautareModel(list_MarcaCautata);
 
-            return list_MarcaCautata;
+            //Verific daca utilizatorul doreste o cautare avansata dupa modelul masinii
+            if (marcaGasita == true)
+                if (CautareDupaModel(cautare_Marca))
+                    return CautareModel(list_MarcaCautata);
+
+            Console.WriteLine("Marca nu a fost gasita.");
+            return null;
         }
 
         public static List<Car> CautareModel(List<Car> list_Masini)
         {
-            List<Car> list_ModelCautat = new List<Car>();
-            string cautare_Marca;
-            Console.Write("Introduceti modelul: ");
-            cautare_Marca = Console.ReadLine().ToUpper().Trim();
-            foreach (Car masina in list_Masini)
+            if(list_Masini != null)
             {
-                if (masina.Model == cautare_Marca)
+                List<Car> list_ModelCautat = new List<Car>();
+                string cautare_Marca;
+                bool model_Gasit = false;
+                Console.Write("Introduceti modelul: ");
+                cautare_Marca = Console.ReadLine().ToUpper().Trim();
+                foreach (Car masina in list_Masini)
                 {
-                    list_ModelCautat.Add(masina);
+                    if (masina.Model == cautare_Marca)
+                    {
+                        list_ModelCautat.Add(masina);
+                        model_Gasit = true;
+                    }
                 }
+                if(!model_Gasit)
+                {
+                    Console.WriteLine("Nu exista modelul introdus.");
+                    return null;
+                }
+                return list_ModelCautat;
             }
-
-            return list_ModelCautat;
+            return null;
         }
 
         public static bool CautareDupaModel(string marcaAleasa)
@@ -241,6 +256,11 @@ namespace CarClass
         /// </summary>
         public static List<Car> ModificareDateAutoturism(List<Car> list_Autoturisme)
         {
+            if(list_Autoturisme == null)
+            {
+                return null;
+            }
+
             bool modificaDate = false;
             bool isTrue = true;
             
@@ -478,7 +498,7 @@ namespace CarClass
                 Console.Write("Reintroduceti tipul de caroserie: ");
             }
         }
-
+        //Implementeaza celelalte metode necesare introducerii datelor
         #endregion
 
         public static Car PriceCompare(Car a, Car b)
