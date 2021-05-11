@@ -29,69 +29,68 @@ namespace CarClass
         private const int FORMAT_TABEL_DREAPTA = -10;
         #endregion
 
-        #region Constante Informatii masina
-        private const int MARCA = 0;
-        private const int MODEL = 1;
-        private const int ANFABRICATIE = 2;
-        private const int CAPACITATE_CILINDRICA = 3;
-        private const int PUTERE = 4;
-        private const int COMBUSTIBIL = 5;
-        private const int CUTIEDEVITEZE = 6;
-        private const int CAROSERIE = 7;
-        private const int CULOARE = 8;
-        private const int PRET = 9;
-        private const int NUMEVANZATOR = 10;
-        private const int NUMECUMPARATOR = 11;
-        private const int DATATRANZACTIE = 12;
-        private const int OPTIUNI = 13;
-        #endregion
-
         #region Proprietati
+        public static int LastIndexAutoturism { get; set; } = 0;
+        public int IndexAutoturism { get; set; }
         public string Marca { get; set; }
         public string Model { get; set; }
         public int AnFabricatie { get; set; }
         public int CapacitateCilindrica { get; set; }
         public int Putere { get; set; }
-        public string Combustibil { get; set; }
-        public string CutieDeViteze { get; set; }
-        public string Caroserie { get; set; }
-        public string Culoare { get; set; }
+        public TipCombustibil Combustibil { get; set; }
+        public TipCutie CutieDeViteze { get; set; }
+        public TipCaroserie Caroserie { get; set; }
+        public Culori Culoare { get; set; }
         public int Pret { get; set; }
-        public string NumeVanzator { get; set; }
-        public string NumeCumparator { get; set; }
+        public string Nume_Vanzator { get; set; }
+        public string Prenume_Vanzator { get; set; }
+        public string Nume_Cumparator { get; set; }
+        public string Prenume_Cumparator { get; set; }
         public DateTime DataTranzactie { get; set; }
         public List<string> Optiuni { get; set; }
         #endregion
 
         #region Constructori
         public Car() { }
+
+        public Car(string pMarca, string pModel)
+        {
+            Marca = pMarca;
+            Model = pModel;
+        }
         public Car(string info)
         {
-            string[] splitInfo = info.Split(',');
-            Marca = splitInfo[MARCA];
-            Model = splitInfo[MODEL];
-            AnFabricatie = int.Parse(splitInfo[ANFABRICATIE]);
-            CapacitateCilindrica = int.Parse(splitInfo[CAPACITATE_CILINDRICA]);
-            Putere = int.Parse(splitInfo[PUTERE]);
-            Combustibil = splitInfo[COMBUSTIBIL];
-            CutieDeViteze = splitInfo[CUTIEDEVITEZE];
-            Caroserie = splitInfo[CAROSERIE];
-            Culoare = splitInfo[CULOARE];
-            Pret = int.Parse(splitInfo[PRET]);
-            NumeVanzator = splitInfo[NUMEVANZATOR];
-            NumeCumparator = splitInfo[NUMECUMPARATOR];
-            DataTranzactie = DateTime.Parse(splitInfo[DATATRANZACTIE]);
+            string[] splitInfo = info.Split(SEPARATOR_PRINCIPAL_FISIER);
+            Marca = splitInfo[(int)CampuriAutoturism.MARCA];
+            Model = splitInfo[(int)CampuriAutoturism.MODEL];
+            AnFabricatie = int.Parse(splitInfo[(int)CampuriAutoturism.ANFABRICATIE]);
+            CapacitateCilindrica = int.Parse(splitInfo[(int)CampuriAutoturism.CAPACITATE_CILINDRICA]);
+            Putere = int.Parse(splitInfo[(int)CampuriAutoturism.PUTERE]);
+            Combustibil = (TipCombustibil) Convert.ToInt32(splitInfo[(int)CampuriAutoturism.COMBUSTIBIL]);
+            CutieDeViteze = (TipCutie) Convert.ToInt32(splitInfo[(int)CampuriAutoturism.CUTIE_VITEZE]);
+            Caroserie = (TipCaroserie) Convert.ToInt32(splitInfo[(int)CampuriAutoturism.CAROSERIE]);
+            Culoare = (Culori) Convert.ToInt32(splitInfo[(int)CampuriAutoturism.CULOARE]);
+            Pret = int.Parse(splitInfo[(int)CampuriAutoturism.PRET]);
+            Nume_Vanzator = splitInfo[(int)CampuriAutoturism.NUME_VANZATOR];
+            Prenume_Vanzator = splitInfo[(int)CampuriAutoturism.PRENUME_VANZATOR];
+            Nume_Cumparator = splitInfo[(int)CampuriAutoturism.NUME_CUMPARATOR];
+            Prenume_Cumparator = splitInfo[(int)CampuriAutoturism.PRENUME_CUMPARATOR];
+            DataTranzactie = DateTime.Parse(splitInfo[(int)CampuriAutoturism.DATA_TRANZACTIE]);
 
             List<string> opt = new List<string>();
-            for (int i = OPTIUNI; i < splitInfo.Length; i++)
+            for (int i = (int)CampuriAutoturism.OPTIUNI; i < splitInfo.Length; i++)
                 opt.Add(splitInfo[i]);
             Optiuni = opt;
+
+            LastIndexAutoturism++;
+            IndexAutoturism = LastIndexAutoturism;
         }
         #endregion
         
         #region Metode de afisare
         public void ShowCar()
         {
+            Console.WriteLine($"{"Firma",FORMAT_TABEL_STANGA} {IndexAutoturism,FORMAT_TABEL_DREAPTA}");
             Console.WriteLine($"{"Firma",FORMAT_TABEL_STANGA} {Marca, FORMAT_TABEL_DREAPTA}");
             Console.WriteLine($"{"Model",FORMAT_TABEL_STANGA} {Model, FORMAT_TABEL_DREAPTA}");
             Console.WriteLine($"{"An Fabricatie",FORMAT_TABEL_STANGA} {AnFabricatie, FORMAT_TABEL_DREAPTA}");
@@ -102,8 +101,8 @@ namespace CarClass
             Console.WriteLine($"{"Caroserie",FORMAT_TABEL_STANGA} {Caroserie, FORMAT_TABEL_DREAPTA}");
             Console.WriteLine($"{"Culoare",FORMAT_TABEL_STANGA} {Culoare, FORMAT_TABEL_DREAPTA}");
             Console.WriteLine($"{"Pret",FORMAT_TABEL_STANGA} {Pret + " Euro", FORMAT_TABEL_DREAPTA}");
-            Console.WriteLine($"{"Nume Vanzator",FORMAT_TABEL_STANGA} {NumeVanzator, FORMAT_TABEL_DREAPTA}");
-            Console.WriteLine($"{"Nume Cumparator",FORMAT_TABEL_STANGA} {NumeCumparator, FORMAT_TABEL_DREAPTA}");
+            Console.WriteLine($"{"Nume Vanzator",FORMAT_TABEL_STANGA} {Nume_Vanzator + " " + Prenume_Vanzator, FORMAT_TABEL_DREAPTA}");
+            Console.WriteLine($"{"Nume Cumparator",FORMAT_TABEL_STANGA} {Nume_Cumparator + " " + Prenume_Cumparator, FORMAT_TABEL_DREAPTA}");
             Console.WriteLine($"{"Data tranzactie",FORMAT_TABEL_STANGA} {DataTranzactie.ToString("dd.MM.yyyy"), FORMAT_TABEL_DREAPTA}");
             Console.WriteLine($"{"Optiuni",FORMAT_TABEL_STANGA}");
             foreach (var optiune in Optiuni)
@@ -125,41 +124,31 @@ namespace CarClass
                    "Combustibil: " + (Combustibil.ToString() ?? "NECUNOSCUT") + "\n" +
                    "Cutie de viteze: " + (CutieDeViteze.ToString() ?? "NECUNOSCUT") + "\n" +
                    "Caroserie: " + (Caroserie.ToString() ?? "NECUNOSCUT") + "\n" +
-                   "Culoare: " + (Culoare ?? "NECUNOSCUT") + "\n" +
+                   "Culoare: " + (Culoare.ToString() ?? "NECUNOSCUT") + "\n" +
                    "Pret: " + (Pret.ToString() ?? "NECUNOSCUT") + "\n" +
-                   "Nume Vanzator: " + (NumeVanzator ?? "NECUNOSCUT") + "\n" +
-                   "Nume Cumparator: " + (NumeCumparator ?? "NECUNOSCUT") + "\n" +
+                   "Nume Vanzator: " + (Nume_Vanzator + " " + Prenume_Vanzator ?? "NECUNOSCUT") + "\n" +
+                   "Nume Cumparator: " + (Nume_Cumparator + " " + Prenume_Vanzator ?? "NECUNOSCUT") + "\n" +
                    "Data Tranzactie: " + (DataTranzactie.ToString("dd.MM.yyyy") ?? "01.01.2000") + "\n" +
                    "Optiuni:\n" + optiuni;
         }
-        //MARCA - MODEL - AN - CAPACITATE CILINDRICA - PUTERE - COMBUSTIBIL - CUTIE - CAROSERIE - CULOARE - PRET - NUME VAN - NUME CUMP - DATA TRANZACTIE - OPTIUNI
 
         public string ConvertToString_File()
         {
             string sCarInfo;
             //
-            sCarInfo = (Marca ?? "NECUNOSCUT") + SEPARATOR_SECUNDAR_FISIER +
-                       (Model ?? "NECUNOSCUT") + SEPARATOR_SECUNDAR_FISIER +
-                       (AnFabricatie.ToString() ?? "NECUNOSCUT") + SEPARATOR_SECUNDAR_FISIER +
-                       (CapacitateCilindrica.ToString() ?? "NECUNOSCUT") + SEPARATOR_SECUNDAR_FISIER +
-                       (Putere.ToString() ?? "NECUNOSCUT") + SEPARATOR_SECUNDAR_FISIER +
-                       (Combustibil ?? "NECUNOSCUT") + SEPARATOR_SECUNDAR_FISIER +
-                       (CutieDeViteze ?? "NECUNOSCUT") + SEPARATOR_SECUNDAR_FISIER +
-                       (Caroserie ?? "NECUNOSCUT") + SEPARATOR_SECUNDAR_FISIER +
-                       (Culoare ?? "NECUNOSCUT") + SEPARATOR_SECUNDAR_FISIER +
-                       (Pret.ToString() ?? "0") + SEPARATOR_SECUNDAR_FISIER +
-                       (NumeVanzator ?? "NECUNOSCUT") + SEPARATOR_SECUNDAR_FISIER +
-                       (NumeCumparator ?? "NECUNOSCUT") + SEPARATOR_SECUNDAR_FISIER +
-                       (DataTranzactie.ToString("dd.MM.yyyy") ?? "NECUNOSCUT") + SEPARATOR_SECUNDAR_FISIER;
-            //
+            sCarInfo = string.Format("{1}{0}{2}{0}{3}{0}{4}{0}{5}{0}{6}{0}{7}{0}{8}{0}{9}{0}{10}{0}{11}{0}{12}{0}{13}{0}{14}{0}{15}{0}",
+                SEPARATOR_PRINCIPAL_FISIER, Marca, Model, AnFabricatie, CapacitateCilindrica, Putere, Convert.ToInt32(Combustibil), Convert.ToInt32(CutieDeViteze), Convert.ToInt32(Caroserie),
+                Convert.ToInt32(Culoare), Pret, Nume_Vanzator, Prenume_Vanzator, Nume_Cumparator, Prenume_Cumparator, DataTranzactie.ToString("dd.MM.yyyy"));
+
+
             if (Optiuni.Count > 0)
             {
                 for (int i = 0; i < Optiuni.Count; i++)
                 {
                     if (i == (Optiuni.Count - 1))
-                        sCarInfo = sCarInfo + Optiuni[i];
+                        sCarInfo += Optiuni[i];
                     else
-                        sCarInfo = sCarInfo + Optiuni[i] + SEPARATOR_SECUNDAR_FISIER;
+                        sCarInfo = sCarInfo + Optiuni[i] + SEPARATOR_PRINCIPAL_FISIER;
                 }
             }
             else
@@ -174,9 +163,7 @@ namespace CarClass
         #endregion
 
         #region Cautare/Modificare
-        /// <summary>
-        /// Metoda efectueaza cautarea dupa o marca de autoturism. </summary>
-        /// <returns>Returneaza List<Car> ce contine autoturismele avand marca specificata.</returns>
+        /*
         public static List<Car> CautareMarca(ArrayList list_Masini)
         {
             List<Car> list_MarcaCautata = new List<Car>();
@@ -388,120 +375,11 @@ namespace CarClass
             return list_Autoturisme;
         }
 
+        */
 
         #endregion
 
-
-        #region Citire Date Autoturism
-        public static Car ReadCarInfo()
-        {
-            string carInfo = string.Empty;
-            Console.WriteLine("Introduceti informatiile despre masina:");
-
-            //Info generic
-            Console.Write("Firma: ");
-            carInfo = carInfo + Console.ReadLine().ToUpper().Trim() + ",";//Firma
-            Console.Write("Model: ");
-            carInfo = carInfo + Console.ReadLine().ToUpper().Trim() + ",";//Model
-            Console.Write("An Fabricatie: ");
-            carInfo = carInfo + Console.ReadLine().Trim() + ",";          //An fabricatie
-
-            //Info tehnic
-            Console.Write("Capacitate Cilindrica: ");
-            carInfo = carInfo + Console.ReadLine().Trim() + ",";          //Capacitate cilindrica
-            Console.Write("Putere: ");
-            carInfo = carInfo + Console.ReadLine().Trim() + ",";          //Putere
-            Console.Write("Combustibil: ");
-            carInfo += Car.CitireTipCombustibil() + ",";
-
-            //carInfo = carInfo + Console.ReadLine().ToUpper().Trim() + ",";//Combustibil
-            Console.Write("Cutie de viteze: ");
-            carInfo = carInfo + Console.ReadLine().ToUpper().Trim() + ",";//Cutie
-
-            //Info afisare masina
-            Console.Write("Caroserie: ");
-            carInfo += Car.CitireTipCaroserie() + ",";
-
-            //carInfo = carInfo + Console.ReadLine().ToUpper().Trim() + ",";//Pret
-            Console.Write("Culoare: ");
-            carInfo = carInfo + Console.ReadLine().ToUpper().Trim() + ",";//Culoare
-            Console.Write("Pret: ");
-            carInfo = carInfo + Console.ReadLine().Trim() + ",";          //Pret
-
-            //Info Tranzactie
-            Console.Write("Nume vanzator: ");
-            carInfo = carInfo + Console.ReadLine().ToUpper().Trim() + ",";//Nume Vanzator
-            Console.Write("Nume cumparator: ");
-            carInfo = carInfo + Console.ReadLine().ToUpper().Trim() + ",";//Nume cumparator
-            Console.Write("Data tranzactie(dd.mm.yyyy): ");
-            carInfo = carInfo + Console.ReadLine().Trim() + ",";          //Data tranzacaatie
-
-            Console.WriteLine("Introduceti optiunile (ex: ABS,Geamuri electrice, Senzori ploaie): ");
-            string optiuni = Console.ReadLine().ToUpper();
-            string[] formatOptiuni = optiuni.Split(',');
-            for (int i = 0; i < formatOptiuni.Length; i++)
-                formatOptiuni[i] = formatOptiuni[i].Trim();
-
-            optiuni = string.Empty;
-            optiuni = string.Join(",", formatOptiuni);
-            if (optiuni != string.Empty)
-                carInfo = carInfo + optiuni;
-            else
-                carInfo = carInfo + "NONE";
-
-            Car newCar = new Car(carInfo);
-            return newCar;
-        }
-
-        public static string CitireTipCombustibil()
-        {
-            string inputCombustibil;
-            var tipCombustibil = Enum.GetNames(typeof(TipCombustibil));
-
-            foreach (var numeCombustibil in tipCombustibil)
-            {
-                Console.Write(numeCombustibil + " ");
-            }
-            Console.Write("\nIntroduceti tipul de combustibil: ");
-
-            while (true)
-            {
-                inputCombustibil = Console.ReadLine().ToUpper().Trim();
-                foreach(var elem in tipCombustibil)
-                {
-                    if (inputCombustibil == elem)
-                        return inputCombustibil;
-                }
-                Console.Write("Reintroduceti tipul de combustibil: ");
-            }
-        }
-
-        public static string CitireTipCaroserie()
-        {
-            string inputCaroserie;
-            var tipCaroserie = Enum.GetNames(typeof(TipCaroserie));
-
-            foreach (var numbeCombustibil in tipCaroserie)
-            {
-                Console.Write(numbeCombustibil + " ");
-            }
-            Console.Write("\nIntroduceti tipul de caroserie: ");
-
-            while (true)
-            {
-                inputCaroserie = Console.ReadLine().ToUpper().Trim();
-                foreach (var elem in tipCaroserie)
-                {
-                    if (inputCaroserie == elem)
-                        return inputCaroserie;
-                }
-                Console.Write("Reintroduceti tipul de caroserie: ");
-            }
-        }
-        //Implementeaza celelalte metode necesare introducerii datelor
-        #endregion
-
-        public static Car PriceCompare(Car a, Car b)
+        public static Car PriceCompare(Car a, Car b)///De modificat utilizand supraincarcare op
         {
             if (a.Pret > b.Pret)
                 return a;

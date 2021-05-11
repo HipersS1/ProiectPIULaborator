@@ -90,6 +90,39 @@ namespace NivelAccesDate
             }
             catch (Exception eGen)
             {
+                
+                throw new Exception("Eroare generica. Mesaj: " + eGen.Message);
+            }
+
+            return cars;
+        }
+
+        public List<Car> GetCarsFile()
+        {
+            List<Car> cars = new List<Car>();
+
+            try
+            {
+                // instructiunea 'using' va apela sr.Close()
+                using (StreamReader sr = new StreamReader(NumeFisier))
+                {
+                    string line;
+
+                    //citeste cate o linie si creaza un obiect de tip Student pe baza datelor din linia citita
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        Car masinaDinFisier = new Car(line);
+                        cars.Add(masinaDinFisier);
+                    }
+                }
+            }
+            catch (IOException eIO)
+            {
+                throw new Exception("Eroare la deschiderea fisierului. Mesaj: " + eIO.Message);
+            }
+            catch (Exception eGen)
+            {
+
                 throw new Exception("Eroare generica. Mesaj: " + eGen.Message);
             }
 

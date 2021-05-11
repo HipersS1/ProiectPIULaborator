@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NivelAccesDate", "NivelAcce
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarClass", "CarClass\CarClass.csproj", "{D744AE5D-56D2-4312-80C4-36081D5AFB49}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfataUtilizator_WindowsForms", "InterfataUtilizator_WindowsForms\InterfataUtilizator_WindowsForms.csproj", "{2363F593-E984-4B58-AA2F-FBDD5AD69804}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D744AE5D-56D2-4312-80C4-36081D5AFB49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D744AE5D-56D2-4312-80C4-36081D5AFB49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D744AE5D-56D2-4312-80C4-36081D5AFB49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2363F593-E984-4B58-AA2F-FBDD5AD69804}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2363F593-E984-4B58-AA2F-FBDD5AD69804}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2363F593-E984-4B58-AA2F-FBDD5AD69804}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2363F593-E984-4B58-AA2F-FBDD5AD69804}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
