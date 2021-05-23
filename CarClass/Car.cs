@@ -22,11 +22,9 @@ namespace CarClass
     public class Car
     {
         #region Constante afisare
-        private const string SEPARATOR_AFISARE = " ";
         private const char SEPARATOR_PRINCIPAL_FISIER = ';';
-        private const char SEPARATOR_SECUNDAR_FISIER = ',';
-        private const int FORMAT_TABEL_STANGA = -25;
-        private const int FORMAT_TABEL_DREAPTA = -10;
+        private const int FTS = -40;//FORMAT TABEL STANGA
+        private const int FTD = -10;//FORMAT TABEL DREAPTA
         #endregion
 
         #region Proprietati
@@ -113,26 +111,28 @@ namespace CarClass
         #region Metode de afisare
         public void ShowCar()
         {
-            Console.WriteLine($"{"ID",FORMAT_TABEL_STANGA} {IndexAutoturism,FORMAT_TABEL_DREAPTA}");
-            Console.WriteLine($"{"Firma",FORMAT_TABEL_STANGA} {Marca, FORMAT_TABEL_DREAPTA}");
-            Console.WriteLine($"{"Model",FORMAT_TABEL_STANGA} {Model, FORMAT_TABEL_DREAPTA}");
-            Console.WriteLine($"{"An Fabricatie",FORMAT_TABEL_STANGA} {AnFabricatie, FORMAT_TABEL_DREAPTA}");
-            Console.WriteLine($"{"Capacitate cilindrica",FORMAT_TABEL_STANGA} {CapacitateCilindrica + " cm^3", FORMAT_TABEL_DREAPTA}");
-            Console.WriteLine($"{"Putere",FORMAT_TABEL_STANGA} {Putere+" CP", FORMAT_TABEL_DREAPTA}");
-            Console.WriteLine($"{"Combustibil",FORMAT_TABEL_STANGA} {Combustibil, FORMAT_TABEL_DREAPTA}");
-            Console.WriteLine($"{"Cutie de viteze",FORMAT_TABEL_STANGA} {CutieDeViteze, FORMAT_TABEL_DREAPTA}");
-            Console.WriteLine($"{"Caroserie",FORMAT_TABEL_STANGA} {Caroserie, FORMAT_TABEL_DREAPTA}");
-            Console.WriteLine($"{"Culoare",FORMAT_TABEL_STANGA} {Culoare, FORMAT_TABEL_DREAPTA}");
-            Console.WriteLine($"{"Pret",FORMAT_TABEL_STANGA} {Pret + " Euro", FORMAT_TABEL_DREAPTA}");
-            Console.WriteLine($"{"Nume Vanzator",FORMAT_TABEL_STANGA} {Nume_Vanzator + " " + Prenume_Vanzator, FORMAT_TABEL_DREAPTA}");
-            Console.WriteLine($"{"Nume Cumparator",FORMAT_TABEL_STANGA} {Nume_Cumparator + " " + Prenume_Cumparator, FORMAT_TABEL_DREAPTA}");
-            Console.WriteLine($"{"Data tranzactie",FORMAT_TABEL_STANGA} {DataTranzactie.ToString("dd.MM.yyyy"), FORMAT_TABEL_DREAPTA}");
-            Console.WriteLine($"{"Optiuni",FORMAT_TABEL_STANGA}");
+            Console.WriteLine($"{"ID",FTS} {IndexAutoturism}");
+            Console.WriteLine($"{"Firma",FTS} {Marca}");
+            Console.WriteLine($"{"Model",FTS} {Model}");
+            Console.WriteLine($"{"An Fabricatie",FTS} {AnFabricatie}");
+            Console.WriteLine($"{"Capacitate cilindrica",FTS} {CapacitateCilindrica + " cm^3", FTD}");
+            Console.WriteLine($"{"Putere",FTS} {Putere+" CP", FTD}");
+            Console.WriteLine($"{"Combustibil",FTS} {Combustibil}");
+            Console.WriteLine($"{"Cutie de viteze",FTS} {CutieDeViteze}");
+            Console.WriteLine($"{"Caroserie",FTS} {Caroserie}");
+            Console.WriteLine($"{"Culoare",FTS} {Culoare}");
+            Console.WriteLine($"{"Pret",FTS} {Pret + " Euro", FTD}");
+            Console.WriteLine($"{"Nume Vanzator",FTS} {Nume_Vanzator + " " + Prenume_Vanzator, FTD}");
+            Console.WriteLine($"{"Nume Cumparator",FTS} {Nume_Cumparator + " " + Prenume_Cumparator, FTD}");
+            Console.WriteLine($"{"Data tranzactie",FTS} {DataTranzactie.ToString("dd.MM.yyyy"), FTD}");
+            Console.WriteLine($"{"Optiuni",FTS}");
             foreach (var optiune in Optiuni)
             {
-                Console.Write($"{"",FORMAT_TABEL_STANGA} {optiune,FORMAT_TABEL_DREAPTA}\n");
+                Console.Write($"{"",FTS} {optiune}\n");
             }
         }
+
+
         public string ConvertToString()
         {
             string optiuni = string.Empty;
@@ -150,7 +150,7 @@ namespace CarClass
                    "Culoare: " + (Culoare.ToString() ?? "NECUNOSCUT") + "\n" +
                    "Pret: " + (Pret.ToString() ?? "NECUNOSCUT") + "\n" +
                    "Nume Vanzator: " + (Nume_Vanzator + " " + Prenume_Vanzator ?? "NECUNOSCUT") + "\n" +
-                   "Nume Cumparator: " + (Nume_Cumparator + " " + Prenume_Vanzator ?? "NECUNOSCUT") + "\n" +
+                   "Nume Cumparator: " + (Nume_Cumparator + " " + Prenume_Cumparator ?? "NECUNOSCUT") + "\n" +
                    "Data Tranzactie: " + (DataTranzactie.ToString("dd.MM.yyyy") ?? "01.01.2000") + "\n" +
                    "Optiuni:\n" + optiuni;
         }

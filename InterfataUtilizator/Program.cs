@@ -17,7 +17,6 @@ namespace InterfataUtilizator
 
             //Car.LastIndexAutoturism = cars.Count;
             List<Car> listaAutoturismeCautate;
-            //MARCA - MODEL - AN - CAPACITATE CILINDRICA - PUTERE - COMBUSTIBIL - CUTIE - CAROSERIE - CULOARE - PRET - NUME VAN - NUME CUMP - DATA TRANZACTIE - OPTIUNI 
             Car autoturismTest = new Car("Audi", "A3", 2012, 7000);
             Car autoturismTest2 = new Car("Audi", "A4", 2015, 8000);
             Car autoturismTest3 = new Car("AUDI", "A4");
@@ -144,7 +143,7 @@ namespace InterfataUtilizator
         public static Car CitireTastaturaAutoturism()
         {
             string inputMarca;
-            string input = string.Empty;
+            string input;
             int inputInt;
             Console.WriteLine("Introduceti informatiile despre masina:");
 

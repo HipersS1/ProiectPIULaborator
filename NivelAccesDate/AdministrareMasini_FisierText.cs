@@ -154,13 +154,13 @@ namespace NivelAccesDate
             {
                 ((Car)autoturismeSpecifice[i]).ShowCar();
             }
-            int input;
-            bool idGasit = true;
+
+            bool idGasit;
             do
             {
                 idGasit = true;
                 Console.Write("Introduceti ID-ul masinii pentru a modifica pretul: ");
-                if(int.TryParse(Console.ReadLine(), out input))
+                if(int.TryParse(Console.ReadLine(), out int input))
                 {        
                     foreach (Car c in autoturismeSpecifice)
                     {

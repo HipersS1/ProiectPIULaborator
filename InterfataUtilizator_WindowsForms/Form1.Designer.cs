@@ -29,6 +29,7 @@ namespace InterfataUtilizator_WindowsForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.textBoxMarca = new System.Windows.Forms.TextBox();
             this.labelMarca = new System.Windows.Forms.Label();
             this.labelModel = new System.Windows.Forms.Label();
@@ -110,6 +111,9 @@ namespace InterfataUtilizator_WindowsForms
             this.btnModificare = new System.Windows.Forms.Button();
             this.btnAfiseaza = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.labelID = new System.Windows.Forms.Label();
+            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.labelEroareIntroducere = new System.Windows.Forms.Label();
             this.groupBoxCombustibil.SuspendLayout();
             this.gpbCutie.SuspendLayout();
             this.gpbCulori.SuspendLayout();
@@ -119,7 +123,8 @@ namespace InterfataUtilizator_WindowsForms
             // 
             // textBoxMarca
             // 
-            this.textBoxMarca.Location = new System.Drawing.Point(158, 49);
+            this.textBoxMarca.BackColor = System.Drawing.Color.LightGray;
+            this.textBoxMarca.Location = new System.Drawing.Point(169, 58);
             this.textBoxMarca.Name = "textBoxMarca";
             this.textBoxMarca.Size = new System.Drawing.Size(187, 22);
             this.textBoxMarca.TabIndex = 0;
@@ -127,7 +132,7 @@ namespace InterfataUtilizator_WindowsForms
             // labelMarca
             // 
             this.labelMarca.AutoSize = true;
-            this.labelMarca.Location = new System.Drawing.Point(18, 52);
+            this.labelMarca.Location = new System.Drawing.Point(29, 61);
             this.labelMarca.Name = "labelMarca";
             this.labelMarca.Size = new System.Drawing.Size(47, 17);
             this.labelMarca.TabIndex = 1;
@@ -136,7 +141,7 @@ namespace InterfataUtilizator_WindowsForms
             // labelModel
             // 
             this.labelModel.AutoSize = true;
-            this.labelModel.Location = new System.Drawing.Point(18, 80);
+            this.labelModel.Location = new System.Drawing.Point(29, 89);
             this.labelModel.Name = "labelModel";
             this.labelModel.Size = new System.Drawing.Size(46, 17);
             this.labelModel.TabIndex = 2;
@@ -144,21 +149,24 @@ namespace InterfataUtilizator_WindowsForms
             // 
             // textBoxModel
             // 
-            this.textBoxModel.Location = new System.Drawing.Point(158, 77);
+            this.textBoxModel.BackColor = System.Drawing.Color.LightGray;
+            this.textBoxModel.Location = new System.Drawing.Point(169, 86);
             this.textBoxModel.Name = "textBoxModel";
             this.textBoxModel.Size = new System.Drawing.Size(187, 22);
             this.textBoxModel.TabIndex = 3;
             // 
             // textBoxAnFabricatie
             // 
-            this.textBoxAnFabricatie.Location = new System.Drawing.Point(158, 105);
+            this.textBoxAnFabricatie.BackColor = System.Drawing.Color.LightGray;
+            this.textBoxAnFabricatie.Location = new System.Drawing.Point(169, 114);
             this.textBoxAnFabricatie.Name = "textBoxAnFabricatie";
             this.textBoxAnFabricatie.Size = new System.Drawing.Size(187, 22);
             this.textBoxAnFabricatie.TabIndex = 4;
             // 
             // textBoxCapacitate
             // 
-            this.textBoxCapacitate.Location = new System.Drawing.Point(158, 131);
+            this.textBoxCapacitate.BackColor = System.Drawing.Color.LightGray;
+            this.textBoxCapacitate.Location = new System.Drawing.Point(169, 140);
             this.textBoxCapacitate.Name = "textBoxCapacitate";
             this.textBoxCapacitate.Size = new System.Drawing.Size(187, 22);
             this.textBoxCapacitate.TabIndex = 5;
@@ -166,7 +174,7 @@ namespace InterfataUtilizator_WindowsForms
             // labelAnFabricatie
             // 
             this.labelAnFabricatie.AutoSize = true;
-            this.labelAnFabricatie.Location = new System.Drawing.Point(18, 108);
+            this.labelAnFabricatie.Location = new System.Drawing.Point(29, 117);
             this.labelAnFabricatie.Name = "labelAnFabricatie";
             this.labelAnFabricatie.Size = new System.Drawing.Size(91, 17);
             this.labelAnFabricatie.TabIndex = 6;
@@ -175,7 +183,7 @@ namespace InterfataUtilizator_WindowsForms
             // labelCapacitate
             // 
             this.labelCapacitate.AutoSize = true;
-            this.labelCapacitate.Location = new System.Drawing.Point(18, 136);
+            this.labelCapacitate.Location = new System.Drawing.Point(29, 145);
             this.labelCapacitate.Name = "labelCapacitate";
             this.labelCapacitate.Size = new System.Drawing.Size(134, 17);
             this.labelCapacitate.TabIndex = 7;
@@ -184,7 +192,7 @@ namespace InterfataUtilizator_WindowsForms
             // labelPutere
             // 
             this.labelPutere.AutoSize = true;
-            this.labelPutere.Location = new System.Drawing.Point(18, 164);
+            this.labelPutere.Location = new System.Drawing.Point(29, 173);
             this.labelPutere.Name = "labelPutere";
             this.labelPutere.Size = new System.Drawing.Size(50, 17);
             this.labelPutere.TabIndex = 8;
@@ -192,14 +200,16 @@ namespace InterfataUtilizator_WindowsForms
             // 
             // textBoxPutere
             // 
-            this.textBoxPutere.Location = new System.Drawing.Point(158, 159);
+            this.textBoxPutere.BackColor = System.Drawing.Color.LightGray;
+            this.textBoxPutere.Location = new System.Drawing.Point(169, 168);
             this.textBoxPutere.Name = "textBoxPutere";
             this.textBoxPutere.Size = new System.Drawing.Size(187, 22);
             this.textBoxPutere.TabIndex = 9;
             // 
             // textBoxPret
             // 
-            this.textBoxPret.Location = new System.Drawing.Point(158, 187);
+            this.textBoxPret.BackColor = System.Drawing.Color.LightGray;
+            this.textBoxPret.Location = new System.Drawing.Point(169, 196);
             this.textBoxPret.Name = "textBoxPret";
             this.textBoxPret.Size = new System.Drawing.Size(187, 22);
             this.textBoxPret.TabIndex = 10;
@@ -207,7 +217,7 @@ namespace InterfataUtilizator_WindowsForms
             // labelPret
             // 
             this.labelPret.AutoSize = true;
-            this.labelPret.Location = new System.Drawing.Point(18, 192);
+            this.labelPret.Location = new System.Drawing.Point(29, 201);
             this.labelPret.Name = "labelPret";
             this.labelPret.Size = new System.Drawing.Size(34, 17);
             this.labelPret.TabIndex = 11;
@@ -216,7 +226,7 @@ namespace InterfataUtilizator_WindowsForms
             // labelNumeVanzator
             // 
             this.labelNumeVanzator.AutoSize = true;
-            this.labelNumeVanzator.Location = new System.Drawing.Point(18, 220);
+            this.labelNumeVanzator.Location = new System.Drawing.Point(29, 229);
             this.labelNumeVanzator.Name = "labelNumeVanzator";
             this.labelNumeVanzator.Size = new System.Drawing.Size(106, 17);
             this.labelNumeVanzator.TabIndex = 12;
@@ -224,21 +234,24 @@ namespace InterfataUtilizator_WindowsForms
             // 
             // textBoxNumeVanzator
             // 
-            this.textBoxNumeVanzator.Location = new System.Drawing.Point(158, 215);
+            this.textBoxNumeVanzator.BackColor = System.Drawing.Color.LightGray;
+            this.textBoxNumeVanzator.Location = new System.Drawing.Point(169, 224);
             this.textBoxNumeVanzator.Name = "textBoxNumeVanzator";
             this.textBoxNumeVanzator.Size = new System.Drawing.Size(187, 22);
             this.textBoxNumeVanzator.TabIndex = 13;
             // 
             // textBoxPrenumeVanzator
             // 
-            this.textBoxPrenumeVanzator.Location = new System.Drawing.Point(158, 243);
+            this.textBoxPrenumeVanzator.BackColor = System.Drawing.Color.LightGray;
+            this.textBoxPrenumeVanzator.Location = new System.Drawing.Point(169, 252);
             this.textBoxPrenumeVanzator.Name = "textBoxPrenumeVanzator";
             this.textBoxPrenumeVanzator.Size = new System.Drawing.Size(187, 22);
             this.textBoxPrenumeVanzator.TabIndex = 14;
             // 
             // textBoxNumeCumparator
             // 
-            this.textBoxNumeCumparator.Location = new System.Drawing.Point(159, 271);
+            this.textBoxNumeCumparator.BackColor = System.Drawing.Color.LightGray;
+            this.textBoxNumeCumparator.Location = new System.Drawing.Point(170, 280);
             this.textBoxNumeCumparator.Name = "textBoxNumeCumparator";
             this.textBoxNumeCumparator.Size = new System.Drawing.Size(187, 22);
             this.textBoxNumeCumparator.TabIndex = 15;
@@ -246,7 +259,7 @@ namespace InterfataUtilizator_WindowsForms
             // labelPrenumeVanzator
             // 
             this.labelPrenumeVanzator.AutoSize = true;
-            this.labelPrenumeVanzator.Location = new System.Drawing.Point(18, 248);
+            this.labelPrenumeVanzator.Location = new System.Drawing.Point(29, 257);
             this.labelPrenumeVanzator.Name = "labelPrenumeVanzator";
             this.labelPrenumeVanzator.Size = new System.Drawing.Size(126, 17);
             this.labelPrenumeVanzator.TabIndex = 16;
@@ -255,7 +268,7 @@ namespace InterfataUtilizator_WindowsForms
             // labelNumeCumparator
             // 
             this.labelNumeCumparator.AutoSize = true;
-            this.labelNumeCumparator.Location = new System.Drawing.Point(18, 276);
+            this.labelNumeCumparator.Location = new System.Drawing.Point(29, 285);
             this.labelNumeCumparator.Name = "labelNumeCumparator";
             this.labelNumeCumparator.Size = new System.Drawing.Size(123, 17);
             this.labelNumeCumparator.TabIndex = 17;
@@ -264,7 +277,7 @@ namespace InterfataUtilizator_WindowsForms
             // labelPrenumeCumparator
             // 
             this.labelPrenumeCumparator.AutoSize = true;
-            this.labelPrenumeCumparator.Location = new System.Drawing.Point(18, 304);
+            this.labelPrenumeCumparator.Location = new System.Drawing.Point(29, 313);
             this.labelPrenumeCumparator.Name = "labelPrenumeCumparator";
             this.labelPrenumeCumparator.Size = new System.Drawing.Size(143, 17);
             this.labelPrenumeCumparator.TabIndex = 18;
@@ -272,7 +285,8 @@ namespace InterfataUtilizator_WindowsForms
             // 
             // textBoxPrenumeCumparator
             // 
-            this.textBoxPrenumeCumparator.Location = new System.Drawing.Point(159, 299);
+            this.textBoxPrenumeCumparator.BackColor = System.Drawing.Color.LightGray;
+            this.textBoxPrenumeCumparator.Location = new System.Drawing.Point(170, 308);
             this.textBoxPrenumeCumparator.Name = "textBoxPrenumeCumparator";
             this.textBoxPrenumeCumparator.Size = new System.Drawing.Size(187, 22);
             this.textBoxPrenumeCumparator.TabIndex = 19;
@@ -280,7 +294,7 @@ namespace InterfataUtilizator_WindowsForms
             // labelDataTranzactie
             // 
             this.labelDataTranzactie.AutoSize = true;
-            this.labelDataTranzactie.Location = new System.Drawing.Point(18, 332);
+            this.labelDataTranzactie.Location = new System.Drawing.Point(29, 341);
             this.labelDataTranzactie.Name = "labelDataTranzactie";
             this.labelDataTranzactie.Size = new System.Drawing.Size(104, 17);
             this.labelDataTranzactie.TabIndex = 20;
@@ -288,7 +302,8 @@ namespace InterfataUtilizator_WindowsForms
             // 
             // textBoxDataTranzactie
             // 
-            this.textBoxDataTranzactie.Location = new System.Drawing.Point(159, 327);
+            this.textBoxDataTranzactie.BackColor = System.Drawing.Color.LightGray;
+            this.textBoxDataTranzactie.Location = new System.Drawing.Point(170, 336);
             this.textBoxDataTranzactie.Name = "textBoxDataTranzactie";
             this.textBoxDataTranzactie.Size = new System.Drawing.Size(187, 22);
             this.textBoxDataTranzactie.TabIndex = 21;
@@ -301,9 +316,9 @@ namespace InterfataUtilizator_WindowsForms
             this.groupBoxCombustibil.Controls.Add(this.rdbGpl);
             this.groupBoxCombustibil.Controls.Add(this.rdbDiesel);
             this.groupBoxCombustibil.Controls.Add(this.rdbBenzina);
-            this.groupBoxCombustibil.Location = new System.Drawing.Point(152, 364);
+            this.groupBoxCombustibil.Location = new System.Drawing.Point(163, 372);
             this.groupBoxCombustibil.Name = "groupBoxCombustibil";
-            this.groupBoxCombustibil.Size = new System.Drawing.Size(212, 89);
+            this.groupBoxCombustibil.Size = new System.Drawing.Size(225, 89);
             this.groupBoxCombustibil.TabIndex = 22;
             this.groupBoxCombustibil.TabStop = false;
             // 
@@ -376,7 +391,7 @@ namespace InterfataUtilizator_WindowsForms
             // labelCombustibil
             // 
             this.labelCombustibil.AutoSize = true;
-            this.labelCombustibil.Location = new System.Drawing.Point(18, 393);
+            this.labelCombustibil.Location = new System.Drawing.Point(29, 401);
             this.labelCombustibil.Name = "labelCombustibil";
             this.labelCombustibil.Size = new System.Drawing.Size(80, 17);
             this.labelCombustibil.TabIndex = 23;
@@ -386,9 +401,9 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.gpbCutie.Controls.Add(this.rdbCutieAutomata);
             this.gpbCutie.Controls.Add(this.rdbCutieManuala);
-            this.gpbCutie.Location = new System.Drawing.Point(152, 479);
+            this.gpbCutie.Location = new System.Drawing.Point(163, 475);
             this.gpbCutie.Name = "gpbCutie";
-            this.gpbCutie.Size = new System.Drawing.Size(212, 39);
+            this.gpbCutie.Size = new System.Drawing.Size(225, 39);
             this.gpbCutie.TabIndex = 24;
             this.gpbCutie.TabStop = false;
             // 
@@ -417,7 +432,7 @@ namespace InterfataUtilizator_WindowsForms
             // labelCutieDeViteze
             // 
             this.labelCutieDeViteze.AutoSize = true;
-            this.labelCutieDeViteze.Location = new System.Drawing.Point(18, 493);
+            this.labelCutieDeViteze.Location = new System.Drawing.Point(29, 489);
             this.labelCutieDeViteze.Name = "labelCutieDeViteze";
             this.labelCutieDeViteze.Size = new System.Drawing.Size(101, 17);
             this.labelCutieDeViteze.TabIndex = 25;
@@ -426,7 +441,7 @@ namespace InterfataUtilizator_WindowsForms
             // labelCuloare
             // 
             this.labelCuloare.AutoSize = true;
-            this.labelCuloare.Location = new System.Drawing.Point(602, 49);
+            this.labelCuloare.Location = new System.Drawing.Point(613, 63);
             this.labelCuloare.Name = "labelCuloare";
             this.labelCuloare.Size = new System.Drawing.Size(57, 17);
             this.labelCuloare.TabIndex = 26;
@@ -443,9 +458,9 @@ namespace InterfataUtilizator_WindowsForms
             this.gpbCulori.Controls.Add(this.rdbGri);
             this.gpbCulori.Controls.Add(this.rdbAlb);
             this.gpbCulori.Controls.Add(this.rdbNegru);
-            this.gpbCulori.Location = new System.Drawing.Point(605, 82);
+            this.gpbCulori.Location = new System.Drawing.Point(616, 89);
             this.gpbCulori.Name = "gpbCulori";
-            this.gpbCulori.Size = new System.Drawing.Size(183, 157);
+            this.gpbCulori.Size = new System.Drawing.Size(183, 169);
             this.gpbCulori.TabIndex = 28;
             this.gpbCulori.TabStop = false;
             // 
@@ -550,6 +565,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             // gpbCaroserie
             // 
+            this.gpbCaroserie.AutoSize = true;
             this.gpbCaroserie.Controls.Add(this.rdbSUV);
             this.gpbCaroserie.Controls.Add(this.rdbMinibus);
             this.gpbCaroserie.Controls.Add(this.rdbMonovolum);
@@ -560,9 +576,10 @@ namespace InterfataUtilizator_WindowsForms
             this.gpbCaroserie.Controls.Add(this.rdbBerlina);
             this.gpbCaroserie.Controls.Add(this.rdbPickup);
             this.gpbCaroserie.Controls.Add(this.rdbCoupe);
-            this.gpbCaroserie.Location = new System.Drawing.Point(383, 77);
+            this.gpbCaroserie.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.gpbCaroserie.Location = new System.Drawing.Point(394, 86);
             this.gpbCaroserie.Name = "gpbCaroserie";
-            this.gpbCaroserie.Size = new System.Drawing.Size(183, 162);
+            this.gpbCaroserie.Size = new System.Drawing.Size(194, 172);
             this.gpbCaroserie.TabIndex = 29;
             this.gpbCaroserie.TabStop = false;
             // 
@@ -679,7 +696,7 @@ namespace InterfataUtilizator_WindowsForms
             // labelCaroserie
             // 
             this.labelCaroserie.AutoSize = true;
-            this.labelCaroserie.Location = new System.Drawing.Point(380, 49);
+            this.labelCaroserie.Location = new System.Drawing.Point(391, 63);
             this.labelCaroserie.Name = "labelCaroserie";
             this.labelCaroserie.Size = new System.Drawing.Size(69, 17);
             this.labelCaroserie.TabIndex = 30;
@@ -688,7 +705,7 @@ namespace InterfataUtilizator_WindowsForms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(383, 248);
+            this.label1.Location = new System.Drawing.Point(391, 263);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 17);
             this.label1.TabIndex = 31;
@@ -712,9 +729,9 @@ namespace InterfataUtilizator_WindowsForms
             this.gpbOptiuni.Controls.Add(this.checkBox4);
             this.gpbOptiuni.Controls.Add(this.checkBox2);
             this.gpbOptiuni.Controls.Add(this.checkBox1);
-            this.gpbOptiuni.Location = new System.Drawing.Point(386, 284);
+            this.gpbOptiuni.Location = new System.Drawing.Point(394, 283);
             this.gpbOptiuni.Name = "gpbOptiuni";
-            this.gpbOptiuni.Size = new System.Drawing.Size(315, 234);
+            this.gpbOptiuni.Size = new System.Drawing.Size(315, 231);
             this.gpbOptiuni.TabIndex = 32;
             this.gpbOptiuni.TabStop = false;
             // 
@@ -880,65 +897,112 @@ namespace InterfataUtilizator_WindowsForms
             // 
             // rtbAfisare
             // 
+            this.rtbAfisare.BackColor = System.Drawing.Color.LightGray;
             this.rtbAfisare.Location = new System.Drawing.Point(819, 31);
             this.rtbAfisare.Name = "rtbAfisare";
-            this.rtbAfisare.Size = new System.Drawing.Size(555, 528);
+            this.rtbAfisare.ReadOnly = true;
+            this.rtbAfisare.Size = new System.Drawing.Size(555, 483);
             this.rtbAfisare.TabIndex = 37;
             this.rtbAfisare.Text = "";
             // 
             // btnAdauga
             // 
-            this.btnAdauga.Location = new System.Drawing.Point(174, 596);
+            this.btnAdauga.BackColor = System.Drawing.Color.LightGray;
+            this.btnAdauga.Location = new System.Drawing.Point(163, 529);
             this.btnAdauga.Name = "btnAdauga";
             this.btnAdauga.Size = new System.Drawing.Size(172, 49);
             this.btnAdauga.TabIndex = 38;
             this.btnAdauga.Text = "Adauga";
-            this.btnAdauga.UseVisualStyleBackColor = true;
+            this.btnAdauga.UseVisualStyleBackColor = false;
             this.btnAdauga.Click += new System.EventHandler(this.btnAdauga_Click);
             // 
             // btnCautare
             // 
-            this.btnCautare.Location = new System.Drawing.Point(394, 596);
+            this.btnCautare.BackColor = System.Drawing.Color.LightGray;
+            this.btnCautare.Location = new System.Drawing.Point(394, 529);
             this.btnCautare.Name = "btnCautare";
             this.btnCautare.Size = new System.Drawing.Size(172, 49);
             this.btnCautare.TabIndex = 39;
+            this.btnCautare.Tag = "0";
             this.btnCautare.Text = "Cautare";
-            this.btnCautare.UseVisualStyleBackColor = true;
+            this.btnCautare.UseVisualStyleBackColor = false;
+            this.btnCautare.Click += new System.EventHandler(this.btnCautare_Click);
             // 
             // btnModificare
             // 
-            this.btnModificare.Location = new System.Drawing.Point(605, 596);
+            this.btnModificare.BackColor = System.Drawing.Color.LightGray;
+            this.btnModificare.Enabled = false;
+            this.btnModificare.Location = new System.Drawing.Point(627, 529);
             this.btnModificare.Name = "btnModificare";
             this.btnModificare.Size = new System.Drawing.Size(172, 49);
             this.btnModificare.TabIndex = 40;
             this.btnModificare.Text = "Modifica";
-            this.btnModificare.UseVisualStyleBackColor = true;
+            this.btnModificare.UseVisualStyleBackColor = false;
+            this.btnModificare.Click += new System.EventHandler(this.btnModificare_Click);
             // 
             // btnAfiseaza
             // 
-            this.btnAfiseaza.Location = new System.Drawing.Point(819, 596);
+            this.btnAfiseaza.BackColor = System.Drawing.Color.LightGray;
+            this.btnAfiseaza.Location = new System.Drawing.Point(938, 529);
             this.btnAfiseaza.Name = "btnAfiseaza";
             this.btnAfiseaza.Size = new System.Drawing.Size(172, 49);
             this.btnAfiseaza.TabIndex = 41;
             this.btnAfiseaza.Text = "Afiseaza";
-            this.btnAfiseaza.UseVisualStyleBackColor = true;
+            this.btnAfiseaza.UseVisualStyleBackColor = false;
             this.btnAfiseaza.Click += new System.EventHandler(this.btnAfisare_Click);
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(1202, 596);
+            this.btnExit.BackColor = System.Drawing.Color.LightGray;
+            this.btnExit.Location = new System.Drawing.Point(1202, 529);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(172, 49);
             this.btnExit.TabIndex = 42;
             this.btnExit.Text = "Iesire";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnIesire_Click);
+            // 
+            // labelID
+            // 
+            this.labelID.AutoSize = true;
+            this.labelID.Location = new System.Drawing.Point(29, 31);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(21, 17);
+            this.labelID.TabIndex = 43;
+            this.labelID.Text = "ID";
+            this.labelID.Visible = false;
+            // 
+            // textBoxID
+            // 
+            this.textBoxID.BackColor = System.Drawing.Color.LightGray;
+            this.textBoxID.Location = new System.Drawing.Point(169, 28);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(100, 22);
+            this.textBoxID.TabIndex = 44;
+            this.textBoxID.Visible = false;
+            // 
+            // labelEroareIntroducere
+            // 
+            this.labelEroareIntroducere.AutoSize = true;
+            this.labelEroareIntroducere.BackColor = System.Drawing.Color.Black;
+            this.labelEroareIntroducere.ForeColor = System.Drawing.Color.Red;
+            this.labelEroareIntroducere.Location = new System.Drawing.Point(391, 28);
+            this.labelEroareIntroducere.Name = "labelEroareIntroducere";
+            this.labelEroareIntroducere.Size = new System.Drawing.Size(147, 17);
+            this.labelEroareIntroducere.TabIndex = 45;
+            this.labelEroareIntroducere.Text = "Eroare de introducere";
+            this.labelEroareIntroducere.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1402, 703);
+            this.BackColor = System.Drawing.Color.Gray;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(1402, 587);
+            this.Controls.Add(this.labelEroareIntroducere);
+            this.Controls.Add(this.textBoxID);
+            this.Controls.Add(this.labelID);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnAfiseaza);
             this.Controls.Add(this.btnModificare);
@@ -977,7 +1041,11 @@ namespace InterfataUtilizator_WindowsForms
             this.Controls.Add(this.labelModel);
             this.Controls.Add(this.labelMarca);
             this.Controls.Add(this.textBoxMarca);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Administrare Autoturisme";
             this.groupBoxCombustibil.ResumeLayout(false);
             this.groupBoxCombustibil.PerformLayout();
@@ -1077,6 +1145,9 @@ namespace InterfataUtilizator_WindowsForms
         private System.Windows.Forms.Button btnModificare;
         private System.Windows.Forms.Button btnAfiseaza;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label labelID;
+        private System.Windows.Forms.TextBox textBoxID;
+        private System.Windows.Forms.Label labelEroareIntroducere;
     }
 }
 
