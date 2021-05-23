@@ -58,6 +58,29 @@ namespace CarClass
             Marca = pMarca;
             Model = pModel;
         }
+        public Car(string pMarca, string pModel, int pAn, int pPret)
+        {
+            Marca = pMarca;
+            Model = pModel;
+            AnFabricatie = pAn;
+            Pret = pPret;
+        }
+
+        public Car(string pMarca, string pModel, int pAn, int pCapacitate, int pPutere, int pPret,
+                   string numeV, string prenumeV, string numeC, string prenumeC)
+        {
+            Marca = pMarca;
+            Model = pModel;
+            AnFabricatie = pAn;
+            CapacitateCilindrica = pCapacitate;
+            Putere = pPutere;
+            Pret = pPret;
+            Nume_Vanzator = numeV;
+            Prenume_Vanzator = prenumeV;
+            Nume_Cumparator = numeC;
+            Prenume_Cumparator = prenumeC;
+        }
+
         public Car(string info)
         {
             string[] splitInfo = info.Split(SEPARATOR_PRINCIPAL_FISIER);
@@ -90,7 +113,7 @@ namespace CarClass
         #region Metode de afisare
         public void ShowCar()
         {
-            Console.WriteLine($"{"Firma",FORMAT_TABEL_STANGA} {IndexAutoturism,FORMAT_TABEL_DREAPTA}");
+            Console.WriteLine($"{"ID",FORMAT_TABEL_STANGA} {IndexAutoturism,FORMAT_TABEL_DREAPTA}");
             Console.WriteLine($"{"Firma",FORMAT_TABEL_STANGA} {Marca, FORMAT_TABEL_DREAPTA}");
             Console.WriteLine($"{"Model",FORMAT_TABEL_STANGA} {Model, FORMAT_TABEL_DREAPTA}");
             Console.WriteLine($"{"An Fabricatie",FORMAT_TABEL_STANGA} {AnFabricatie, FORMAT_TABEL_DREAPTA}");
@@ -159,7 +182,6 @@ namespace CarClass
 
             return sCarInfo;
         }
-
         #endregion
 
         #region Cautare/Modificare
@@ -376,10 +398,10 @@ namespace CarClass
         }
 
         */
-
         #endregion
 
-        public static Car PriceCompare(Car a, Car b)///De modificat utilizand supraincarcare op
+        #region Comparare
+        public static Car PriceCompare(Car a, Car b)///De modificat utilizand supraincarcare op////De facut in linie de comanda
         {
             if (a.Pret > b.Pret)
                 return a;
@@ -391,5 +413,27 @@ namespace CarClass
             else
                 return b;
         }
+
+        public static string operator <(Car a, Car b)
+        {
+            if (a == null || b == null)
+                return "Eroare";
+            if (a.Pret < b.Pret)
+                return $"{b.Marca} {b.Model}  {b.AnFabricatie} {b.Pret}";
+            if(a.Pret > b.Pret)
+                return $"{a.Marca} {a.Model}  {a.AnFabricatie} {a.Pret}";
+            return "Preturile masinilor sunt egale.";
+        }
+        public static string operator >(Car a, Car b)
+        {
+            if (a == null || b == null)
+                return "Eroare";
+            if (a.Pret > b.Pret)
+                return $"{a.Marca} {a.Model}  {a.AnFabricatie} {a.Pret}";
+            if (a.Pret < b.Pret)
+                return $"{b.Marca} {b.Model}  {b.AnFabricatie} {b.Pret}";
+            return "Preturile masinilor sunt egale.";
+        }
+        #endregion
     }
 }

@@ -38,77 +38,73 @@ namespace InterfataUtilizator_WindowsForms
             this.labelAnFabricatie = new System.Windows.Forms.Label();
             this.labelCapacitate = new System.Windows.Forms.Label();
             this.labelPutere = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxPutere = new System.Windows.Forms.TextBox();
+            this.textBoxPret = new System.Windows.Forms.TextBox();
             this.labelPret = new System.Windows.Forms.Label();
-            this.labelNumeV = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.labelPrenumeV = new System.Windows.Forms.Label();
-            this.labelNumeC = new System.Windows.Forms.Label();
-            this.labelPrenumeC = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.labelNumeVanzator = new System.Windows.Forms.Label();
+            this.textBoxNumeVanzator = new System.Windows.Forms.TextBox();
+            this.textBoxPrenumeVanzator = new System.Windows.Forms.TextBox();
+            this.textBoxNumeCumparator = new System.Windows.Forms.TextBox();
+            this.labelPrenumeVanzator = new System.Windows.Forms.Label();
+            this.labelNumeCumparator = new System.Windows.Forms.Label();
+            this.labelPrenumeCumparator = new System.Windows.Forms.Label();
+            this.textBoxPrenumeCumparator = new System.Windows.Forms.TextBox();
             this.labelDataTranzactie = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBoxDataTranzactie = new System.Windows.Forms.TextBox();
             this.groupBoxCombustibil = new System.Windows.Forms.GroupBox();
-            this.labelCombustibil = new System.Windows.Forms.Label();
-            this.rdbBenzina = new System.Windows.Forms.RadioButton();
-            this.rdbDiesel = new System.Windows.Forms.RadioButton();
-            this.rdbGpl = new System.Windows.Forms.RadioButton();
-            this.rdbHibrid = new System.Windows.Forms.RadioButton();
-            this.rdbElectric = new System.Windows.Forms.RadioButton();
             this.rdbBenzinaGpl = new System.Windows.Forms.RadioButton();
+            this.rdbElectric = new System.Windows.Forms.RadioButton();
+            this.rdbHibrid = new System.Windows.Forms.RadioButton();
+            this.rdbGpl = new System.Windows.Forms.RadioButton();
+            this.rdbDiesel = new System.Windows.Forms.RadioButton();
+            this.rdbBenzina = new System.Windows.Forms.RadioButton();
+            this.labelCombustibil = new System.Windows.Forms.Label();
             this.gpbCutie = new System.Windows.Forms.GroupBox();
-            this.labelCutieDeViteze = new System.Windows.Forms.Label();
-            this.rdbCutieManuala = new System.Windows.Forms.RadioButton();
             this.rdbCutieAutomata = new System.Windows.Forms.RadioButton();
+            this.rdbCutieManuala = new System.Windows.Forms.RadioButton();
+            this.labelCutieDeViteze = new System.Windows.Forms.Label();
             this.labelCuloare = new System.Windows.Forms.Label();
             this.gpbCulori = new System.Windows.Forms.GroupBox();
-            this.rdbNegru = new System.Windows.Forms.RadioButton();
-            this.rdbAlb = new System.Windows.Forms.RadioButton();
-            this.rdbGri = new System.Windows.Forms.RadioButton();
-            this.rdbRosu = new System.Windows.Forms.RadioButton();
-            this.rdbAlbastru = new System.Windows.Forms.RadioButton();
-            this.rdbVerde = new System.Windows.Forms.RadioButton();
-            this.rdbGalben = new System.Windows.Forms.RadioButton();
-            this.rdbPortocaliu = new System.Windows.Forms.RadioButton();
             this.rdbMov = new System.Windows.Forms.RadioButton();
+            this.rdbPortocaliu = new System.Windows.Forms.RadioButton();
+            this.rdbGalben = new System.Windows.Forms.RadioButton();
+            this.rdbVerde = new System.Windows.Forms.RadioButton();
+            this.rdbAlbastru = new System.Windows.Forms.RadioButton();
+            this.rdbRosu = new System.Windows.Forms.RadioButton();
+            this.rdbGri = new System.Windows.Forms.RadioButton();
+            this.rdbAlb = new System.Windows.Forms.RadioButton();
+            this.rdbNegru = new System.Windows.Forms.RadioButton();
             this.gpbCaroserie = new System.Windows.Forms.GroupBox();
+            this.rdbSUV = new System.Windows.Forms.RadioButton();
+            this.rdbMinibus = new System.Windows.Forms.RadioButton();
+            this.rdbMonovolum = new System.Windows.Forms.RadioButton();
+            this.rdbBreak = new System.Windows.Forms.RadioButton();
+            this.rdbOffroad = new System.Windows.Forms.RadioButton();
+            this.rdbHatchback = new System.Windows.Forms.RadioButton();
+            this.rdbCabrio = new System.Windows.Forms.RadioButton();
+            this.rdbBerlina = new System.Windows.Forms.RadioButton();
+            this.rdbPickup = new System.Windows.Forms.RadioButton();
+            this.rdbCoupe = new System.Windows.Forms.RadioButton();
             this.labelCaroserie = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.gpbOptiuni = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
-            this.checkBox18 = new System.Windows.Forms.CheckBox();
-            this.checkBox19 = new System.Windows.Forms.CheckBox();
             this.checkBox20 = new System.Windows.Forms.CheckBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.checkBox19 = new System.Windows.Forms.CheckBox();
+            this.checkBox18 = new System.Windows.Forms.CheckBox();
+            this.checkBox17 = new System.Windows.Forms.CheckBox();
+            this.checkBox16 = new System.Windows.Forms.CheckBox();
+            this.checkBox15 = new System.Windows.Forms.CheckBox();
+            this.checkBox14 = new System.Windows.Forms.CheckBox();
+            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.rtbAfisare = new System.Windows.Forms.RichTextBox();
             this.btnAdauga = new System.Windows.Forms.Button();
             this.btnCautare = new System.Windows.Forms.Button();
             this.btnModificare = new System.Windows.Forms.Button();
@@ -136,7 +132,6 @@ namespace InterfataUtilizator_WindowsForms
             this.labelMarca.Size = new System.Drawing.Size(47, 17);
             this.labelMarca.TabIndex = 1;
             this.labelMarca.Text = "Marca";
-            this.labelMarca.Click += new System.EventHandler(this.label1_Click);
             // 
             // labelModel
             // 
@@ -185,7 +180,6 @@ namespace InterfataUtilizator_WindowsForms
             this.labelCapacitate.Size = new System.Drawing.Size(134, 17);
             this.labelCapacitate.TabIndex = 7;
             this.labelCapacitate.Text = "Capacitate cilindrica";
-            this.labelCapacitate.Click += new System.EventHandler(this.label4_Click);
             // 
             // labelPutere
             // 
@@ -196,19 +190,19 @@ namespace InterfataUtilizator_WindowsForms
             this.labelPutere.TabIndex = 8;
             this.labelPutere.Text = "Putere";
             // 
-            // textBox5
+            // textBoxPutere
             // 
-            this.textBox5.Location = new System.Drawing.Point(158, 159);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(187, 22);
-            this.textBox5.TabIndex = 9;
+            this.textBoxPutere.Location = new System.Drawing.Point(158, 159);
+            this.textBoxPutere.Name = "textBoxPutere";
+            this.textBoxPutere.Size = new System.Drawing.Size(187, 22);
+            this.textBoxPutere.TabIndex = 9;
             // 
-            // textBox6
+            // textBoxPret
             // 
-            this.textBox6.Location = new System.Drawing.Point(158, 187);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(187, 22);
-            this.textBox6.TabIndex = 10;
+            this.textBoxPret.Location = new System.Drawing.Point(158, 187);
+            this.textBoxPret.Name = "textBoxPret";
+            this.textBoxPret.Size = new System.Drawing.Size(187, 22);
+            this.textBoxPret.TabIndex = 10;
             // 
             // labelPret
             // 
@@ -218,75 +212,70 @@ namespace InterfataUtilizator_WindowsForms
             this.labelPret.Size = new System.Drawing.Size(34, 17);
             this.labelPret.TabIndex = 11;
             this.labelPret.Text = "Pret";
-            this.labelPret.Click += new System.EventHandler(this.label6_Click);
             // 
-            // labelNumeV
+            // labelNumeVanzator
             // 
-            this.labelNumeV.AutoSize = true;
-            this.labelNumeV.Location = new System.Drawing.Point(18, 220);
-            this.labelNumeV.Name = "labelNumeV";
-            this.labelNumeV.Size = new System.Drawing.Size(106, 17);
-            this.labelNumeV.TabIndex = 12;
-            this.labelNumeV.Text = "Nume Vanzator";
-            this.labelNumeV.Click += new System.EventHandler(this.label7_Click);
+            this.labelNumeVanzator.AutoSize = true;
+            this.labelNumeVanzator.Location = new System.Drawing.Point(18, 220);
+            this.labelNumeVanzator.Name = "labelNumeVanzator";
+            this.labelNumeVanzator.Size = new System.Drawing.Size(106, 17);
+            this.labelNumeVanzator.TabIndex = 12;
+            this.labelNumeVanzator.Text = "Nume Vanzator";
             // 
-            // textBox7
+            // textBoxNumeVanzator
             // 
-            this.textBox7.Location = new System.Drawing.Point(158, 215);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(187, 22);
-            this.textBox7.TabIndex = 13;
+            this.textBoxNumeVanzator.Location = new System.Drawing.Point(158, 215);
+            this.textBoxNumeVanzator.Name = "textBoxNumeVanzator";
+            this.textBoxNumeVanzator.Size = new System.Drawing.Size(187, 22);
+            this.textBoxNumeVanzator.TabIndex = 13;
             // 
-            // textBox8
+            // textBoxPrenumeVanzator
             // 
-            this.textBox8.Location = new System.Drawing.Point(158, 243);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(187, 22);
-            this.textBox8.TabIndex = 14;
+            this.textBoxPrenumeVanzator.Location = new System.Drawing.Point(158, 243);
+            this.textBoxPrenumeVanzator.Name = "textBoxPrenumeVanzator";
+            this.textBoxPrenumeVanzator.Size = new System.Drawing.Size(187, 22);
+            this.textBoxPrenumeVanzator.TabIndex = 14;
             // 
-            // textBox9
+            // textBoxNumeCumparator
             // 
-            this.textBox9.Location = new System.Drawing.Point(159, 271);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(187, 22);
-            this.textBox9.TabIndex = 15;
+            this.textBoxNumeCumparator.Location = new System.Drawing.Point(159, 271);
+            this.textBoxNumeCumparator.Name = "textBoxNumeCumparator";
+            this.textBoxNumeCumparator.Size = new System.Drawing.Size(187, 22);
+            this.textBoxNumeCumparator.TabIndex = 15;
             // 
-            // labelPrenumeV
+            // labelPrenumeVanzator
             // 
-            this.labelPrenumeV.AutoSize = true;
-            this.labelPrenumeV.Location = new System.Drawing.Point(18, 248);
-            this.labelPrenumeV.Name = "labelPrenumeV";
-            this.labelPrenumeV.Size = new System.Drawing.Size(126, 17);
-            this.labelPrenumeV.TabIndex = 16;
-            this.labelPrenumeV.Text = "Prenume Vanzator";
-            this.labelPrenumeV.Click += new System.EventHandler(this.label8_Click);
+            this.labelPrenumeVanzator.AutoSize = true;
+            this.labelPrenumeVanzator.Location = new System.Drawing.Point(18, 248);
+            this.labelPrenumeVanzator.Name = "labelPrenumeVanzator";
+            this.labelPrenumeVanzator.Size = new System.Drawing.Size(126, 17);
+            this.labelPrenumeVanzator.TabIndex = 16;
+            this.labelPrenumeVanzator.Text = "Prenume Vanzator";
             // 
-            // labelNumeC
+            // labelNumeCumparator
             // 
-            this.labelNumeC.AutoSize = true;
-            this.labelNumeC.Location = new System.Drawing.Point(18, 276);
-            this.labelNumeC.Name = "labelNumeC";
-            this.labelNumeC.Size = new System.Drawing.Size(123, 17);
-            this.labelNumeC.TabIndex = 17;
-            this.labelNumeC.Text = "Nume Cumparator";
-            this.labelNumeC.Click += new System.EventHandler(this.label9_Click);
+            this.labelNumeCumparator.AutoSize = true;
+            this.labelNumeCumparator.Location = new System.Drawing.Point(18, 276);
+            this.labelNumeCumparator.Name = "labelNumeCumparator";
+            this.labelNumeCumparator.Size = new System.Drawing.Size(123, 17);
+            this.labelNumeCumparator.TabIndex = 17;
+            this.labelNumeCumparator.Text = "Nume Cumparator";
             // 
-            // labelPrenumeC
+            // labelPrenumeCumparator
             // 
-            this.labelPrenumeC.AutoSize = true;
-            this.labelPrenumeC.Location = new System.Drawing.Point(18, 304);
-            this.labelPrenumeC.Name = "labelPrenumeC";
-            this.labelPrenumeC.Size = new System.Drawing.Size(143, 17);
-            this.labelPrenumeC.TabIndex = 18;
-            this.labelPrenumeC.Text = "Prenume Cumparator";
-            this.labelPrenumeC.Click += new System.EventHandler(this.label10_Click);
+            this.labelPrenumeCumparator.AutoSize = true;
+            this.labelPrenumeCumparator.Location = new System.Drawing.Point(18, 304);
+            this.labelPrenumeCumparator.Name = "labelPrenumeCumparator";
+            this.labelPrenumeCumparator.Size = new System.Drawing.Size(143, 17);
+            this.labelPrenumeCumparator.TabIndex = 18;
+            this.labelPrenumeCumparator.Text = "Prenume Cumparator";
             // 
-            // textBox10
+            // textBoxPrenumeCumparator
             // 
-            this.textBox10.Location = new System.Drawing.Point(159, 299);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(187, 22);
-            this.textBox10.TabIndex = 19;
+            this.textBoxPrenumeCumparator.Location = new System.Drawing.Point(159, 299);
+            this.textBoxPrenumeCumparator.Name = "textBoxPrenumeCumparator";
+            this.textBoxPrenumeCumparator.Size = new System.Drawing.Size(187, 22);
+            this.textBoxPrenumeCumparator.TabIndex = 19;
             // 
             // labelDataTranzactie
             // 
@@ -296,14 +285,13 @@ namespace InterfataUtilizator_WindowsForms
             this.labelDataTranzactie.Size = new System.Drawing.Size(104, 17);
             this.labelDataTranzactie.TabIndex = 20;
             this.labelDataTranzactie.Text = "Data tranzactie";
-            this.labelDataTranzactie.Click += new System.EventHandler(this.label11_Click);
             // 
-            // textBox11
+            // textBoxDataTranzactie
             // 
-            this.textBox11.Location = new System.Drawing.Point(159, 327);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(187, 22);
-            this.textBox11.TabIndex = 21;
+            this.textBoxDataTranzactie.Location = new System.Drawing.Point(159, 327);
+            this.textBoxDataTranzactie.Name = "textBoxDataTranzactie";
+            this.textBoxDataTranzactie.Size = new System.Drawing.Size(187, 22);
+            this.textBoxDataTranzactie.TabIndex = 21;
             // 
             // groupBoxCombustibil
             // 
@@ -319,49 +307,27 @@ namespace InterfataUtilizator_WindowsForms
             this.groupBoxCombustibil.TabIndex = 22;
             this.groupBoxCombustibil.TabStop = false;
             // 
-            // labelCombustibil
+            // rdbBenzinaGpl
             // 
-            this.labelCombustibil.AutoSize = true;
-            this.labelCombustibil.Location = new System.Drawing.Point(18, 393);
-            this.labelCombustibil.Name = "labelCombustibil";
-            this.labelCombustibil.Size = new System.Drawing.Size(80, 17);
-            this.labelCombustibil.TabIndex = 23;
-            this.labelCombustibil.Text = "Combustibil";
+            this.rdbBenzinaGpl.AutoSize = true;
+            this.rdbBenzinaGpl.Location = new System.Drawing.Point(101, 64);
+            this.rdbBenzinaGpl.Name = "rdbBenzinaGpl";
+            this.rdbBenzinaGpl.Size = new System.Drawing.Size(116, 21);
+            this.rdbBenzinaGpl.TabIndex = 24;
+            this.rdbBenzinaGpl.TabStop = true;
+            this.rdbBenzinaGpl.Text = "Benzina+GPL";
+            this.rdbBenzinaGpl.UseVisualStyleBackColor = true;
             // 
-            // rdbBenzina
+            // rdbElectric
             // 
-            this.rdbBenzina.AutoSize = true;
-            this.rdbBenzina.Location = new System.Drawing.Point(6, 10);
-            this.rdbBenzina.Name = "rdbBenzina";
-            this.rdbBenzina.Size = new System.Drawing.Size(80, 21);
-            this.rdbBenzina.TabIndex = 0;
-            this.rdbBenzina.TabStop = true;
-            this.rdbBenzina.Text = "Benzina";
-            this.rdbBenzina.UseVisualStyleBackColor = true;
-            // 
-            // rdbDiesel
-            // 
-            this.rdbDiesel.AutoSize = true;
-            this.rdbDiesel.Location = new System.Drawing.Point(101, 10);
-            this.rdbDiesel.Name = "rdbDiesel";
-            this.rdbDiesel.Size = new System.Drawing.Size(68, 21);
-            this.rdbDiesel.TabIndex = 24;
-            this.rdbDiesel.TabStop = true;
-            this.rdbDiesel.Text = "Diesel";
-            this.rdbDiesel.UseVisualStyleBackColor = true;
-            this.rdbDiesel.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // rdbGpl
-            // 
-            this.rdbGpl.AutoSize = true;
-            this.rdbGpl.Location = new System.Drawing.Point(6, 37);
-            this.rdbGpl.Name = "rdbGpl";
-            this.rdbGpl.Size = new System.Drawing.Size(57, 21);
-            this.rdbGpl.TabIndex = 24;
-            this.rdbGpl.TabStop = true;
-            this.rdbGpl.Text = "GPL";
-            this.rdbGpl.UseVisualStyleBackColor = true;
-            this.rdbGpl.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.rdbElectric.AutoSize = true;
+            this.rdbElectric.Location = new System.Drawing.Point(6, 64);
+            this.rdbElectric.Name = "rdbElectric";
+            this.rdbElectric.Size = new System.Drawing.Size(75, 21);
+            this.rdbElectric.TabIndex = 24;
+            this.rdbElectric.TabStop = true;
+            this.rdbElectric.Text = "Electric";
+            this.rdbElectric.UseVisualStyleBackColor = true;
             // 
             // rdbHibrid
             // 
@@ -374,28 +340,47 @@ namespace InterfataUtilizator_WindowsForms
             this.rdbHibrid.Text = "Hibrid";
             this.rdbHibrid.UseVisualStyleBackColor = true;
             // 
-            // rdbElectric
+            // rdbGpl
             // 
-            this.rdbElectric.AutoSize = true;
-            this.rdbElectric.Location = new System.Drawing.Point(6, 64);
-            this.rdbElectric.Name = "rdbElectric";
-            this.rdbElectric.Size = new System.Drawing.Size(75, 21);
-            this.rdbElectric.TabIndex = 24;
-            this.rdbElectric.TabStop = true;
-            this.rdbElectric.Text = "Electric";
-            this.rdbElectric.UseVisualStyleBackColor = true;
-            this.rdbElectric.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            this.rdbGpl.AutoSize = true;
+            this.rdbGpl.Location = new System.Drawing.Point(6, 37);
+            this.rdbGpl.Name = "rdbGpl";
+            this.rdbGpl.Size = new System.Drawing.Size(57, 21);
+            this.rdbGpl.TabIndex = 24;
+            this.rdbGpl.TabStop = true;
+            this.rdbGpl.Text = "GPL";
+            this.rdbGpl.UseVisualStyleBackColor = true;
             // 
-            // rdbBenzinaGpl
+            // rdbDiesel
             // 
-            this.rdbBenzinaGpl.AutoSize = true;
-            this.rdbBenzinaGpl.Location = new System.Drawing.Point(101, 64);
-            this.rdbBenzinaGpl.Name = "rdbBenzinaGpl";
-            this.rdbBenzinaGpl.Size = new System.Drawing.Size(116, 21);
-            this.rdbBenzinaGpl.TabIndex = 24;
-            this.rdbBenzinaGpl.TabStop = true;
-            this.rdbBenzinaGpl.Text = "Benzina+GPL";
-            this.rdbBenzinaGpl.UseVisualStyleBackColor = true;
+            this.rdbDiesel.AutoSize = true;
+            this.rdbDiesel.Location = new System.Drawing.Point(101, 10);
+            this.rdbDiesel.Name = "rdbDiesel";
+            this.rdbDiesel.Size = new System.Drawing.Size(68, 21);
+            this.rdbDiesel.TabIndex = 24;
+            this.rdbDiesel.TabStop = true;
+            this.rdbDiesel.Text = "Diesel";
+            this.rdbDiesel.UseVisualStyleBackColor = true;
+            // 
+            // rdbBenzina
+            // 
+            this.rdbBenzina.AutoSize = true;
+            this.rdbBenzina.Location = new System.Drawing.Point(6, 10);
+            this.rdbBenzina.Name = "rdbBenzina";
+            this.rdbBenzina.Size = new System.Drawing.Size(80, 21);
+            this.rdbBenzina.TabIndex = 0;
+            this.rdbBenzina.TabStop = true;
+            this.rdbBenzina.Text = "Benzina";
+            this.rdbBenzina.UseVisualStyleBackColor = true;
+            // 
+            // labelCombustibil
+            // 
+            this.labelCombustibil.AutoSize = true;
+            this.labelCombustibil.Location = new System.Drawing.Point(18, 393);
+            this.labelCombustibil.Name = "labelCombustibil";
+            this.labelCombustibil.Size = new System.Drawing.Size(80, 17);
+            this.labelCombustibil.TabIndex = 23;
+            this.labelCombustibil.Text = "Combustibil";
             // 
             // gpbCutie
             // 
@@ -406,27 +391,6 @@ namespace InterfataUtilizator_WindowsForms
             this.gpbCutie.Size = new System.Drawing.Size(212, 39);
             this.gpbCutie.TabIndex = 24;
             this.gpbCutie.TabStop = false;
-            // 
-            // labelCutieDeViteze
-            // 
-            this.labelCutieDeViteze.AutoSize = true;
-            this.labelCutieDeViteze.Location = new System.Drawing.Point(18, 493);
-            this.labelCutieDeViteze.Name = "labelCutieDeViteze";
-            this.labelCutieDeViteze.Size = new System.Drawing.Size(101, 17);
-            this.labelCutieDeViteze.TabIndex = 25;
-            this.labelCutieDeViteze.Text = "Cutie de viteze";
-            this.labelCutieDeViteze.Click += new System.EventHandler(this.labelCutieDeViteze_Click);
-            // 
-            // rdbCutieManuala
-            // 
-            this.rdbCutieManuala.AutoSize = true;
-            this.rdbCutieManuala.Location = new System.Drawing.Point(7, 12);
-            this.rdbCutieManuala.Name = "rdbCutieManuala";
-            this.rdbCutieManuala.Size = new System.Drawing.Size(83, 21);
-            this.rdbCutieManuala.TabIndex = 0;
-            this.rdbCutieManuala.TabStop = true;
-            this.rdbCutieManuala.Text = "Manuala";
-            this.rdbCutieManuala.UseVisualStyleBackColor = true;
             // 
             // rdbCutieAutomata
             // 
@@ -439,6 +403,26 @@ namespace InterfataUtilizator_WindowsForms
             this.rdbCutieAutomata.Text = "Automata";
             this.rdbCutieAutomata.UseVisualStyleBackColor = true;
             // 
+            // rdbCutieManuala
+            // 
+            this.rdbCutieManuala.AutoSize = true;
+            this.rdbCutieManuala.Location = new System.Drawing.Point(7, 12);
+            this.rdbCutieManuala.Name = "rdbCutieManuala";
+            this.rdbCutieManuala.Size = new System.Drawing.Size(83, 21);
+            this.rdbCutieManuala.TabIndex = 0;
+            this.rdbCutieManuala.TabStop = true;
+            this.rdbCutieManuala.Text = "Manuala";
+            this.rdbCutieManuala.UseVisualStyleBackColor = true;
+            // 
+            // labelCutieDeViteze
+            // 
+            this.labelCutieDeViteze.AutoSize = true;
+            this.labelCutieDeViteze.Location = new System.Drawing.Point(18, 493);
+            this.labelCutieDeViteze.Name = "labelCutieDeViteze";
+            this.labelCutieDeViteze.Size = new System.Drawing.Size(101, 17);
+            this.labelCutieDeViteze.TabIndex = 25;
+            this.labelCutieDeViteze.Text = "Cutie de viteze";
+            // 
             // labelCuloare
             // 
             this.labelCuloare.AutoSize = true;
@@ -447,7 +431,6 @@ namespace InterfataUtilizator_WindowsForms
             this.labelCuloare.Size = new System.Drawing.Size(57, 17);
             this.labelCuloare.TabIndex = 26;
             this.labelCuloare.Text = "Culoare";
-            this.labelCuloare.Click += new System.EventHandler(this.labelCuloare_Click);
             // 
             // gpbCulori
             // 
@@ -466,83 +449,16 @@ namespace InterfataUtilizator_WindowsForms
             this.gpbCulori.TabIndex = 28;
             this.gpbCulori.TabStop = false;
             // 
-            // rdbNegru
+            // rdbMov
             // 
-            this.rdbNegru.AutoSize = true;
-            this.rdbNegru.Location = new System.Drawing.Point(6, 21);
-            this.rdbNegru.Name = "rdbNegru";
-            this.rdbNegru.Size = new System.Drawing.Size(68, 21);
-            this.rdbNegru.TabIndex = 29;
-            this.rdbNegru.TabStop = true;
-            this.rdbNegru.Text = "Negru";
-            this.rdbNegru.UseVisualStyleBackColor = true;
-            // 
-            // rdbAlb
-            // 
-            this.rdbAlb.AutoSize = true;
-            this.rdbAlb.Location = new System.Drawing.Point(6, 48);
-            this.rdbAlb.Name = "rdbAlb";
-            this.rdbAlb.Size = new System.Drawing.Size(49, 21);
-            this.rdbAlb.TabIndex = 29;
-            this.rdbAlb.TabStop = true;
-            this.rdbAlb.Text = "Alb";
-            this.rdbAlb.UseVisualStyleBackColor = true;
-            // 
-            // rdbGri
-            // 
-            this.rdbGri.AutoSize = true;
-            this.rdbGri.Location = new System.Drawing.Point(6, 75);
-            this.rdbGri.Name = "rdbGri";
-            this.rdbGri.Size = new System.Drawing.Size(48, 21);
-            this.rdbGri.TabIndex = 29;
-            this.rdbGri.TabStop = true;
-            this.rdbGri.Text = "Gri";
-            this.rdbGri.UseVisualStyleBackColor = true;
-            // 
-            // rdbRosu
-            // 
-            this.rdbRosu.AutoSize = true;
-            this.rdbRosu.Location = new System.Drawing.Point(6, 102);
-            this.rdbRosu.Name = "rdbRosu";
-            this.rdbRosu.Size = new System.Drawing.Size(62, 21);
-            this.rdbRosu.TabIndex = 29;
-            this.rdbRosu.TabStop = true;
-            this.rdbRosu.Text = "Rosu";
-            this.rdbRosu.UseVisualStyleBackColor = true;
-            // 
-            // rdbAlbastru
-            // 
-            this.rdbAlbastru.AutoSize = true;
-            this.rdbAlbastru.Location = new System.Drawing.Point(6, 129);
-            this.rdbAlbastru.Name = "rdbAlbastru";
-            this.rdbAlbastru.Size = new System.Drawing.Size(81, 21);
-            this.rdbAlbastru.TabIndex = 30;
-            this.rdbAlbastru.TabStop = true;
-            this.rdbAlbastru.Text = "Albastru";
-            this.rdbAlbastru.UseVisualStyleBackColor = true;
-            // 
-            // rdbVerde
-            // 
-            this.rdbVerde.AutoSize = true;
-            this.rdbVerde.Location = new System.Drawing.Point(84, 21);
-            this.rdbVerde.Name = "rdbVerde";
-            this.rdbVerde.Size = new System.Drawing.Size(67, 21);
-            this.rdbVerde.TabIndex = 30;
-            this.rdbVerde.TabStop = true;
-            this.rdbVerde.Text = "Verde";
-            this.rdbVerde.UseVisualStyleBackColor = true;
-            // 
-            // rdbGalben
-            // 
-            this.rdbGalben.AutoSize = true;
-            this.rdbGalben.Location = new System.Drawing.Point(84, 48);
-            this.rdbGalben.Name = "rdbGalben";
-            this.rdbGalben.Size = new System.Drawing.Size(75, 21);
-            this.rdbGalben.TabIndex = 30;
-            this.rdbGalben.TabStop = true;
-            this.rdbGalben.Text = "Galben";
-            this.rdbGalben.UseVisualStyleBackColor = true;
-            this.rdbGalben.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.rdbMov.AutoSize = true;
+            this.rdbMov.Location = new System.Drawing.Point(84, 102);
+            this.rdbMov.Name = "rdbMov";
+            this.rdbMov.Size = new System.Drawing.Size(55, 21);
+            this.rdbMov.TabIndex = 30;
+            this.rdbMov.TabStop = true;
+            this.rdbMov.Text = "Mov";
+            this.rdbMov.UseVisualStyleBackColor = true;
             // 
             // rdbPortocaliu
             // 
@@ -555,34 +471,210 @@ namespace InterfataUtilizator_WindowsForms
             this.rdbPortocaliu.Text = "Portocaliu";
             this.rdbPortocaliu.UseVisualStyleBackColor = true;
             // 
-            // rdbMov
+            // rdbGalben
             // 
-            this.rdbMov.AutoSize = true;
-            this.rdbMov.Location = new System.Drawing.Point(84, 102);
-            this.rdbMov.Name = "rdbMov";
-            this.rdbMov.Size = new System.Drawing.Size(55, 21);
-            this.rdbMov.TabIndex = 30;
-            this.rdbMov.TabStop = true;
-            this.rdbMov.Text = "Mov";
-            this.rdbMov.UseVisualStyleBackColor = true;
+            this.rdbGalben.AutoSize = true;
+            this.rdbGalben.Location = new System.Drawing.Point(84, 48);
+            this.rdbGalben.Name = "rdbGalben";
+            this.rdbGalben.Size = new System.Drawing.Size(75, 21);
+            this.rdbGalben.TabIndex = 30;
+            this.rdbGalben.TabStop = true;
+            this.rdbGalben.Text = "Galben";
+            this.rdbGalben.UseVisualStyleBackColor = true;
+            // 
+            // rdbVerde
+            // 
+            this.rdbVerde.AutoSize = true;
+            this.rdbVerde.Location = new System.Drawing.Point(84, 21);
+            this.rdbVerde.Name = "rdbVerde";
+            this.rdbVerde.Size = new System.Drawing.Size(67, 21);
+            this.rdbVerde.TabIndex = 30;
+            this.rdbVerde.TabStop = true;
+            this.rdbVerde.Text = "Verde";
+            this.rdbVerde.UseVisualStyleBackColor = true;
+            // 
+            // rdbAlbastru
+            // 
+            this.rdbAlbastru.AutoSize = true;
+            this.rdbAlbastru.Location = new System.Drawing.Point(6, 129);
+            this.rdbAlbastru.Name = "rdbAlbastru";
+            this.rdbAlbastru.Size = new System.Drawing.Size(81, 21);
+            this.rdbAlbastru.TabIndex = 30;
+            this.rdbAlbastru.TabStop = true;
+            this.rdbAlbastru.Text = "Albastru";
+            this.rdbAlbastru.UseVisualStyleBackColor = true;
+            // 
+            // rdbRosu
+            // 
+            this.rdbRosu.AutoSize = true;
+            this.rdbRosu.Location = new System.Drawing.Point(6, 102);
+            this.rdbRosu.Name = "rdbRosu";
+            this.rdbRosu.Size = new System.Drawing.Size(62, 21);
+            this.rdbRosu.TabIndex = 29;
+            this.rdbRosu.TabStop = true;
+            this.rdbRosu.Text = "Rosu";
+            this.rdbRosu.UseVisualStyleBackColor = true;
+            // 
+            // rdbGri
+            // 
+            this.rdbGri.AutoSize = true;
+            this.rdbGri.Location = new System.Drawing.Point(6, 75);
+            this.rdbGri.Name = "rdbGri";
+            this.rdbGri.Size = new System.Drawing.Size(48, 21);
+            this.rdbGri.TabIndex = 29;
+            this.rdbGri.TabStop = true;
+            this.rdbGri.Text = "Gri";
+            this.rdbGri.UseVisualStyleBackColor = true;
+            // 
+            // rdbAlb
+            // 
+            this.rdbAlb.AutoSize = true;
+            this.rdbAlb.Location = new System.Drawing.Point(6, 48);
+            this.rdbAlb.Name = "rdbAlb";
+            this.rdbAlb.Size = new System.Drawing.Size(49, 21);
+            this.rdbAlb.TabIndex = 29;
+            this.rdbAlb.TabStop = true;
+            this.rdbAlb.Text = "Alb";
+            this.rdbAlb.UseVisualStyleBackColor = true;
+            // 
+            // rdbNegru
+            // 
+            this.rdbNegru.AutoSize = true;
+            this.rdbNegru.Location = new System.Drawing.Point(6, 21);
+            this.rdbNegru.Name = "rdbNegru";
+            this.rdbNegru.Size = new System.Drawing.Size(68, 21);
+            this.rdbNegru.TabIndex = 29;
+            this.rdbNegru.TabStop = true;
+            this.rdbNegru.Text = "Negru";
+            this.rdbNegru.UseVisualStyleBackColor = true;
             // 
             // gpbCaroserie
             // 
-            this.gpbCaroserie.Controls.Add(this.radioButton10);
-            this.gpbCaroserie.Controls.Add(this.radioButton8);
-            this.gpbCaroserie.Controls.Add(this.radioButton9);
-            this.gpbCaroserie.Controls.Add(this.radioButton5);
-            this.gpbCaroserie.Controls.Add(this.radioButton7);
-            this.gpbCaroserie.Controls.Add(this.radioButton6);
-            this.gpbCaroserie.Controls.Add(this.radioButton1);
-            this.gpbCaroserie.Controls.Add(this.radioButton2);
-            this.gpbCaroserie.Controls.Add(this.radioButton4);
-            this.gpbCaroserie.Controls.Add(this.radioButton3);
+            this.gpbCaroserie.Controls.Add(this.rdbSUV);
+            this.gpbCaroserie.Controls.Add(this.rdbMinibus);
+            this.gpbCaroserie.Controls.Add(this.rdbMonovolum);
+            this.gpbCaroserie.Controls.Add(this.rdbBreak);
+            this.gpbCaroserie.Controls.Add(this.rdbOffroad);
+            this.gpbCaroserie.Controls.Add(this.rdbHatchback);
+            this.gpbCaroserie.Controls.Add(this.rdbCabrio);
+            this.gpbCaroserie.Controls.Add(this.rdbBerlina);
+            this.gpbCaroserie.Controls.Add(this.rdbPickup);
+            this.gpbCaroserie.Controls.Add(this.rdbCoupe);
             this.gpbCaroserie.Location = new System.Drawing.Point(383, 77);
             this.gpbCaroserie.Name = "gpbCaroserie";
             this.gpbCaroserie.Size = new System.Drawing.Size(183, 162);
             this.gpbCaroserie.TabIndex = 29;
             this.gpbCaroserie.TabStop = false;
+            // 
+            // rdbSUV
+            // 
+            this.rdbSUV.AutoSize = true;
+            this.rdbSUV.Location = new System.Drawing.Point(84, 129);
+            this.rdbSUV.Name = "rdbSUV";
+            this.rdbSUV.Size = new System.Drawing.Size(57, 21);
+            this.rdbSUV.TabIndex = 32;
+            this.rdbSUV.TabStop = true;
+            this.rdbSUV.Text = "SUV";
+            this.rdbSUV.UseVisualStyleBackColor = true;
+            // 
+            // rdbMinibus
+            // 
+            this.rdbMinibus.AutoSize = true;
+            this.rdbMinibus.Location = new System.Drawing.Point(84, 75);
+            this.rdbMinibus.Name = "rdbMinibus";
+            this.rdbMinibus.Size = new System.Drawing.Size(78, 21);
+            this.rdbMinibus.TabIndex = 32;
+            this.rdbMinibus.TabStop = true;
+            this.rdbMinibus.Text = "MiniBus";
+            this.rdbMinibus.UseVisualStyleBackColor = true;
+            // 
+            // rdbMonovolum
+            // 
+            this.rdbMonovolum.AutoSize = true;
+            this.rdbMonovolum.Location = new System.Drawing.Point(83, 102);
+            this.rdbMonovolum.Name = "rdbMonovolum";
+            this.rdbMonovolum.Size = new System.Drawing.Size(101, 21);
+            this.rdbMonovolum.TabIndex = 31;
+            this.rdbMonovolum.TabStop = true;
+            this.rdbMonovolum.Text = "Monovolum";
+            this.rdbMonovolum.UseVisualStyleBackColor = true;
+            // 
+            // rdbBreak
+            // 
+            this.rdbBreak.AutoSize = true;
+            this.rdbBreak.Location = new System.Drawing.Point(6, 130);
+            this.rdbBreak.Name = "rdbBreak";
+            this.rdbBreak.Size = new System.Drawing.Size(66, 21);
+            this.rdbBreak.TabIndex = 34;
+            this.rdbBreak.TabStop = true;
+            this.rdbBreak.Text = "Break";
+            this.rdbBreak.UseVisualStyleBackColor = true;
+            // 
+            // rdbOffroad
+            // 
+            this.rdbOffroad.AutoSize = true;
+            this.rdbOffroad.Location = new System.Drawing.Point(84, 48);
+            this.rdbOffroad.Name = "rdbOffroad";
+            this.rdbOffroad.Size = new System.Drawing.Size(82, 21);
+            this.rdbOffroad.TabIndex = 31;
+            this.rdbOffroad.TabStop = true;
+            this.rdbOffroad.Text = "OffRoad";
+            this.rdbOffroad.UseVisualStyleBackColor = true;
+            // 
+            // rdbHatchback
+            // 
+            this.rdbHatchback.AutoSize = true;
+            this.rdbHatchback.Location = new System.Drawing.Point(84, 21);
+            this.rdbHatchback.Name = "rdbHatchback";
+            this.rdbHatchback.Size = new System.Drawing.Size(96, 21);
+            this.rdbHatchback.TabIndex = 35;
+            this.rdbHatchback.TabStop = true;
+            this.rdbHatchback.Text = "Hatchback";
+            this.rdbHatchback.UseVisualStyleBackColor = true;
+            // 
+            // rdbCabrio
+            // 
+            this.rdbCabrio.AutoSize = true;
+            this.rdbCabrio.Location = new System.Drawing.Point(6, 21);
+            this.rdbCabrio.Name = "rdbCabrio";
+            this.rdbCabrio.Size = new System.Drawing.Size(70, 21);
+            this.rdbCabrio.TabIndex = 0;
+            this.rdbCabrio.TabStop = true;
+            this.rdbCabrio.Text = "Cabrio";
+            this.rdbCabrio.UseVisualStyleBackColor = true;
+            // 
+            // rdbBerlina
+            // 
+            this.rdbBerlina.AutoSize = true;
+            this.rdbBerlina.Location = new System.Drawing.Point(6, 48);
+            this.rdbBerlina.Name = "rdbBerlina";
+            this.rdbBerlina.Size = new System.Drawing.Size(73, 21);
+            this.rdbBerlina.TabIndex = 31;
+            this.rdbBerlina.TabStop = true;
+            this.rdbBerlina.Text = "Berlina";
+            this.rdbBerlina.UseVisualStyleBackColor = true;
+            // 
+            // rdbPickup
+            // 
+            this.rdbPickup.AutoSize = true;
+            this.rdbPickup.Location = new System.Drawing.Point(6, 102);
+            this.rdbPickup.Name = "rdbPickup";
+            this.rdbPickup.Size = new System.Drawing.Size(71, 21);
+            this.rdbPickup.TabIndex = 33;
+            this.rdbPickup.TabStop = true;
+            this.rdbPickup.Text = "Pickup";
+            this.rdbPickup.UseVisualStyleBackColor = true;
+            // 
+            // rdbCoupe
+            // 
+            this.rdbCoupe.AutoSize = true;
+            this.rdbCoupe.Location = new System.Drawing.Point(6, 75);
+            this.rdbCoupe.Name = "rdbCoupe";
+            this.rdbCoupe.Size = new System.Drawing.Size(70, 21);
+            this.rdbCoupe.TabIndex = 32;
+            this.rdbCoupe.TabStop = true;
+            this.rdbCoupe.Text = "Coupe";
+            this.rdbCoupe.UseVisualStyleBackColor = true;
             // 
             // labelCaroserie
             // 
@@ -592,118 +684,6 @@ namespace InterfataUtilizator_WindowsForms
             this.labelCaroserie.Size = new System.Drawing.Size(69, 17);
             this.labelCaroserie.TabIndex = 30;
             this.labelCaroserie.Text = "Caroserie";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 21);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(70, 21);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Cabrio";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 48);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(73, 21);
-            this.radioButton2.TabIndex = 31;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Berlina";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged_1);
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(6, 75);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(70, 21);
-            this.radioButton3.TabIndex = 32;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Coupe";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(6, 102);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(71, 21);
-            this.radioButton4.TabIndex = 33;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Pickup";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(6, 130);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(66, 21);
-            this.radioButton5.TabIndex = 34;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Break";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            // 
-            // radioButton6
-            // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(84, 21);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(95, 21);
-            this.radioButton6.TabIndex = 35;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Hatckback";
-            this.radioButton6.UseVisualStyleBackColor = true;
-            // 
-            // radioButton7
-            // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(84, 48);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(82, 21);
-            this.radioButton7.TabIndex = 31;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "OffRoad";
-            this.radioButton7.UseVisualStyleBackColor = true;
-            // 
-            // radioButton8
-            // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(84, 75);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(78, 21);
-            this.radioButton8.TabIndex = 32;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "MiniBus";
-            this.radioButton8.UseVisualStyleBackColor = true;
-            this.radioButton8.CheckedChanged += new System.EventHandler(this.radioButton8_CheckedChanged);
-            // 
-            // radioButton9
-            // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(83, 102);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(101, 21);
-            this.radioButton9.TabIndex = 31;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "Monovolum";
-            this.radioButton9.UseVisualStyleBackColor = true;
-            // 
-            // radioButton10
-            // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(84, 129);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(57, 21);
-            this.radioButton10.TabIndex = 32;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "SUV";
-            this.radioButton10.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -723,9 +703,6 @@ namespace InterfataUtilizator_WindowsForms
             this.gpbOptiuni.Controls.Add(this.checkBox16);
             this.gpbOptiuni.Controls.Add(this.checkBox15);
             this.gpbOptiuni.Controls.Add(this.checkBox14);
-            this.gpbOptiuni.Controls.Add(this.checkBox13);
-            this.gpbOptiuni.Controls.Add(this.checkBox12);
-            this.gpbOptiuni.Controls.Add(this.checkBox11);
             this.gpbOptiuni.Controls.Add(this.checkBox10);
             this.gpbOptiuni.Controls.Add(this.checkBox9);
             this.gpbOptiuni.Controls.Add(this.checkBox8);
@@ -733,158 +710,63 @@ namespace InterfataUtilizator_WindowsForms
             this.gpbOptiuni.Controls.Add(this.checkBox6);
             this.gpbOptiuni.Controls.Add(this.checkBox5);
             this.gpbOptiuni.Controls.Add(this.checkBox4);
-            this.gpbOptiuni.Controls.Add(this.checkBox3);
             this.gpbOptiuni.Controls.Add(this.checkBox2);
             this.gpbOptiuni.Controls.Add(this.checkBox1);
-            this.gpbOptiuni.Location = new System.Drawing.Point(383, 276);
+            this.gpbOptiuni.Location = new System.Drawing.Point(386, 284);
             this.gpbOptiuni.Name = "gpbOptiuni";
-            this.gpbOptiuni.Size = new System.Drawing.Size(315, 283);
+            this.gpbOptiuni.Size = new System.Drawing.Size(315, 234);
             this.gpbOptiuni.TabIndex = 32;
             this.gpbOptiuni.TabStop = false;
             // 
-            // checkBox1
+            // checkBox20
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(7, 13);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(57, 21);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "ABS";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox20.AutoSize = true;
+            this.checkBox20.Location = new System.Drawing.Point(166, 94);
+            this.checkBox20.Name = "checkBox20";
+            this.checkBox20.Size = new System.Drawing.Size(112, 21);
+            this.checkBox20.TabIndex = 34;
+            this.checkBox20.Text = "Pilot automat";
+            this.checkBox20.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // checkBox19
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(7, 40);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(90, 21);
-            this.checkBox2.TabIndex = 33;
-            this.checkBox2.Text = "Bluetooth";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.checkBox19.AutoSize = true;
+            this.checkBox19.Location = new System.Drawing.Point(166, 121);
+            this.checkBox19.Name = "checkBox19";
+            this.checkBox19.Size = new System.Drawing.Size(132, 21);
+            this.checkBox19.TabIndex = 34;
+            this.checkBox19.Text = "Incalzire scaune";
+            this.checkBox19.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // checkBox18
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(7, 67);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(67, 21);
-            this.checkBox3.TabIndex = 33;
-            this.checkBox3.Text = "Radio";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox18.AutoSize = true;
+            this.checkBox18.Location = new System.Drawing.Point(8, 94);
+            this.checkBox18.Name = "checkBox18";
+            this.checkBox18.Size = new System.Drawing.Size(68, 21);
+            this.checkBox18.TabIndex = 36;
+            this.checkBox18.Text = "Trapa";
+            this.checkBox18.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // checkBox17
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(7, 94);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(113, 21);
-            this.checkBox4.TabIndex = 33;
-            this.checkBox4.Text = "Servodirectie";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox17.AutoSize = true;
+            this.checkBox17.Location = new System.Drawing.Point(7, 67);
+            this.checkBox17.Name = "checkBox17";
+            this.checkBox17.Size = new System.Drawing.Size(155, 21);
+            this.checkBox17.TabIndex = 34;
+            this.checkBox17.Text = "Acoperis panoramic";
+            this.checkBox17.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // checkBox16
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(7, 121);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(122, 21);
-            this.checkBox5.TabIndex = 34;
-            this.checkBox5.Text = "Navigatie GPS";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(7, 148);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(131, 21);
-            this.checkBox6.TabIndex = 33;
-            this.checkBox6.Text = "Senzori parcare";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(7, 175);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(132, 21);
-            this.checkBox7.TabIndex = 33;
-            this.checkBox7.Text = "Camera parcare";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(7, 202);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(122, 21);
-            this.checkBox8.TabIndex = 33;
-            this.checkBox8.Text = "Comenzi volan";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(166, 13);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(148, 21);
-            this.checkBox9.TabIndex = 33;
-            this.checkBox9.Text = "Controlul stabilitatii";
-            this.checkBox9.UseVisualStyleBackColor = true;
-            // 
-            // checkBox10
-            // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(166, 40);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(143, 21);
-            this.checkBox10.TabIndex = 33;
-            this.checkBox10.Text = "Controlul tractiunii";
-            this.checkBox10.UseVisualStyleBackColor = true;
-            this.checkBox10.CheckedChanged += new System.EventHandler(this.checkBox10_CheckedChanged);
-            // 
-            // checkBox11
-            // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(166, 65);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(130, 21);
-            this.checkBox11.TabIndex = 35;
-            this.checkBox11.Text = "Faruri automate";
-            this.checkBox11.UseVisualStyleBackColor = true;
-            // 
-            // checkBox12
-            // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(166, 92);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(112, 21);
-            this.checkBox12.TabIndex = 33;
-            this.checkBox12.Text = "Faruri Xenon";
-            this.checkBox12.UseVisualStyleBackColor = true;
-            // 
-            // checkBox13
-            // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Location = new System.Drawing.Point(166, 121);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(130, 21);
-            this.checkBox13.TabIndex = 33;
-            this.checkBox13.Text = "Geamuri fumurii";
-            this.checkBox13.UseVisualStyleBackColor = true;
-            // 
-            // checkBox14
-            // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(166, 148);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(141, 21);
-            this.checkBox14.TabIndex = 33;
-            this.checkBox14.Text = "Geamuri electrice";
-            this.checkBox14.UseVisualStyleBackColor = true;
-            this.checkBox14.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged);
+            this.checkBox16.AutoSize = true;
+            this.checkBox16.Location = new System.Drawing.Point(166, 202);
+            this.checkBox16.Name = "checkBox16";
+            this.checkBox16.Size = new System.Drawing.Size(130, 21);
+            this.checkBox16.TabIndex = 33;
+            this.checkBox16.Text = "Oglinzi electrice";
+            this.checkBox16.UseVisualStyleBackColor = true;
             // 
             // checkBox15
             // 
@@ -896,64 +778,113 @@ namespace InterfataUtilizator_WindowsForms
             this.checkBox15.Text = "Interior piele";
             this.checkBox15.UseVisualStyleBackColor = true;
             // 
-            // checkBox16
+            // checkBox14
             // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.Location = new System.Drawing.Point(166, 202);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(130, 21);
-            this.checkBox16.TabIndex = 33;
-            this.checkBox16.Text = "Oglinzi electrice";
-            this.checkBox16.UseVisualStyleBackColor = true;
-            this.checkBox16.CheckedChanged += new System.EventHandler(this.checkBox16_CheckedChanged);
+            this.checkBox14.AutoSize = true;
+            this.checkBox14.Location = new System.Drawing.Point(166, 148);
+            this.checkBox14.Name = "checkBox14";
+            this.checkBox14.Size = new System.Drawing.Size(141, 21);
+            this.checkBox14.TabIndex = 33;
+            this.checkBox14.Text = "Geamuri electrice";
+            this.checkBox14.UseVisualStyleBackColor = true;
             // 
-            // checkBox17
+            // checkBox10
             // 
-            this.checkBox17.AutoSize = true;
-            this.checkBox17.Location = new System.Drawing.Point(7, 229);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(155, 21);
-            this.checkBox17.TabIndex = 34;
-            this.checkBox17.Text = "Acoperis panoramic";
-            this.checkBox17.UseVisualStyleBackColor = true;
+            this.checkBox10.AutoSize = true;
+            this.checkBox10.Location = new System.Drawing.Point(166, 40);
+            this.checkBox10.Name = "checkBox10";
+            this.checkBox10.Size = new System.Drawing.Size(143, 21);
+            this.checkBox10.TabIndex = 33;
+            this.checkBox10.Text = "Controlul tractiunii";
+            this.checkBox10.UseVisualStyleBackColor = true;
             // 
-            // checkBox18
+            // checkBox9
             // 
-            this.checkBox18.AutoSize = true;
-            this.checkBox18.Location = new System.Drawing.Point(7, 256);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(68, 21);
-            this.checkBox18.TabIndex = 36;
-            this.checkBox18.Text = "Trapa";
-            this.checkBox18.UseVisualStyleBackColor = true;
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Location = new System.Drawing.Point(166, 13);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(148, 21);
+            this.checkBox9.TabIndex = 33;
+            this.checkBox9.Text = "Controlul stabilitatii";
+            this.checkBox9.UseVisualStyleBackColor = true;
             // 
-            // checkBox19
+            // checkBox8
             // 
-            this.checkBox19.AutoSize = true;
-            this.checkBox19.Location = new System.Drawing.Point(166, 229);
-            this.checkBox19.Name = "checkBox19";
-            this.checkBox19.Size = new System.Drawing.Size(132, 21);
-            this.checkBox19.TabIndex = 34;
-            this.checkBox19.Text = "Incalzire scaune";
-            this.checkBox19.UseVisualStyleBackColor = true;
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.Location = new System.Drawing.Point(7, 202);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(122, 21);
+            this.checkBox8.TabIndex = 33;
+            this.checkBox8.Text = "Comenzi volan";
+            this.checkBox8.UseVisualStyleBackColor = true;
             // 
-            // checkBox20
+            // checkBox7
             // 
-            this.checkBox20.AutoSize = true;
-            this.checkBox20.Location = new System.Drawing.Point(166, 256);
-            this.checkBox20.Name = "checkBox20";
-            this.checkBox20.Size = new System.Drawing.Size(112, 21);
-            this.checkBox20.TabIndex = 34;
-            this.checkBox20.Text = "Pilot automat";
-            this.checkBox20.UseVisualStyleBackColor = true;
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Location = new System.Drawing.Point(7, 175);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(132, 21);
+            this.checkBox7.TabIndex = 33;
+            this.checkBox7.Text = "Camera parcare";
+            this.checkBox7.UseVisualStyleBackColor = true;
             // 
-            // richTextBox1
+            // checkBox6
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(819, 31);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(555, 528);
-            this.richTextBox1.TabIndex = 37;
-            this.richTextBox1.Text = "";
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(7, 148);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(131, 21);
+            this.checkBox6.TabIndex = 33;
+            this.checkBox6.Text = "Senzori parcare";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(7, 121);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(122, 21);
+            this.checkBox5.TabIndex = 34;
+            this.checkBox5.Text = "Navigatie GPS";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(166, 67);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(113, 21);
+            this.checkBox4.TabIndex = 33;
+            this.checkBox4.Text = "Servodirectie";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(7, 40);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(90, 21);
+            this.checkBox2.TabIndex = 33;
+            this.checkBox2.Text = "Bluetooth";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(7, 13);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(57, 21);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "ABS";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // rtbAfisare
+            // 
+            this.rtbAfisare.Location = new System.Drawing.Point(819, 31);
+            this.rtbAfisare.Name = "rtbAfisare";
+            this.rtbAfisare.Size = new System.Drawing.Size(555, 528);
+            this.rtbAfisare.TabIndex = 37;
+            this.rtbAfisare.Text = "";
             // 
             // btnAdauga
             // 
@@ -963,7 +894,7 @@ namespace InterfataUtilizator_WindowsForms
             this.btnAdauga.TabIndex = 38;
             this.btnAdauga.Text = "Adauga";
             this.btnAdauga.UseVisualStyleBackColor = true;
-            this.btnAdauga.Click += new System.EventHandler(this.button1_Click);
+            this.btnAdauga.Click += new System.EventHandler(this.btnAdauga_Click);
             // 
             // btnCautare
             // 
@@ -973,7 +904,6 @@ namespace InterfataUtilizator_WindowsForms
             this.btnCautare.TabIndex = 39;
             this.btnCautare.Text = "Cautare";
             this.btnCautare.UseVisualStyleBackColor = true;
-            this.btnCautare.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnModificare
             // 
@@ -992,7 +922,7 @@ namespace InterfataUtilizator_WindowsForms
             this.btnAfiseaza.TabIndex = 41;
             this.btnAfiseaza.Text = "Afiseaza";
             this.btnAfiseaza.UseVisualStyleBackColor = true;
-            this.btnAfiseaza.Click += new System.EventHandler(this.button4_Click);
+            this.btnAfiseaza.Click += new System.EventHandler(this.btnAfisare_Click);
             // 
             // btnExit
             // 
@@ -1002,6 +932,7 @@ namespace InterfataUtilizator_WindowsForms
             this.btnExit.TabIndex = 42;
             this.btnExit.Text = "Iesire";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnIesire_Click);
             // 
             // Form1
             // 
@@ -1013,7 +944,7 @@ namespace InterfataUtilizator_WindowsForms
             this.Controls.Add(this.btnModificare);
             this.Controls.Add(this.btnCautare);
             this.Controls.Add(this.btnAdauga);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.rtbAfisare);
             this.Controls.Add(this.gpbOptiuni);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelCaroserie);
@@ -1024,19 +955,19 @@ namespace InterfataUtilizator_WindowsForms
             this.Controls.Add(this.gpbCutie);
             this.Controls.Add(this.labelCombustibil);
             this.Controls.Add(this.groupBoxCombustibil);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.textBoxDataTranzactie);
             this.Controls.Add(this.labelDataTranzactie);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.labelPrenumeC);
-            this.Controls.Add(this.labelNumeC);
-            this.Controls.Add(this.labelPrenumeV);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.labelNumeV);
+            this.Controls.Add(this.textBoxPrenumeCumparator);
+            this.Controls.Add(this.labelPrenumeCumparator);
+            this.Controls.Add(this.labelNumeCumparator);
+            this.Controls.Add(this.labelPrenumeVanzator);
+            this.Controls.Add(this.textBoxNumeCumparator);
+            this.Controls.Add(this.textBoxPrenumeVanzator);
+            this.Controls.Add(this.textBoxNumeVanzator);
+            this.Controls.Add(this.labelNumeVanzator);
             this.Controls.Add(this.labelPret);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBoxPret);
+            this.Controls.Add(this.textBoxPutere);
             this.Controls.Add(this.labelPutere);
             this.Controls.Add(this.labelCapacitate);
             this.Controls.Add(this.labelAnFabricatie);
@@ -1048,7 +979,6 @@ namespace InterfataUtilizator_WindowsForms
             this.Controls.Add(this.textBoxMarca);
             this.Name = "Form1";
             this.Text = " Administrare Autoturisme";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBoxCombustibil.ResumeLayout(false);
             this.groupBoxCombustibil.PerformLayout();
             this.gpbCutie.ResumeLayout(false);
@@ -1075,19 +1005,19 @@ namespace InterfataUtilizator_WindowsForms
         private System.Windows.Forms.Label labelAnFabricatie;
         private System.Windows.Forms.Label labelCapacitate;
         private System.Windows.Forms.Label labelPutere;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxPutere;
+        private System.Windows.Forms.TextBox textBoxPret;
         private System.Windows.Forms.Label labelPret;
-        private System.Windows.Forms.Label labelNumeV;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label labelPrenumeV;
-        private System.Windows.Forms.Label labelNumeC;
-        private System.Windows.Forms.Label labelPrenumeC;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label labelNumeVanzator;
+        private System.Windows.Forms.TextBox textBoxNumeVanzator;
+        private System.Windows.Forms.TextBox textBoxPrenumeVanzator;
+        private System.Windows.Forms.TextBox textBoxNumeCumparator;
+        private System.Windows.Forms.Label labelPrenumeVanzator;
+        private System.Windows.Forms.Label labelNumeCumparator;
+        private System.Windows.Forms.Label labelPrenumeCumparator;
+        private System.Windows.Forms.TextBox textBoxPrenumeCumparator;
         private System.Windows.Forms.Label labelDataTranzactie;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBoxDataTranzactie;
         private System.Windows.Forms.GroupBox groupBoxCombustibil;
         private System.Windows.Forms.RadioButton rdbHibrid;
         private System.Windows.Forms.RadioButton rdbGpl;
@@ -1112,31 +1042,27 @@ namespace InterfataUtilizator_WindowsForms
         private System.Windows.Forms.RadioButton rdbNegru;
         private System.Windows.Forms.RadioButton rdbMov;
         private System.Windows.Forms.GroupBox gpbCaroserie;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton rdbCabrio;
+        private System.Windows.Forms.RadioButton rdbBerlina;
+        private System.Windows.Forms.RadioButton rdbCoupe;
         private System.Windows.Forms.Label labelCaroserie;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton7;
+        private System.Windows.Forms.RadioButton rdbPickup;
+        private System.Windows.Forms.RadioButton rdbBreak;
+        private System.Windows.Forms.RadioButton rdbHatchback;
+        private System.Windows.Forms.RadioButton rdbSUV;
+        private System.Windows.Forms.RadioButton rdbMinibus;
+        private System.Windows.Forms.RadioButton rdbMonovolum;
+        private System.Windows.Forms.RadioButton rdbOffroad;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox gpbOptiuni;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox6;
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox16;
         private System.Windows.Forms.CheckBox checkBox15;
         private System.Windows.Forms.CheckBox checkBox14;
-        private System.Windows.Forms.CheckBox checkBox13;
-        private System.Windows.Forms.CheckBox checkBox12;
-        private System.Windows.Forms.CheckBox checkBox11;
         private System.Windows.Forms.CheckBox checkBox10;
         private System.Windows.Forms.CheckBox checkBox9;
         private System.Windows.Forms.CheckBox checkBox8;
@@ -1145,7 +1071,7 @@ namespace InterfataUtilizator_WindowsForms
         private System.Windows.Forms.CheckBox checkBox19;
         private System.Windows.Forms.CheckBox checkBox18;
         private System.Windows.Forms.CheckBox checkBox17;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtbAfisare;
         private System.Windows.Forms.Button btnAdauga;
         private System.Windows.Forms.Button btnCautare;
         private System.Windows.Forms.Button btnModificare;

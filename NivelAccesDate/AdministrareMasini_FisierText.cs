@@ -58,10 +58,6 @@ namespace NivelAccesDate
             {
                 throw new Exception("Eroare generica. Mesaj: " + eGen.Message);
             }
-            foreach (var car in listOfCars)
-            {
-                
-            }
         }
 
 
@@ -97,6 +93,18 @@ namespace NivelAccesDate
             return cars;
         }
 
+        public List<Car> SearchCars(Car autoCautat, List<Car> listaAutoturisme)
+        {
+            //List<Car> autoFisier = GetCarsFile();
+            List<Car> autoGasite = new List<Car>();
+            foreach(Car c in listaAutoturisme)
+            {
+                if (autoCautat.Marca == c.Marca && autoCautat.Model == c.Model)
+                    autoGasite.Add(c);
+            }
+
+            return autoGasite; 
+        }
         public List<Car> GetCarsFile()
         {
             List<Car> cars = new List<Car>();
@@ -128,5 +136,52 @@ namespace NivelAccesDate
 
             return cars;
         }
+
+        public List<Car> ModifyCarPrice(List<Car> listaAutoturisme, Car carToBeModified)
+        {
+            List<Car> autoturismeSpecifice = SearchCars(carToBeModified, listaAutoturisme);
+            if (autoturismeSpecifice == null)
+                return listaAutoturisme;
+
+            Console.WriteLine("Informatii masini:");
+            if (autoturismeSpecifice.Count == 0)
+            {
+                Console.WriteLine("- NONE -");
+                return listaAutoturisme;
+            }
+
+            for (int i = 0; i < autoturismeSpecifice.Count; i++)
+            {
+                ((Car)autoturismeSpecifice[i]).ShowCar();
+            }
+            int input;
+            bool idGasit = true;
+            do
+            {
+                idGasit = true;
+                Console.Write("Introduceti ID-ul masinii pentru a modifica pretul: ");
+                if(int.TryParse(Console.ReadLine(), out input))
+                {        
+                    foreach (Car c in autoturismeSpecifice)
+                    {
+                        if (input == c.IndexAutoturism)
+                        {
+                            idGasit = false;
+                            Console.WriteLine("Autoturism: " + c.Marca + " " + c.Model + " " + c.Pret);
+                            do
+                            {
+                                Console.Write("Introduceti pretul nou al masinii: ");
+                                if (int.TryParse(Console.ReadLine(), out input) && input >= 0)
+                                    break;
+                            } while (true);
+                            c.Pret = input;
+                        }
+                    }
+                }
+            } while (idGasit);
+
+            return listaAutoturisme;
+        }
+
     }
 }

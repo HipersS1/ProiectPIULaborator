@@ -9,22 +9,27 @@ namespace InterfataUtilizator
 {
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
             IStocareData adminCars = StocareFactory.GetAdministratorStocare();
-            ArrayList cars = adminCars.GetCars();
-            Car.LastIndexAutoturism = cars.Count;
-            List<Car> lista_cu_autoturisme;
-            //MARCA - MODEL - AN - CAPACITATE CILINDRICA - PUTERE - COMBUSTIBIL - CUTIE - CAROSERIE - CULOARE - PRET - NUME VAN - NUME CUMP - DATA TRANZACTIE - OPTIUNI 
+            ArrayList cars;
+            List<Car> listaAutoturismeFisier = adminCars.GetCarsFile();
 
+            //Car.LastIndexAutoturism = cars.Count;
+            List<Car> listaAutoturismeCautate;
+            //MARCA - MODEL - AN - CAPACITATE CILINDRICA - PUTERE - COMBUSTIBIL - CUTIE - CAROSERIE - CULOARE - PRET - NUME VAN - NUME CUMP - DATA TRANZACTIE - OPTIUNI 
+            Car autoturismTest = new Car("Audi", "A3", 2012, 7000);
+            Car autoturismTest2 = new Car("Audi", "A4", 2015, 8000);
+            Car autoturismTest3 = new Car("AUDI", "A4");
             while (true)
             {
                 Console.Clear();
                 Console.WriteLine("A. Afisare masini");
                 Console.WriteLine("B. Afisare masini tabel");
                 Console.WriteLine("C. Creare si Adaugare");
-                Console.WriteLine("F. Cautare/Modificare autoturism");
-                Console.WriteLine("T. TEST");
+                Console.WriteLine("F. Cautare autoturismE dupa marca si model");
+                Console.WriteLine("R. Cautare si modificare autoturism");
+                Console.WriteLine("T. Compara utilizand autoturism din linia de comanda");
                 Console.WriteLine("X. Inchidere program");
                 Console.WriteLine("Alegeti o optiune\n");
                 var key = Console.ReadKey(true).Key;
@@ -32,42 +37,39 @@ namespace InterfataUtilizator
                 switch (key)
                 {
                     case ConsoleKey.A:
-                        AfisareInformatii(cars);
+                        cars = ConvertListToArrayList(listaAutoturismeFisier);
+                        AfisareInformatii(cars);// arraylist
                         break;
                     case ConsoleKey.B:
-                        AfisareInformatiiTabel(cars);
+                        //AfisareInformatiiTabel(cars); // arraylist
+                        AfisareInformatiiTabel(listaAutoturismeFisier);
                         break;
                     case ConsoleKey.T:
-                        /*
-                        Car masinaTest = new Car("Audi,A4,2010,2200,150,DIESEL,MANUALA,BERLINA,NEGRU,7500,JON SNOW,POSEIDON KAN,25.4.2018,ABS,SERVODIRECTIE,NAVIGATIE,SENZORI PLOAIE,SENZORI PARCARE");
-                        masinaTest.ShowCar();
-                        Console.WriteLine(masinaTest.ConvertToString());
-                        Console.WriteLine(masinaTest.ConvertToString_File());
-                        masinaTest = Car.ReadCarInfo();
-                        masinaTest.ShowCar();
-                        Console.WriteLine(masinaTest.ConvertToString());
-                        Console.WriteLine(masinaTest.ConvertToString_File());
-                        AfisareInformatiiTabel(cars);
-                        */
+                        //Console.WriteLine("Rezultatul Compararii:\n" + (autoturismTest < CitireComanda(args)));
+                        Console.WriteLine("Rezultatul Compararii:\n" + (autoturismTest < autoturismTest2));
+
                         break;
                     case ConsoleKey.F:
-                        //lista_cu_autoturisme = Car.CautareMarca(cars);
-                        //AfisareInformatiiTabel(lista_cu_autoturisme);
-                        //Car.ModificareDateAutoturism(lista_cu_autoturisme);
-                        //if(lista_cu_autoturisme != null)
-                        //{
-                        //    lista_cu_autoturisme.RemoveRange(0, lista_cu_autoturisme.Count);
-                        //    foreach (var car in cars)
-                        //    {
-                        //        lista_cu_autoturisme.Add((Car)car);
-                        //    }
-                        //    adminCars.RewriteCars(lista_cu_autoturisme);
-                        //}
+                        Console.Write("Introduceti marca cautata: " );
+                        autoturismTest3.Marca = Console.ReadLine().ToUpper().Trim();
+                        Console.Write("Introduceti modelul cautat: " );
+                        autoturismTest3.Model = Console.ReadLine().ToUpper().Trim();
+                        listaAutoturismeCautate = adminCars.SearchCars(autoturismTest3, listaAutoturismeFisier);
+                        AfisareInformatiiTabel(listaAutoturismeCautate);
                         
+                        break;
+                    case ConsoleKey.R:
+                        Console.Write("Introduceti marca cautata: ");
+                        autoturismTest3.Marca = Console.ReadLine().ToUpper().Trim();
+                        Console.Write("Introduceti modelul cautat: ");
+                        autoturismTest3.Model = Console.ReadLine().ToUpper().Trim();
+                        listaAutoturismeFisier = adminCars.ModifyCarPrice(listaAutoturismeFisier, autoturismTest3);
+                        adminCars.RewriteCars(listaAutoturismeFisier);
                         break;
                     case ConsoleKey.C:
                         Car newCarCreated = CitireTastaturaAutoturism();
-                        cars.Add(newCarCreated);
+                        //cars.Add(newCarCreated); // arraylist
+                        listaAutoturismeFisier.Add(newCarCreated);
                         adminCars.AddCar(newCarCreated);
                         break;
                     case ConsoleKey.X:
@@ -136,8 +138,6 @@ namespace InterfataUtilizator
                 ((Car)info[i]).ShowCar();
             }
         }
-
-
         #endregion
 
         #region Citire Tastatura
@@ -218,6 +218,7 @@ namespace InterfataUtilizator
             autoturismCitit.Optiuni = optiuni;
             return autoturismCitit;
         }
+
         public static TipCombustibil CitireTipCombustibil()
         {
             var tipCombustibil = Enum.GetNames(typeof(TipCombustibil));
@@ -304,6 +305,27 @@ namespace InterfataUtilizator
 
         #endregion
 
+        #region Citire Comanda
+        public static Car CitireComanda(string[] args)
+        {
+            if (args.Length == 0)
+                return null;
+            Console.WriteLine($"{args[0]} {args[1]} {args[2]} {args[2]}");
+            Car autoturism = new Car(args[0], args[1], Convert.ToInt32(args[2]), Convert.ToInt32(args[3]));
+
+            return autoturism ;
+        }
+
+        #endregion
+
+
+        public static ArrayList ConvertListToArrayList(List<Car> listaAutoturisme)
+        {
+            ArrayList arr = new ArrayList();
+            foreach (Car c in listaAutoturisme)
+                arr.Add(c);
+            return arr;
+        }
 
     }
 }
