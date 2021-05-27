@@ -17,6 +17,7 @@ namespace NivelAccesDate
             sFisierText.Close();
         }
 
+        //LABORATOR 3 EX 1
         public void AddCar(Car car)
         {
             try
@@ -36,6 +37,37 @@ namespace NivelAccesDate
             }
         }
 
+        //LABORATOR 3 EX 1
+        public List<Car> GetCarsFile()
+        {
+            List<Car> cars = new List<Car>();
+
+            try
+            {
+                using (StreamReader sr = new StreamReader(NumeFisier))
+                {
+                    string line;
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        Car masinaDinFisier = new Car(line);
+                        cars.Add(masinaDinFisier);
+                    }
+                }
+            }
+            catch (IOException eIO)
+            {
+                throw new Exception("Eroare la deschiderea fisierului. Mesaj: " + eIO.Message);
+            }
+            catch (Exception eGen)
+            {
+
+                throw new Exception("Eroare generica. Mesaj: " + eGen.Message);
+            }
+
+            return cars;
+        }
+
+        //LABORATOR 3 EX 2
         public void RewriteCars(List<Car> listOfCars)
         {
             try
@@ -46,7 +78,6 @@ namespace NivelAccesDate
                     foreach (var car in listOfCars)
                     {
                         swFisierText.WriteLine(car.ConvertToString_File());
-
                     }
                 }
             }
@@ -59,20 +90,15 @@ namespace NivelAccesDate
                 throw new Exception("Eroare generica. Mesaj: " + eGen.Message);
             }
         }
-
-
         public ArrayList GetCars()
         {
             ArrayList cars = new ArrayList();
 
             try
             {
-                // instructiunea 'using' va apela sr.Close()
                 using (StreamReader sr = new StreamReader(NumeFisier))
                 {
                     string line;
-
-                    //citeste cate o linie si creaza un obiect de tip Student pe baza datelor din linia citita
                     while ((line = sr.ReadLine()) != null)
                     {
                         Car masinaDinFisier = new Car(line);
@@ -93,9 +119,11 @@ namespace NivelAccesDate
             return cars;
         }
 
+        //LABORATOR 3 EX 2
         public List<Car> SearchCars(Car autoCautat, List<Car> listaAutoturisme)
         {
-            //List<Car> autoFisier = GetCarsFile();
+            if (listaAutoturisme.Count == 0)
+                return listaAutoturisme;
             List<Car> autoGasite = new List<Car>();
             foreach(Car c in listaAutoturisme)
             {
@@ -105,38 +133,8 @@ namespace NivelAccesDate
 
             return autoGasite; 
         }
-        public List<Car> GetCarsFile()
-        {
-            List<Car> cars = new List<Car>();
 
-            try
-            {
-                // instructiunea 'using' va apela sr.Close()
-                using (StreamReader sr = new StreamReader(NumeFisier))
-                {
-                    string line;
-
-                    //citeste cate o linie si creaza un obiect de tip Student pe baza datelor din linia citita
-                    while ((line = sr.ReadLine()) != null)
-                    {
-                        Car masinaDinFisier = new Car(line);
-                        cars.Add(masinaDinFisier);
-                    }
-                }
-            }
-            catch (IOException eIO)
-            {
-                throw new Exception("Eroare la deschiderea fisierului. Mesaj: " + eIO.Message);
-            }
-            catch (Exception eGen)
-            {
-
-                throw new Exception("Eroare generica. Mesaj: " + eGen.Message);
-            }
-
-            return cars;
-        }
-
+        //LABORATOR 3 EX 2
         public List<Car> ModifyCarPrice(List<Car> listaAutoturisme, Car carToBeModified)
         {
             List<Car> autoturismeSpecifice = SearchCars(carToBeModified, listaAutoturisme);
@@ -152,7 +150,7 @@ namespace NivelAccesDate
 
             for (int i = 0; i < autoturismeSpecifice.Count; i++)
             {
-                ((Car)autoturismeSpecifice[i]).ShowCar();
+                (autoturismeSpecifice[i]).ShowCar();
             }
 
             bool idGasit;

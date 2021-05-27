@@ -45,29 +45,41 @@ namespace InterfataUtilizator
                         break;
                     case ConsoleKey.T:
                         //Console.WriteLine("Rezultatul Compararii:\n" + (autoturismTest < CitireComanda(args)));
-                        Console.WriteLine("Rezultatul Compararii:\n" + (autoturismTest < autoturismTest2));
+                        Console.WriteLine("Comparare\n" + autoturismTest.Marca + " " + autoturismTest.Model + " " + autoturismTest.Pret);
+                        Console.WriteLine("cu\n" + autoturismTest2.Marca + " " + autoturismTest2.Model + " " + autoturismTest2.Pret);
+                        Console.WriteLine("\nRezultatul Compararii:\n" + (autoturismTest < autoturismTest2));
 
                         break;
                     case ConsoleKey.F:
-                        Console.Write("Introduceti marca cautata: " );
-                        autoturismTest3.Marca = Console.ReadLine().ToUpper().Trim();
-                        Console.Write("Introduceti modelul cautat: " );
-                        autoturismTest3.Model = Console.ReadLine().ToUpper().Trim();
-                        listaAutoturismeCautate = adminCars.SearchCars(autoturismTest3, listaAutoturismeFisier);
-                        AfisareInformatiiTabel(listaAutoturismeCautate);
-                        
+                        if (listaAutoturismeFisier.Count > 0)
+                        {
+                            Console.Write("Introduceti marca cautata: ");
+                            autoturismTest3.Marca = Console.ReadLine().ToUpper().Trim();
+                            Console.Write("Introduceti modelul cautat: ");
+                            autoturismTest3.Model = Console.ReadLine().ToUpper().Trim();
+                            listaAutoturismeCautate = adminCars.SearchCars(autoturismTest3, listaAutoturismeFisier);
+                            AfisareInformatiiTabel(listaAutoturismeCautate);
+                        }
+                        else
+                        {
+                            Console.WriteLine("- NU EXISTA MASINI INTRODUSE -");
+                        }
                         break;
                     case ConsoleKey.R:
-                        Console.Write("Introduceti marca cautata: ");
-                        autoturismTest3.Marca = Console.ReadLine().ToUpper().Trim();
-                        Console.Write("Introduceti modelul cautat: ");
-                        autoturismTest3.Model = Console.ReadLine().ToUpper().Trim();
-                        listaAutoturismeFisier = adminCars.ModifyCarPrice(listaAutoturismeFisier, autoturismTest3);
-                        adminCars.RewriteCars(listaAutoturismeFisier);
+                        if (listaAutoturismeFisier.Count > 0)
+                        {
+                            Console.Write("Introduceti marca cautata: ");
+                            autoturismTest3.Marca = Console.ReadLine().ToUpper().Trim();
+                            Console.Write("Introduceti modelul cautat: ");
+                            autoturismTest3.Model = Console.ReadLine().ToUpper().Trim();
+                            listaAutoturismeFisier = adminCars.ModifyCarPrice(listaAutoturismeFisier, autoturismTest3);
+                            adminCars.RewriteCars(listaAutoturismeFisier);
+                        }
+                        else
+                            Console.WriteLine("- NU EXISTA MASINI INTRODUSE-");
                         break;
                     case ConsoleKey.C:
                         Car newCarCreated = CitireTastaturaAutoturism();
-                        //cars.Add(newCarCreated); // arraylist
                         listaAutoturismeFisier.Add(newCarCreated);
                         adminCars.AddCar(newCarCreated);
                         break;
@@ -83,6 +95,7 @@ namespace InterfataUtilizator
             }
 
         }
+
         #region Afisare
         public static void AfisareInformatii(ArrayList info)
         {
@@ -200,7 +213,6 @@ namespace InterfataUtilizator
             Console.Write("Data tranzactie(dd.mm.yyyy): ");
             input = Console.ReadLine();
             autoturismCitit.DataTranzactie = DateTime.Parse(input);
-            //DateTime.TryParse(Console.ReadLine(), out userDateTime);
 
             Console.WriteLine("Introduceti optiunile (ex: ABS,Geamuri electrice, Senzori ploaie): ");
             input = Console.ReadLine().ToUpper();
@@ -316,7 +328,6 @@ namespace InterfataUtilizator
         }
 
         #endregion
-
 
         public static ArrayList ConvertListToArrayList(List<Car> listaAutoturisme)
         {
