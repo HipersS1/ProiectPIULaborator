@@ -21,6 +21,7 @@ namespace InterfataUtilizator_WindowsForms
             InitializeComponent();
             adminAutoturisme = StocareFactory.GetAdministratorStocare();
             listAutoturismeFisier = adminAutoturisme.GetCarsFile();
+            dataGridMarca.ReadOnly = true;
         }
 
         private void btnCautare_Click(object sender, EventArgs e)
@@ -51,7 +52,6 @@ namespace InterfataUtilizator_WindowsForms
                 labelCautareMarca.Text = "Marca nu exista";
             }
 
-            //txtNume2.Text = String.Empty;
         }
 
         private void btnRevenire_Click(object sender, EventArgs e)

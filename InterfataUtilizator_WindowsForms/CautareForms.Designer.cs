@@ -29,6 +29,8 @@ namespace InterfataUtilizator_WindowsForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelCautareMarca = new System.Windows.Forms.Label();
             this.textBoxCautareMarca = new System.Windows.Forms.TextBox();
             this.dataGridMarca = new System.Windows.Forms.DataGridView();
@@ -57,10 +59,22 @@ namespace InterfataUtilizator_WindowsForms
             // 
             // dataGridMarca
             // 
+            this.dataGridMarca.BackgroundColor = System.Drawing.Color.Silver;
             this.dataGridMarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridMarca.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridMarca.Location = new System.Drawing.Point(12, 134);
             this.dataGridMarca.Name = "dataGridMarca";
-            this.dataGridMarca.RowHeadersWidth = 51;
+            this.dataGridMarca.RowHeadersVisible = false;
+            this.dataGridMarca.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
+            this.dataGridMarca.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridMarca.RowTemplate.Height = 24;
             this.dataGridMarca.Size = new System.Drawing.Size(776, 252);
             this.dataGridMarca.TabIndex = 2;

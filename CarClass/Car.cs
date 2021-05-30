@@ -145,10 +145,22 @@ namespace CarClass
 
         public string ConvertToString2()
         {
-            return String.Format("{0,-15}{1,-20}{2,-15}{3,-6}{4,-8}{5,-15}{6,-20}{7,-20}" +
-                "{8,-15}{9,-15}", Marca, Model, AnFabricatie.ToString(), CapacitateCilindrica.ToString(), 
-                Putere.ToString(), Combustibil.ToString(), CutieDeViteze.ToString(), Caroserie.ToString(), Culoare.ToString(), Pret.ToString());
+            return $"{Marca,-20}{Model,-15}{AnFabricatie.ToString(),-5}{CapacitateCilindrica.ToString(), -7}" +
+                   $"{Putere.ToString(), -7}{Combustibil.ToString(), -12}{CutieDeViteze.ToString(), -11}{Caroserie.ToString(), -11}{Culoare.ToString(), -11}" +
+                   $"{Pret.ToString(), -10}{Nume_Cumparator + " " + Prenume_Cumparator, -35}{Nume_Vanzator + " " + Prenume_Cumparator, -35}{DataTranzactie.ToString("dd.MM.yyyy"), -17}";
         }
+
+        public string ConvertToString3()
+        {
+            string s = $"{Marca,-20}{Model,-15}{AnFabricatie.ToString(),-5}{CapacitateCilindrica.ToString(),-7}" +
+                   $"{Putere.ToString(),-7}{Combustibil.ToString(),-12}{CutieDeViteze.ToString(),-11}{Caroserie.ToString(),-11}{Culoare.ToString(),-11}" +
+                   $"{Pret.ToString(),-10}{Nume_Cumparator + " " + Prenume_Cumparator,-35}{Nume_Vanzator + " " + Prenume_Cumparator,-35}{DataTranzactie.ToString("dd.MM.yyyy"),-17}";
+            foreach(string str in Optiuni)
+            { s += str +  ","; }
+
+            return s;
+        }
+
 
         public string ConvertToString_File()
         {

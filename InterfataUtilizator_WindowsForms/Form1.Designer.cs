@@ -29,6 +29,10 @@ namespace InterfataUtilizator_WindowsForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.textBoxMarca = new System.Windows.Forms.TextBox();
             this.labelMarca = new System.Windows.Forms.Label();
@@ -106,8 +110,6 @@ namespace InterfataUtilizator_WindowsForms
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.rtbAfisare = new System.Windows.Forms.RichTextBox();
-            this.labelID = new System.Windows.Forms.Label();
-            this.textBoxID = new System.Windows.Forms.TextBox();
             this.labelEroareIntroducere = new System.Windows.Forms.Label();
             this.listBoxAfisare = new System.Windows.Forms.ListBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -118,12 +120,15 @@ namespace InterfataUtilizator_WindowsForms
             this.iesireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deschideFisierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.dataGridAfisare = new System.Windows.Forms.DataGridView();
+            this.eliminaAutoturismToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxCombustibil.SuspendLayout();
             this.gpbCutie.SuspendLayout();
             this.gpbCulori.SuspendLayout();
             this.gpbCaroserie.SuspendLayout();
             this.gpbOptiuni.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAfisare)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxMarca
@@ -196,7 +201,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.labelCapacitate.AutoSize = true;
             this.labelCapacitate.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCapacitate.Location = new System.Drawing.Point(29, 156);
+            this.labelCapacitate.Location = new System.Drawing.Point(29, 154);
             this.labelCapacitate.Name = "labelCapacitate";
             this.labelCapacitate.Size = new System.Drawing.Size(123, 20);
             this.labelCapacitate.TabIndex = 7;
@@ -206,7 +211,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.labelPutere.AutoSize = true;
             this.labelPutere.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPutere.Location = new System.Drawing.Point(29, 184);
+            this.labelPutere.Location = new System.Drawing.Point(29, 182);
             this.labelPutere.Name = "labelPutere";
             this.labelPutere.Size = new System.Drawing.Size(45, 20);
             this.labelPutere.TabIndex = 8;
@@ -234,7 +239,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.labelPret.AutoSize = true;
             this.labelPret.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPret.Location = new System.Drawing.Point(29, 212);
+            this.labelPret.Location = new System.Drawing.Point(29, 210);
             this.labelPret.Name = "labelPret";
             this.labelPret.Size = new System.Drawing.Size(31, 20);
             this.labelPret.TabIndex = 11;
@@ -244,7 +249,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.labelNumeVanzator.AutoSize = true;
             this.labelNumeVanzator.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNumeVanzator.Location = new System.Drawing.Point(29, 240);
+            this.labelNumeVanzator.Location = new System.Drawing.Point(29, 238);
             this.labelNumeVanzator.Name = "labelNumeVanzator";
             this.labelNumeVanzator.Size = new System.Drawing.Size(93, 20);
             this.labelNumeVanzator.TabIndex = 12;
@@ -281,7 +286,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.labelPrenumeVanzator.AutoSize = true;
             this.labelPrenumeVanzator.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrenumeVanzator.Location = new System.Drawing.Point(29, 268);
+            this.labelPrenumeVanzator.Location = new System.Drawing.Point(29, 266);
             this.labelPrenumeVanzator.Name = "labelPrenumeVanzator";
             this.labelPrenumeVanzator.Size = new System.Drawing.Size(110, 20);
             this.labelPrenumeVanzator.TabIndex = 16;
@@ -291,7 +296,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.labelNumeCumparator.AutoSize = true;
             this.labelNumeCumparator.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNumeCumparator.Location = new System.Drawing.Point(29, 296);
+            this.labelNumeCumparator.Location = new System.Drawing.Point(29, 294);
             this.labelNumeCumparator.Name = "labelNumeCumparator";
             this.labelNumeCumparator.Size = new System.Drawing.Size(112, 20);
             this.labelNumeCumparator.TabIndex = 17;
@@ -301,7 +306,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.labelPrenumeCumparator.AutoSize = true;
             this.labelPrenumeCumparator.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrenumeCumparator.Location = new System.Drawing.Point(29, 324);
+            this.labelPrenumeCumparator.Location = new System.Drawing.Point(29, 322);
             this.labelPrenumeCumparator.Name = "labelPrenumeCumparator";
             this.labelPrenumeCumparator.Size = new System.Drawing.Size(129, 20);
             this.labelPrenumeCumparator.TabIndex = 18;
@@ -320,7 +325,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.labelDataTranzactie.AutoSize = true;
             this.labelDataTranzactie.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDataTranzactie.Location = new System.Drawing.Point(29, 352);
+            this.labelDataTranzactie.Location = new System.Drawing.Point(29, 350);
             this.labelDataTranzactie.Name = "labelDataTranzactie";
             this.labelDataTranzactie.Size = new System.Drawing.Size(91, 20);
             this.labelDataTranzactie.TabIndex = 20;
@@ -420,7 +425,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.labelCombustibil.AutoSize = true;
             this.labelCombustibil.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCombustibil.Location = new System.Drawing.Point(29, 412);
+            this.labelCombustibil.Location = new System.Drawing.Point(29, 415);
             this.labelCombustibil.Name = "labelCombustibil";
             this.labelCombustibil.Size = new System.Drawing.Size(75, 20);
             this.labelCombustibil.TabIndex = 23;
@@ -473,7 +478,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.labelCuloare.AutoSize = true;
             this.labelCuloare.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCuloare.Location = new System.Drawing.Point(612, 63);
+            this.labelCuloare.Location = new System.Drawing.Point(671, 63);
             this.labelCuloare.Name = "labelCuloare";
             this.labelCuloare.Size = new System.Drawing.Size(53, 20);
             this.labelCuloare.TabIndex = 26;
@@ -731,7 +736,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.labelCaroserie.AutoSize = true;
             this.labelCaroserie.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCaroserie.Location = new System.Drawing.Point(391, 74);
+            this.labelCaroserie.Location = new System.Drawing.Point(465, 63);
             this.labelCaroserie.Name = "labelCaroserie";
             this.labelCaroserie.Size = new System.Drawing.Size(63, 20);
             this.labelCaroserie.TabIndex = 30;
@@ -741,7 +746,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(391, 274);
+            this.label1.Location = new System.Drawing.Point(563, 274);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 20);
             this.label1.TabIndex = 31;
@@ -766,7 +771,7 @@ namespace InterfataUtilizator_WindowsForms
             this.gpbOptiuni.Controls.Add(this.checkBox2);
             this.gpbOptiuni.Controls.Add(this.checkBox1);
             this.gpbOptiuni.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpbOptiuni.Location = new System.Drawing.Point(394, 294);
+            this.gpbOptiuni.Location = new System.Drawing.Point(438, 297);
             this.gpbOptiuni.Name = "gpbOptiuni";
             this.gpbOptiuni.Size = new System.Drawing.Size(315, 231);
             this.gpbOptiuni.TabIndex = 32;
@@ -935,43 +940,22 @@ namespace InterfataUtilizator_WindowsForms
             // rtbAfisare
             // 
             this.rtbAfisare.BackColor = System.Drawing.Color.Silver;
-            this.rtbAfisare.Location = new System.Drawing.Point(819, 298);
+            this.rtbAfisare.Location = new System.Drawing.Point(1006, 268);
             this.rtbAfisare.Name = "rtbAfisare";
             this.rtbAfisare.ReadOnly = true;
-            this.rtbAfisare.Size = new System.Drawing.Size(674, 227);
+            this.rtbAfisare.Size = new System.Drawing.Size(294, 33);
             this.rtbAfisare.TabIndex = 37;
             this.rtbAfisare.Text = "";
-            // 
-            // labelID
-            // 
-            this.labelID.AutoSize = true;
-            this.labelID.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelID.Location = new System.Drawing.Point(29, 42);
-            this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(21, 20);
-            this.labelID.TabIndex = 43;
-            this.labelID.Text = "ID";
-            this.labelID.Visible = false;
-            // 
-            // textBoxID
-            // 
-            this.textBoxID.BackColor = System.Drawing.Color.Silver;
-            this.textBoxID.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxID.Location = new System.Drawing.Point(169, 39);
-            this.textBoxID.Name = "textBoxID";
-            this.textBoxID.Size = new System.Drawing.Size(100, 25);
-            this.textBoxID.TabIndex = 44;
-            this.textBoxID.Visible = false;
             // 
             // labelEroareIntroducere
             // 
             this.labelEroareIntroducere.AutoSize = true;
-            this.labelEroareIntroducere.BackColor = System.Drawing.Color.Black;
-            this.labelEroareIntroducere.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEroareIntroducere.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelEroareIntroducere.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEroareIntroducere.ForeColor = System.Drawing.Color.Red;
-            this.labelEroareIntroducere.Location = new System.Drawing.Point(398, 42);
+            this.labelEroareIntroducere.Location = new System.Drawing.Point(182, 42);
             this.labelEroareIntroducere.Name = "labelEroareIntroducere";
-            this.labelEroareIntroducere.Size = new System.Drawing.Size(129, 20);
+            this.labelEroareIntroducere.Size = new System.Drawing.Size(145, 19);
             this.labelEroareIntroducere.TabIndex = 45;
             this.labelEroareIntroducere.Text = "Eroare de introducere";
             this.labelEroareIntroducere.Visible = false;
@@ -979,11 +963,13 @@ namespace InterfataUtilizator_WindowsForms
             // listBoxAfisare
             // 
             this.listBoxAfisare.BackColor = System.Drawing.Color.Silver;
+            this.listBoxAfisare.Font = new System.Drawing.Font("Courier New", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxAfisare.FormattingEnabled = true;
+            this.listBoxAfisare.HorizontalScrollbar = true;
             this.listBoxAfisare.ItemHeight = 16;
             this.listBoxAfisare.Location = new System.Drawing.Point(819, 42);
             this.listBoxAfisare.Name = "listBoxAfisare";
-            this.listBoxAfisare.Size = new System.Drawing.Size(674, 244);
+            this.listBoxAfisare.Size = new System.Drawing.Size(674, 212);
             this.listBoxAfisare.TabIndex = 46;
             this.listBoxAfisare.SelectedIndexChanged += new System.EventHandler(this.listBoxAfisare_SelectedIndexChanged);
             // 
@@ -996,8 +982,9 @@ namespace InterfataUtilizator_WindowsForms
             this.afisareAutoturismeToolStripMenuItem,
             this.cautareAutoturismToolStripMenuItem,
             this.modificaAutoturismToolStripMenuItem,
-            this.iesireToolStripMenuItem,
-            this.deschideFisierToolStripMenuItem});
+            this.eliminaAutoturismToolStripMenuItem,
+            this.deschideFisierToolStripMenuItem,
+            this.iesireToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -1022,8 +1009,8 @@ namespace InterfataUtilizator_WindowsForms
             // cautareAutoturismToolStripMenuItem
             // 
             this.cautareAutoturismToolStripMenuItem.Name = "cautareAutoturismToolStripMenuItem";
-            this.cautareAutoturismToolStripMenuItem.Size = new System.Drawing.Size(151, 24);
-            this.cautareAutoturismToolStripMenuItem.Text = "Cautare Autoturism";
+            this.cautareAutoturismToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
+            this.cautareAutoturismToolStripMenuItem.Text = "Cauta Autoturism";
             this.cautareAutoturismToolStripMenuItem.Click += new System.EventHandler(this.btnCautare_Click);
             // 
             // modificaAutoturismToolStripMenuItem
@@ -1051,6 +1038,49 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // dataGridAfisare
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkGray;
+            this.dataGridAfisare.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridAfisare.BackgroundColor = System.Drawing.Color.Silver;
+            this.dataGridAfisare.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridAfisare.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridAfisare.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridAfisare.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridAfisare.GridColor = System.Drawing.Color.Silver;
+            this.dataGridAfisare.Location = new System.Drawing.Point(819, 307);
+            this.dataGridAfisare.Name = "dataGridAfisare";
+            this.dataGridAfisare.ReadOnly = true;
+            this.dataGridAfisare.RowHeadersWidth = 51;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver;
+            this.dataGridAfisare.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridAfisare.RowTemplate.Height = 24;
+            this.dataGridAfisare.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridAfisare.Size = new System.Drawing.Size(674, 234);
+            this.dataGridAfisare.TabIndex = 48;
+            this.dataGridAfisare.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridAfisare_CellContentClick);
+            // 
+            // eliminaAutoturismToolStripMenuItem
+            // 
+            this.eliminaAutoturismToolStripMenuItem.Name = "eliminaAutoturismToolStripMenuItem";
+            this.eliminaAutoturismToolStripMenuItem.Size = new System.Drawing.Size(149, 24);
+            this.eliminaAutoturismToolStripMenuItem.Text = "Elimina Autoturism";
+            this.eliminaAutoturismToolStripMenuItem.Click += new System.EventHandler(this.eliminaAutoturismToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1058,10 +1088,9 @@ namespace InterfataUtilizator_WindowsForms
             this.BackColor = System.Drawing.Color.DimGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1505, 553);
+            this.Controls.Add(this.dataGridAfisare);
             this.Controls.Add(this.listBoxAfisare);
             this.Controls.Add(this.labelEroareIntroducere);
-            this.Controls.Add(this.textBoxID);
-            this.Controls.Add(this.labelID);
             this.Controls.Add(this.rtbAfisare);
             this.Controls.Add(this.gpbOptiuni);
             this.Controls.Add(this.label1);
@@ -1115,6 +1144,7 @@ namespace InterfataUtilizator_WindowsForms
             this.gpbOptiuni.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAfisare)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1198,8 +1228,6 @@ namespace InterfataUtilizator_WindowsForms
         private System.Windows.Forms.CheckBox checkBox18;
         private System.Windows.Forms.CheckBox checkBox17;
         private System.Windows.Forms.RichTextBox rtbAfisare;
-        private System.Windows.Forms.Label labelID;
-        private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.Label labelEroareIntroducere;
         private System.Windows.Forms.ListBox listBoxAfisare;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -1210,6 +1238,8 @@ namespace InterfataUtilizator_WindowsForms
         private System.Windows.Forms.ToolStripMenuItem iesireToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deschideFisierToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.DataGridView dataGridAfisare;
+        private System.Windows.Forms.ToolStripMenuItem eliminaAutoturismToolStripMenuItem;
     }
 }
 

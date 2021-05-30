@@ -36,13 +36,19 @@ namespace InterfataUtilizator_WindowsForms
             {
                 str[i] = str[i].Remove(str[i].IndexOf('\r'));
                 Car auto = new Car(str[i]);
-                comboBoxAfisare.Items.Add(auto.ConvertToString());
+                comboBoxAfisare.Items.Add(auto.ConvertToString3());
             }
         }
 
         private void btnMeniu_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+        }
+
+        private void comboBoxAfisare_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            richTextBoxAfisareSelectie.Clear();
+            richTextBoxAfisareSelectie.AppendText(comboBoxAfisare.SelectedItem.ToString());
         }
     }
 }
