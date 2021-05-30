@@ -135,8 +135,11 @@ namespace NivelAccesDate
         }
 
         //LABORATOR 3 EX 2
+
+        
         public List<Car> ModifyCarPrice(List<Car> listaAutoturisme, Car carToBeModified)
         {
+            /*
             List<Car> autoturismeSpecifice = SearchCars(carToBeModified, listaAutoturisme);
             if (autoturismeSpecifice == null)
                 return listaAutoturisme;
@@ -177,9 +180,9 @@ namespace NivelAccesDate
                     }
                 }
             } while (idGasit);
-
+            */
             return listaAutoturisme;
+            
         }
-
     }
 }

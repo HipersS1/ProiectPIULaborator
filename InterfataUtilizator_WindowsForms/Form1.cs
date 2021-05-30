@@ -4,6 +4,8 @@ using System.Drawing;
 using System.Windows.Forms;
 using CarClass;
 using NivelAccesDate;
+using System.Linq;
+using System.IO;
 
 namespace InterfataUtilizator_WindowsForms
 {
@@ -12,6 +14,7 @@ namespace InterfataUtilizator_WindowsForms
         //LABORATOR 5 + 6
         IStocareData adminAutoturisme;
         List<Car> listAutoturismeFisier;
+        string TextArea;
         const int capacitateMin = 500;
         const int capacitateMax = 15000;
         const int putereMin = 50;
@@ -31,6 +34,7 @@ namespace InterfataUtilizator_WindowsForms
             int inputInt;
             bool isCorrect = true;
             ResetColors();
+            //ResetControls();
             if(!IsString(textBoxMarca.Text))
             {
                 labelMarca.ForeColor = Color.Red;
@@ -205,15 +209,22 @@ namespace InterfataUtilizator_WindowsForms
                 return;
             }
 
-            rtbAfisare.AppendText(autoturism.ConvertToString());
             adminAutoturisme.AddCar(autoturism);
-            Car.LastIndexAutoturism = 0;
+            //Car.LastIndexAutoturism = 0;
             listAutoturismeFisier = adminAutoturisme.GetCarsFile();
             ResetControls();
+            rtbAfisare.Clear();
+            listBoxAfisare.Items.Clear();
+            rtbAfisare.AppendText("Autoturismul a fost inregistrat cu succes\n\n");
+            //Afisare();
         }
 
-        private void btnAfisare_Click(object sender, EventArgs e)
+
+        #region Afisare
+
+        private void Afisare()
         {
+            ResetControls();
             rtbAfisare.Clear();
 
             foreach (Car c in listAutoturismeFisier)
@@ -222,13 +233,21 @@ namespace InterfataUtilizator_WindowsForms
                 rtbAfisare.AppendText(linieTabel + "\n");
             }
 
+            listBoxAfisare.Items.Clear();
+            listBoxAfisare.Items.Add(String.Format("{0,-15}{1,-12}{2,-10}{3,-6}{4,-8}{5,-15}{6,-20}{7,-20}" +
+                "{8,-15}{9,-15}", "Firma", "Model", "An", "CC", "Putere", "Combustibil", "Cutie", "Caroserie", "Culoare", "Pret"));
+            //listBoxAfisare.Items.Add("Lista autoturisme");
+            foreach (Car c in listAutoturismeFisier)
+            {
+                listBoxAfisare.Items.Add(c.ConvertToString2());
+            }
         }
-
-        private void btnIesire_Click(object sender, EventArgs e)
+        private void btnAfisare_Click(object sender, EventArgs e)
         {
-            Environment.Exit(1);
+            Afisare();
         }
-
+        #endregion
+        #region Validari
         public static bool IsString(string s)
         {
             if (string.IsNullOrEmpty(s))
@@ -241,6 +260,163 @@ namespace InterfataUtilizator_WindowsForms
 
             return true;
         }
+        private bool ValidareCampuri(Car c)
+        {
+            int inputInt;
+            bool isCorrect = true;
+            if (!IsString(textBoxMarca.Text))
+            {
+                labelMarca.ForeColor = Color.Red;
+                textBoxMarca.Clear();
+                isCorrect = false;
+            }
+            if (string.IsNullOrEmpty(textBoxModel.Text))
+            {
+                labelModel.ForeColor = Color.Red;
+                isCorrect = false;
+            }
+
+            if (int.TryParse(textBoxAnFabricatie.Text, out inputInt))
+            {
+                if (inputInt < 1900 || inputInt > DateTime.UtcNow.Year)
+                {
+                    labelAnFabricatie.ForeColor = Color.Red;
+                    textBoxAnFabricatie.Clear();
+                    isCorrect = false;
+                }
+            }
+            else
+            {
+                labelAnFabricatie.ForeColor = Color.Red;
+                textBoxAnFabricatie.Clear();
+                isCorrect = false;
+            }
+
+            if (int.TryParse(textBoxCapacitate.Text, out inputInt))
+            {
+                if (inputInt < capacitateMin || inputInt > capacitateMax)
+                {
+                    labelCapacitate.ForeColor = Color.Red;
+                    textBoxCapacitate.Clear();
+                    isCorrect = false;
+                }
+            }
+            else
+            {
+                labelCapacitate.ForeColor = Color.Red;
+                textBoxCapacitate.Clear();
+                isCorrect = false;
+            }
+
+            if (int.TryParse(textBoxPutere.Text, out inputInt))
+            {
+                if (inputInt < putereMin || inputInt > putereMax)
+                {
+                    labelPutere.ForeColor = Color.Red;
+                    textBoxPutere.Clear();
+                    isCorrect = false;
+                }
+            }
+            else
+            {
+                labelPutere.ForeColor = Color.Red;
+                textBoxPutere.Clear();
+                isCorrect = false;
+            }
+
+            if (int.TryParse(textBoxPret.Text, out inputInt))
+            {
+                if (inputInt < pretMin)
+                {
+                    labelPret.ForeColor = Color.Red;
+                    textBoxPret.Clear();
+                    isCorrect = false;
+                }
+            }
+            else
+            {
+                labelPret.ForeColor = Color.Red;
+                textBoxPret.Clear();
+                isCorrect = false;
+            }
+
+            //Vanzator
+            if (!IsString(textBoxNumeVanzator.Text))
+            {
+                labelNumeVanzator.ForeColor = Color.Red;
+                textBoxNumeVanzator.Clear();
+                isCorrect = false;
+            }
+
+            if (!IsString(textBoxPrenumeVanzator.Text))
+            {
+                labelPrenumeVanzator.ForeColor = Color.Red;
+                textBoxPrenumeVanzator.Clear();
+                isCorrect = false;
+            }
+
+            //Cumparator
+            if (!IsString(textBoxNumeCumparator.Text))
+            {
+                labelNumeCumparator.ForeColor = Color.Red;
+                textBoxNumeCumparator.Clear();
+                isCorrect = false;
+            }
+
+            if (!IsString(textBoxPrenumeCumparator.Text))
+            {
+                labelPrenumeCumparator.ForeColor = Color.Red;
+                textBoxPrenumeCumparator.Clear();
+                isCorrect = false;
+            }
+
+            DateTime data;
+            if (!DateTime.TryParse(textBoxDataTranzactie.Text, out data))
+            {
+                labelDataTranzactie.ForeColor = Color.Red;
+                textBoxDataTranzactie.Clear();
+                isCorrect = false;
+            }
+
+            if (data.Year < c.AnFabricatie)
+            {
+                labelDataTranzactie.ForeColor = Color.Red;
+                textBoxDataTranzactie.Clear();
+                isCorrect = false;
+            }
+
+            if (!GetCombustibilSelectat().HasValue)
+            {
+                labelCombustibil.ForeColor = Color.Red;
+                isCorrect = false;
+            }
+            if (!GetTipCutieSelectat().HasValue)
+            {
+                labelCutieDeViteze.ForeColor = Color.Red;
+                isCorrect = false;
+            }
+            if (!GetTipCaroserie().HasValue)
+            {
+                labelCaroserie.ForeColor = Color.Red;
+                isCorrect = false;
+            }
+            if (!GetCuloareSelectat().HasValue)
+            {
+                labelCuloare.ForeColor = Color.Red;
+                isCorrect = false;
+            }
+
+            //autoturism.Optiuni = GetOptiuniSelectate();
+
+            if (!isCorrect)
+            {
+                labelEroareIntroducere.Visible = true;
+                return false;
+            }
+
+            return true;
+        }
+        #endregion
 
         #region Reset CONTROLS / COLORS
         public void ResetControls()
@@ -420,6 +596,8 @@ namespace InterfataUtilizator_WindowsForms
         #region Cautare/Modificare
         private void btnCautare_Click(object sender, EventArgs e)
         {
+            #region Cod Vechi
+            /*
             bool isCorrect = true;
             ResetColors();
             rtbAfisare.Clear();
@@ -447,10 +625,25 @@ namespace InterfataUtilizator_WindowsForms
                 rtbAfisare.AppendText("ID: " +  c.IndexAutoturism + "\n" + c.ConvertToString() + "\n");
             }
 
-            DeactivateControlsForSearch(autoturismeCautate);
+            //DeactivateControlsForSearch(autoturismeCautate);
+            */
 
+            /*
+            using(CautareForms cautareForm = new CautareForms())
+            {
+                this.Hide();
+                cautareForm.ShowDialog();
+            }
+            */
+            #endregion
+
+            CautareForms cautareForm = new CautareForms();
+            this.Hide();
+            cautareForm.ShowDialog();
+            this.Show();
         }
 
+        ///Cod laborator precedent //Activare / Dezactivare
         public void ActivateControls()
         {
             ResetControls();
@@ -489,13 +682,11 @@ namespace InterfataUtilizator_WindowsForms
                 cb.Enabled = true;
             }
         }
-
         public void DeactivateControlsForSearch(List<Car> autoturismeCautate)
         {
             //rtbAfisare.Clear();
             if(autoturismeCautate.Count > 0)
             {
-                btnModificare.Enabled = true;
                 labelID.Visible = true;
                 textBoxID.Visible = true;
 
@@ -538,70 +729,216 @@ namespace InterfataUtilizator_WindowsForms
         }
         private void btnModificare_Click(object sender, EventArgs e)
         {
-            if (labelID.Visible == false)
+            //int inputInt;
+            //bool isCorrect = true;
+            if (listAutoturismeFisier.Count == 0)
                 return;
-            if (textBoxID.Text == string.Empty || !int.TryParse(textBoxID.Text, out int inputID))
-            {
-                labelID.ForeColor = Color.Red;
+            if (listBoxAfisare.SelectedIndex == 0)
                 return;
-            }
-            if (textBoxPret.Text == string.Empty || !int.TryParse(textBoxPret.Text, out int inputPret))
-            {
-                labelPret.ForeColor = Color.Red;
+            if (listBoxAfisare.SelectedIndex == -1)
                 return;
-            }
+            //if (labelID.Visible == false)
+            //    return;
+            //if (textBoxID.Text == string.Empty || !int.TryParse(textBoxID.Text, out int inputID))
+            //{
+            //    labelID.ForeColor = Color.Red;
+            //    return;
+            //}
+            //if (textBoxPret.Text == string.Empty || !int.TryParse(textBoxPret.Text, out int inputPret))
+            //{
+            //    labelPret.ForeColor = Color.Red;
+            //    return;
+            //}
+            if (ValidareCampuri(listAutoturismeFisier.ElementAt(listBoxAfisare.SelectedIndex - 1)) == false)
+                return;
+            listAutoturismeFisier.ElementAt(listBoxAfisare.SelectedIndex - 1).Marca = textBoxMarca.Text.ToUpper().Trim();
+            listAutoturismeFisier.ElementAt(listBoxAfisare.SelectedIndex - 1).Model = textBoxModel.Text.ToUpper().Trim();
+            listAutoturismeFisier.ElementAt(listBoxAfisare.SelectedIndex - 1).AnFabricatie = Convert.ToInt32(textBoxAnFabricatie.Text.Trim());
+            listAutoturismeFisier.ElementAt(listBoxAfisare.SelectedIndex - 1).CapacitateCilindrica = Convert.ToInt32(textBoxCapacitate.Text.Trim());
+            listAutoturismeFisier.ElementAt(listBoxAfisare.SelectedIndex - 1).Putere = Convert.ToInt32(textBoxPutere.Text.Trim());
+            listAutoturismeFisier.ElementAt(listBoxAfisare.SelectedIndex - 1).Pret = Convert.ToInt32(textBoxPret.Text.Trim());
+            DateTime data;
+            DateTime.TryParse(textBoxDataTranzactie.Text.Trim(), out data);
+            listAutoturismeFisier.ElementAt(listBoxAfisare.SelectedIndex - 1).DataTranzactie = data;
+            listAutoturismeFisier.ElementAt(listBoxAfisare.SelectedIndex - 1).Combustibil = (TipCombustibil)GetCombustibilSelectat();
+            listAutoturismeFisier.ElementAt(listBoxAfisare.SelectedIndex - 1).CutieDeViteze = (TipCutie)GetTipCutieSelectat();
+            listAutoturismeFisier.ElementAt(listBoxAfisare.SelectedIndex - 1).Caroserie = (TipCaroserie)GetTipCaroserie();
+            listAutoturismeFisier.ElementAt(listBoxAfisare.SelectedIndex - 1).Culoare = (Culori)GetCuloareSelectat();
+            listAutoturismeFisier.ElementAt(listBoxAfisare.SelectedIndex - 1).Optiuni = GetOptiuniSelectate();
 
-            foreach(Car c in listAutoturismeFisier)
-            {
-                if(c.IndexAutoturism == inputID)
-                {
-                    c.Pret = inputPret;
-                    rtbAfisare.Clear();
-                    rtbAfisare.AppendText("Modificare cu succes\n\n" + c.ConvertToString());
-                    break;
-                }
-            }
-            ResetControls();
-            btnModificare.Enabled = false;
-            labelID.Visible = false;
-            textBoxID.Visible = false;
-
-            textBoxAnFabricatie.Enabled = true;
-            textBoxCapacitate.Enabled = true;
-            textBoxPutere.Enabled = true;
-            textBoxNumeVanzator.Enabled = true;
-            textBoxNumeVanzator.Enabled = true;
-            textBoxPrenumeVanzator.Enabled = true;
-            textBoxNumeCumparator.Enabled = true;
-            textBoxPrenumeCumparator.Enabled = true;
-            textBoxDataTranzactie.Enabled = true;
-
-            btnAdauga.Enabled = true;
-            btnAfiseaza.Enabled = true;
-
-            foreach (RadioButton rb in groupBoxCombustibil.Controls)
-            {
-                rb.Enabled = true;
-            }
-            foreach (RadioButton rb in gpbCutie.Controls)
-            {
-                rb.Enabled = true;
-            }
-            foreach (RadioButton rb in gpbCaroserie.Controls)
-            {
-                rb.Enabled = true;
-            }
-            foreach (RadioButton rb in gpbCulori.Controls)
-            {
-                rb.Enabled = true;
-            }
-            foreach (CheckBox cb in gpbOptiuni.Controls)
-            {
-                cb.Enabled = true;
-            }
             adminAutoturisme.RewriteCars(listAutoturismeFisier);
-            rtbAfisare.AppendText("Informatiile au fost actualizate");
+            listBoxAfisare.Items.Clear();
+            listBoxAfisare.Items.Add(String.Format("{0,-15}{1,-12}{2,-10}{3,-6}{4,-8}{5,-15}{6,-20}{7,-20}" +
+                "{8,-15}{9,-15}", "Firma", "Model", "An", "CC", "Putere", "Combustibil", "Cutie", "Caroserie", "Culoare", "Pret"));
+            //listBoxAfisare.Items.Add("Lista autoturisme");
+            foreach (Car car in listAutoturismeFisier)
+            {
+                listBoxAfisare.Items.Add(car.ConvertToString2());
+            }
+
+            //foreach(Car c in listAutoturismeFisier)
+            //{
+            //    if(c.IndexAutoturism == inputID)
+            //    {
+            //        c.Pret = inputPret;
+            //        rtbAfisare.Clear();
+            //        rtbAfisare.AppendText("Modificare cu succes\n\n" + c.ConvertToString());
+            //        break;
+            //    }
+            //}
+            //ResetControls();
+            //btnModificare.Enabled = false;
+            //labelID.Visible = false;
+            //textBoxID.Visible = false;
+
+            //textBoxAnFabricatie.Enabled = true;
+            //textBoxCapacitate.Enabled = true;
+            //textBoxPutere.Enabled = true;
+            //textBoxNumeVanzator.Enabled = true;
+            //textBoxNumeVanzator.Enabled = true;
+            //textBoxPrenumeVanzator.Enabled = true;
+            //textBoxNumeCumparator.Enabled = true;
+            //textBoxPrenumeCumparator.Enabled = true;
+            //textBoxDataTranzactie.Enabled = true;
+
+            //btnAdauga.Enabled = true;
+            //btnAfiseaza.Enabled = true;
+
+            //foreach (RadioButton rb in groupBoxCombustibil.Controls)
+            //{
+            //    rb.Enabled = true;
+            //}
+            //foreach (RadioButton rb in gpbCutie.Controls)
+            //{
+            //    rb.Enabled = true;
+            //}
+            //foreach (RadioButton rb in gpbCaroserie.Controls)
+            //{
+            //    rb.Enabled = true;
+            //}
+            //foreach (RadioButton rb in gpbCulori.Controls)
+            //{
+            //    rb.Enabled = true;
+            //}
+            //foreach (CheckBox cb in gpbOptiuni.Controls)
+            //{
+            //    cb.Enabled = true;
+            //}
+            //adminAutoturisme.RewriteCars(listAutoturismeFisier);
+            //rtbAfisare.AppendText("Informatiile au fost actualizate");
         }
         #endregion
+
+        private void listBoxAfisare_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ResetControls();
+            if (listBoxAfisare.SelectedIndex == 0)
+                return;
+            if (listBoxAfisare.SelectedIndex == -1)
+                return;
+            Car c = listAutoturismeFisier.ElementAt(listBoxAfisare.SelectedIndex-1);
+            textBoxMarca.Text = c.Marca;
+            textBoxModel.Text = c.Model;
+            textBoxAnFabricatie.Text = c.AnFabricatie.ToString();
+            textBoxCapacitate.Text = c.CapacitateCilindrica.ToString();
+            textBoxPutere.Text = c.Putere.ToString();
+            textBoxPret.Text = c.Pret.ToString();
+            textBoxNumeVanzator.Text = c.Nume_Vanzator;
+            textBoxPrenumeVanzator.Text = c.Prenume_Vanzator;
+            textBoxNumeCumparator.Text = c.Nume_Cumparator;
+            textBoxPrenumeCumparator.Text = c.Prenume_Cumparator;
+            textBoxDataTranzactie.Text = c.DataTranzactie.ToString("dd.MM.yyyy");
+            foreach (Control control in groupBoxCombustibil.Controls)
+            {
+                if (control.GetType() == typeof(RadioButton))
+                {
+                    if (c.Combustibil.ToString() == control.Text.ToUpper())
+                    {
+                        ((RadioButton)control).Checked = true;
+                    }
+                }
+            }
+
+            foreach (Control control in gpbCutie.Controls)
+            {
+                if (control.GetType() == typeof(RadioButton))
+                {
+                    if (c.CutieDeViteze.ToString() == control.Text.ToUpper())
+                    {
+                        ((RadioButton)control).Checked = true;
+                    }
+                }
+            }
+
+            foreach (Control control in gpbCaroserie.Controls)
+            {
+                if (control.GetType() == typeof(RadioButton))
+                {
+                    if (c.Caroserie.ToString() == control.Text.ToUpper())
+                    {
+                        ((RadioButton)control).Checked = true;
+                    }
+                }
+            }
+            foreach (Control control in gpbCulori.Controls)
+            {
+                if (control.GetType() == typeof(RadioButton))
+                {
+                    if (c.Culoare.ToString() == control.Text.ToUpper())
+                    {
+                        ((RadioButton)control).Checked = true;
+                    }
+                }
+            }
+
+            foreach (Control control in gpbOptiuni.Controls)
+            {
+                if (control.GetType() == typeof(CheckBox))
+                {
+                    foreach (string optiune in c.Optiuni)
+                        if (((CheckBox)control).Text == optiune)
+                            ((CheckBox)control).Checked = true;
+                }
+            }
+        }
+
+
+        ///laborator 8 filedialog
+        private void deschideFisierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var fileContent = string.Empty;
+            var filePath = string.Empty;
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            openFileDialog.InitialDirectory = "d:\\";
+            openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            openFileDialog.FilterIndex = 2;
+            openFileDialog.RestoreDirectory = true;
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                //Get the path of specified file
+                filePath = openFileDialog.FileName;
+
+                //Read the contents of the file into a stream
+                var fileStream = openFileDialog.OpenFile();
+
+                using (StreamReader reader = new StreamReader(fileStream))
+                {
+                    TextArea = reader.ReadToEnd();
+                    reader.Close();
+                }
+            }
+            AfisareFisier cautareForm = new AfisareFisier(TextArea);
+            this.Hide();
+            cautareForm.ShowDialog();
+            this.Show();
+        }
+
+        private void iesireToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(1);
+        }
+
     }
 }
