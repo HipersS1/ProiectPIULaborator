@@ -78,6 +78,12 @@
     <Compile Include="CautareForms.Designer.cs">
       <DependentUpon>CautareForms.cs</DependentUpon>
     </Compile>
+    <Compile Include="FereastraDeschideFisier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FereastraDeschideFisier.Designer.cs">
+      <DependentUpon>FereastraDeschideFisier.cs</DependentUpon>
+    </Compile>
     <Compile Include="FereastraModificare.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CautareForms.resx">
       <DependentUpon>CautareForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FereastraDeschideFisier.resx">
+      <DependentUpon>FereastraDeschideFisier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FereastraModificare.resx">
       <DependentUpon>FereastraModificare.cs</DependentUpon>

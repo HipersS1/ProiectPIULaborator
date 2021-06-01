@@ -30,11 +30,11 @@ namespace InterfataUtilizator_WindowsForms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FereastraModificare));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelBaraUp = new System.Windows.Forms.Panel();
             this.buttonReturn = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
@@ -42,6 +42,7 @@ namespace InterfataUtilizator_WindowsForms
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelHome = new System.Windows.Forms.Label();
             this.panelBaraLeft = new System.Windows.Forms.Panel();
+            this.buttonElimina = new System.Windows.Forms.Button();
             this.buttonSelecteaza = new System.Windows.Forms.Button();
             this.buttonInfo = new System.Windows.Forms.Button();
             this.buttonModificare = new System.Windows.Forms.Button();
@@ -126,7 +127,6 @@ namespace InterfataUtilizator_WindowsForms
             this.panelAfisareListaAutoturisme = new System.Windows.Forms.Panel();
             this.labelAlegeAutoturism = new System.Windows.Forms.Label();
             this.dataGridAfisare = new System.Windows.Forms.DataGridView();
-            this.buttonElimina = new System.Windows.Forms.Button();
             this.panelBaraUp.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -215,11 +215,11 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.labelHome.AutoSize = true;
             this.labelHome.Font = new System.Drawing.Font("Lucida Console", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHome.Location = new System.Drawing.Point(553, 9);
+            this.labelHome.Location = new System.Drawing.Point(482, 13);
             this.labelHome.Name = "labelHome";
-            this.labelHome.Size = new System.Drawing.Size(289, 43);
+            this.labelHome.Size = new System.Drawing.Size(451, 43);
             this.labelHome.TabIndex = 1;
-            this.labelHome.Text = "Modificare";
+            this.labelHome.Text = "MENIU MODIFICARE";
             // 
             // panelBaraLeft
             // 
@@ -234,6 +234,23 @@ namespace InterfataUtilizator_WindowsForms
             this.panelBaraLeft.Name = "panelBaraLeft";
             this.panelBaraLeft.Size = new System.Drawing.Size(187, 482);
             this.panelBaraLeft.TabIndex = 1;
+            // 
+            // buttonElimina
+            // 
+            this.buttonElimina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(173)))), ((int)(((byte)(0)))));
+            this.buttonElimina.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonElimina.FlatAppearance.BorderSize = 0;
+            this.buttonElimina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonElimina.Font = new System.Drawing.Font("Lucida Console", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonElimina.Location = new System.Drawing.Point(0, 114);
+            this.buttonElimina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonElimina.Name = "buttonElimina";
+            this.buttonElimina.Size = new System.Drawing.Size(187, 57);
+            this.buttonElimina.TabIndex = 9;
+            this.buttonElimina.Text = "Elimina";
+            this.buttonElimina.UseVisualStyleBackColor = false;
+            this.buttonElimina.Visible = false;
+            this.buttonElimina.Click += new System.EventHandler(this.buttonElimina_Click);
             // 
             // buttonSelecteaza
             // 
@@ -334,12 +351,12 @@ namespace InterfataUtilizator_WindowsForms
             // labelConfirmareAdaugare
             // 
             this.labelConfirmareAdaugare.AutoSize = true;
-            this.labelConfirmareAdaugare.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelConfirmareAdaugare.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelConfirmareAdaugare.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(64)))));
+            this.labelConfirmareAdaugare.Font = new System.Drawing.Font("Times New Roman", 16.2F);
             this.labelConfirmareAdaugare.ForeColor = System.Drawing.Color.Green;
             this.labelConfirmareAdaugare.Location = new System.Drawing.Point(719, 182);
             this.labelConfirmareAdaugare.Name = "labelConfirmareAdaugare";
-            this.labelConfirmareAdaugare.Size = new System.Drawing.Size(245, 25);
+            this.labelConfirmareAdaugare.Size = new System.Drawing.Size(342, 33);
             this.labelConfirmareAdaugare.TabIndex = 82;
             this.labelConfirmareAdaugare.Text = "Autoturismul a fost modificat";
             this.labelConfirmareAdaugare.Visible = false;
@@ -875,12 +892,12 @@ namespace InterfataUtilizator_WindowsForms
             // labelEroareIntroducere
             // 
             this.labelEroareIntroducere.AutoSize = true;
-            this.labelEroareIntroducere.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelEroareIntroducere.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEroareIntroducere.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(64)))));
+            this.labelEroareIntroducere.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEroareIntroducere.ForeColor = System.Drawing.Color.Red;
             this.labelEroareIntroducere.Location = new System.Drawing.Point(506, 182);
             this.labelEroareIntroducere.Name = "labelEroareIntroducere";
-            this.labelEroareIntroducere.Size = new System.Drawing.Size(187, 25);
+            this.labelEroareIntroducere.Size = new System.Drawing.Size(254, 33);
             this.labelEroareIntroducere.TabIndex = 68;
             this.labelEroareIntroducere.Text = "Eroare de introducere";
             this.labelEroareIntroducere.Visible = false;
@@ -1235,7 +1252,7 @@ namespace InterfataUtilizator_WindowsForms
             this.labelAlegeAutoturism.Name = "labelAlegeAutoturism";
             this.labelAlegeAutoturism.Size = new System.Drawing.Size(262, 24);
             this.labelAlegeAutoturism.TabIndex = 52;
-            this.labelAlegeAutoturism.Text = "Alege autoturismul";
+            this.labelAlegeAutoturism.Text = "ALEGE AUTOTURISMUL";
             // 
             // dataGridAfisare
             // 
@@ -1243,76 +1260,59 @@ namespace InterfataUtilizator_WindowsForms
             this.dataGridAfisare.AllowUserToDeleteRows = false;
             this.dataGridAfisare.AllowUserToResizeColumns = false;
             this.dataGridAfisare.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(173)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Lucida Console", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridAfisare.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(173)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Lucida Console", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dataGridAfisare.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
             this.dataGridAfisare.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridAfisare.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(92)))), ((int)(((byte)(101)))));
             this.dataGridAfisare.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridAfisare.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(142)))), ((int)(((byte)(155)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Lucida Console", 12F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridAfisare.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(142)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Lucida Console", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridAfisare.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.dataGridAfisare.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridAfisare.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Lucida Console", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridAfisare.DefaultCellStyle = dataGridViewCellStyle23;
             this.dataGridAfisare.EnableHeadersVisualStyles = false;
             this.dataGridAfisare.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dataGridAfisare.Location = new System.Drawing.Point(17, 73);
             this.dataGridAfisare.MultiSelect = false;
             this.dataGridAfisare.Name = "dataGridAfisare";
             this.dataGridAfisare.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(142)))), ((int)(((byte)(155)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Lucida Console", 12F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridAfisare.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(142)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Lucida Console", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridAfisare.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.dataGridAfisare.RowHeadersVisible = false;
             this.dataGridAfisare.RowHeadersWidth = 51;
             this.dataGridAfisare.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Lucida Console", 10.2F);
-            this.dataGridAfisare.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Lucida Console", 10.2F);
+            this.dataGridAfisare.RowsDefaultCellStyle = dataGridViewCellStyle25;
             this.dataGridAfisare.RowTemplate.Height = 24;
             this.dataGridAfisare.RowTemplate.ReadOnly = true;
             this.dataGridAfisare.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridAfisare.Size = new System.Drawing.Size(977, 377);
             this.dataGridAfisare.TabIndex = 51;
             this.dataGridAfisare.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridAfisare_DoubleClick);
-            // 
-            // buttonElimina
-            // 
-            this.buttonElimina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(173)))), ((int)(((byte)(0)))));
-            this.buttonElimina.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonElimina.FlatAppearance.BorderSize = 0;
-            this.buttonElimina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonElimina.Font = new System.Drawing.Font("Lucida Console", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonElimina.Location = new System.Drawing.Point(0, 114);
-            this.buttonElimina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonElimina.Name = "buttonElimina";
-            this.buttonElimina.Size = new System.Drawing.Size(187, 57);
-            this.buttonElimina.TabIndex = 9;
-            this.buttonElimina.Text = "Elimina";
-            this.buttonElimina.UseVisualStyleBackColor = false;
-            this.buttonElimina.Visible = false;
-            this.buttonElimina.Click += new System.EventHandler(this.buttonElimina_Click);
             // 
             // FereastraModificare
             // 

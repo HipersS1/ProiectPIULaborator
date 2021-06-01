@@ -213,12 +213,12 @@ namespace InterfataUtilizator_WindowsForms
             // labelEroareIntroducere
             // 
             this.labelEroareIntroducere.AutoSize = true;
-            this.labelEroareIntroducere.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelEroareIntroducere.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEroareIntroducere.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(64)))));
+            this.labelEroareIntroducere.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEroareIntroducere.ForeColor = System.Drawing.Color.Red;
-            this.labelEroareIntroducere.Location = new System.Drawing.Point(506, 182);
+            this.labelEroareIntroducere.Location = new System.Drawing.Point(451, 188);
             this.labelEroareIntroducere.Name = "labelEroareIntroducere";
-            this.labelEroareIntroducere.Size = new System.Drawing.Size(187, 25);
+            this.labelEroareIntroducere.Size = new System.Drawing.Size(242, 26);
             this.labelEroareIntroducere.TabIndex = 68;
             this.labelEroareIntroducere.Text = "Eroare de introducere";
             this.labelEroareIntroducere.Visible = false;
@@ -666,12 +666,12 @@ namespace InterfataUtilizator_WindowsForms
             // labelConfirmareAdaugare
             // 
             this.labelConfirmareAdaugare.AutoSize = true;
-            this.labelConfirmareAdaugare.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelConfirmareAdaugare.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelConfirmareAdaugare.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(64)))));
+            this.labelConfirmareAdaugare.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelConfirmareAdaugare.ForeColor = System.Drawing.Color.Green;
-            this.labelConfirmareAdaugare.Location = new System.Drawing.Point(719, 182);
+            this.labelConfirmareAdaugare.Location = new System.Drawing.Point(684, 188);
             this.labelConfirmareAdaugare.Name = "labelConfirmareAdaugare";
-            this.labelConfirmareAdaugare.Size = new System.Drawing.Size(253, 25);
+            this.labelConfirmareAdaugare.Size = new System.Drawing.Size(324, 26);
             this.labelConfirmareAdaugare.TabIndex = 82;
             this.labelConfirmareAdaugare.Text = "Autoturismul a fost inregistrat";
             this.labelConfirmareAdaugare.Visible = false;
@@ -1016,7 +1016,7 @@ namespace InterfataUtilizator_WindowsForms
             // labelCuloare
             // 
             this.labelCuloare.Font = new System.Drawing.Font("Lucida Console", 10.2F);
-            this.labelCuloare.Location = new System.Drawing.Point(738, 17);
+            this.labelCuloare.Location = new System.Drawing.Point(738, 20);
             this.labelCuloare.Name = "labelCuloare";
             this.labelCuloare.Size = new System.Drawing.Size(78, 14);
             this.labelCuloare.TabIndex = 77;

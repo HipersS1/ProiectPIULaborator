@@ -30,11 +30,11 @@ namespace InterfataUtilizator_WindowsForms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FereastraCautare));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle101 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle102 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle103 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle104 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle105 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelBaraUp = new System.Windows.Forms.Panel();
             this.buttonReturn = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
@@ -129,13 +129,12 @@ namespace InterfataUtilizator_WindowsForms
             // 
             // labelHome
             // 
-            this.labelHome.AutoSize = true;
             this.labelHome.Font = new System.Drawing.Font("Lucida Console", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHome.Location = new System.Drawing.Point(580, 7);
+            this.labelHome.Location = new System.Drawing.Point(538, 11);
             this.labelHome.Name = "labelHome";
-            this.labelHome.Size = new System.Drawing.Size(208, 43);
+            this.labelHome.Size = new System.Drawing.Size(372, 43);
             this.labelHome.TabIndex = 1;
-            this.labelHome.Text = "Cautare";
+            this.labelHome.Text = "MENIU CAUTARE";
             // 
             // panelBaraLeft
             // 
@@ -213,33 +212,33 @@ namespace InterfataUtilizator_WindowsForms
             this.dataGridAfisare.AllowUserToDeleteRows = false;
             this.dataGridAfisare.AllowUserToResizeColumns = false;
             this.dataGridAfisare.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(173)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Lucida Console", 10.2F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridAfisare.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle101.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(173)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle101.Font = new System.Drawing.Font("Lucida Console", 10.2F);
+            dataGridViewCellStyle101.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle101.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle101.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dataGridAfisare.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle101;
             this.dataGridAfisare.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridAfisare.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(92)))), ((int)(((byte)(101)))));
             this.dataGridAfisare.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridAfisare.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(142)))), ((int)(((byte)(155)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Lucida Console", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridAfisare.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle102.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle102.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(142)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle102.Font = new System.Drawing.Font("Lucida Console", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle102.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle102.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle102.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle102.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridAfisare.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle102;
             this.dataGridAfisare.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Lucida Console", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridAfisare.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle103.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle103.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle103.Font = new System.Drawing.Font("Lucida Console", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle103.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle103.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle103.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle103.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridAfisare.DefaultCellStyle = dataGridViewCellStyle103;
             this.dataGridAfisare.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridAfisare.EnableHeadersVisualStyles = false;
             this.dataGridAfisare.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -247,23 +246,23 @@ namespace InterfataUtilizator_WindowsForms
             this.dataGridAfisare.MultiSelect = false;
             this.dataGridAfisare.Name = "dataGridAfisare";
             this.dataGridAfisare.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(142)))), ((int)(((byte)(155)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Lucida Console", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridAfisare.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle104.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle104.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(142)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle104.Font = new System.Drawing.Font("Lucida Console", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle104.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle104.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle104.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle104.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridAfisare.RowHeadersDefaultCellStyle = dataGridViewCellStyle104;
             this.dataGridAfisare.RowHeadersVisible = false;
             this.dataGridAfisare.RowHeadersWidth = 51;
             this.dataGridAfisare.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Lucida Console", 10.2F);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridAfisare.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle105.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle105.Font = new System.Drawing.Font("Lucida Console", 10.2F);
+            dataGridViewCellStyle105.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle105.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle105.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dataGridAfisare.RowsDefaultCellStyle = dataGridViewCellStyle105;
             this.dataGridAfisare.RowTemplate.Height = 24;
             this.dataGridAfisare.RowTemplate.ReadOnly = true;
             this.dataGridAfisare.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -272,20 +271,22 @@ namespace InterfataUtilizator_WindowsForms
             // 
             // textBoxCautareMarca
             // 
+            this.textBoxCautareMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxCautareMarca.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCautareMarca.Location = new System.Drawing.Point(561, 105);
+            this.textBoxCautareMarca.Location = new System.Drawing.Point(561, 112);
             this.textBoxCautareMarca.Name = "textBoxCautareMarca";
-            this.textBoxCautareMarca.Size = new System.Drawing.Size(266, 27);
+            this.textBoxCautareMarca.Size = new System.Drawing.Size(262, 20);
             this.textBoxCautareMarca.TabIndex = 3;
             // 
             // labelCautareMarca
             // 
+            this.labelCautareMarca.AutoSize = true;
             this.labelCautareMarca.Font = new System.Drawing.Font("Lucida Console", 13.8F);
-            this.labelCautareMarca.Location = new System.Drawing.Point(561, 71);
+            this.labelCautareMarca.Location = new System.Drawing.Point(592, 85);
             this.labelCautareMarca.Name = "labelCautareMarca";
-            this.labelCautareMarca.Size = new System.Drawing.Size(266, 31);
+            this.labelCautareMarca.Size = new System.Drawing.Size(248, 24);
             this.labelCautareMarca.TabIndex = 4;
-            this.labelCautareMarca.Text = "Introduceti Marca";
+            this.labelCautareMarca.Text = "INTRODUCETI MARCA";
             // 
             // FereastraCautare
             // 
@@ -306,7 +307,6 @@ namespace InterfataUtilizator_WindowsForms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.panelBaraUp.ResumeLayout(false);
-            this.panelBaraUp.PerformLayout();
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelBaraLeft.ResumeLayout(false);

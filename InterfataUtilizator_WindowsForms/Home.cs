@@ -88,5 +88,15 @@ namespace InterfataUtilizator_WindowsForms
             string title = "INFO";
             MessageBox.Show(message, title);
         }
+
+        private void buttonDeschideFisier_Click(object sender, EventArgs e)
+        {
+            using (FereastraDeschideFisier Form = new FereastraDeschideFisier())
+            {
+                this.Hide();
+                Form.ShowDialog();
+                this.Show();
+            }
+        }
     }
 }

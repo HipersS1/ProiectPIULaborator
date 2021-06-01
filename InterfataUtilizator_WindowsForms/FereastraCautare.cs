@@ -57,7 +57,7 @@ namespace InterfataUtilizator_WindowsForms
         {
             
             labelCautareMarca.ForeColor = Color.Black;
-            labelCautareMarca.Text = "Introduceti Marca";
+            labelCautareMarca.Text = "INTRODUCETI MARCA";
             dataGridAfisare.DataSource = null;
             listAutoturismeFisier = adminAutoturisme.GetCarsFile();
             if (textBoxCautareMarca.Text == string.Empty)
@@ -79,8 +79,8 @@ namespace InterfataUtilizator_WindowsForms
             }
             else
             {
-                labelCautareMarca.ForeColor = Color.Red;
-                labelCautareMarca.Text = "Marca nu a fost gasita";
+                labelCautareMarca.ForeColor = Color.FromArgb(255, 193, 64);
+                labelCautareMarca.Text = "MARCA INEXISTENTA";
             }
             textBoxCautareMarca.Clear();
         }
