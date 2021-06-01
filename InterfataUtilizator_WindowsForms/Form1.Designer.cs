@@ -117,11 +117,11 @@ namespace InterfataUtilizator_WindowsForms
             this.afisareAutoturismeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cautareAutoturismToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificaAutoturismToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.iesireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminaAutoturismToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deschideFisierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iesireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.dataGridAfisare = new System.Windows.Forms.DataGridView();
-            this.eliminaAutoturismToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxCombustibil.SuspendLayout();
             this.gpbCutie.SuspendLayout();
             this.gpbCulori.SuspendLayout();
@@ -1020,12 +1020,12 @@ namespace InterfataUtilizator_WindowsForms
             this.modificaAutoturismToolStripMenuItem.Text = "Modifica Autoturism";
             this.modificaAutoturismToolStripMenuItem.Click += new System.EventHandler(this.btnModificare_Click);
             // 
-            // iesireToolStripMenuItem
+            // eliminaAutoturismToolStripMenuItem
             // 
-            this.iesireToolStripMenuItem.Name = "iesireToolStripMenuItem";
-            this.iesireToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
-            this.iesireToolStripMenuItem.Text = "Iesire";
-            this.iesireToolStripMenuItem.Click += new System.EventHandler(this.iesireToolStripMenuItem_Click);
+            this.eliminaAutoturismToolStripMenuItem.Name = "eliminaAutoturismToolStripMenuItem";
+            this.eliminaAutoturismToolStripMenuItem.Size = new System.Drawing.Size(149, 24);
+            this.eliminaAutoturismToolStripMenuItem.Text = "Elimina Autoturism";
+            this.eliminaAutoturismToolStripMenuItem.Click += new System.EventHandler(this.eliminaAutoturismToolStripMenuItem_Click);
             // 
             // deschideFisierToolStripMenuItem
             // 
@@ -1033,6 +1033,13 @@ namespace InterfataUtilizator_WindowsForms
             this.deschideFisierToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
             this.deschideFisierToolStripMenuItem.Text = "Deschide Fisier";
             this.deschideFisierToolStripMenuItem.Click += new System.EventHandler(this.deschideFisierToolStripMenuItem_Click);
+            // 
+            // iesireToolStripMenuItem
+            // 
+            this.iesireToolStripMenuItem.Name = "iesireToolStripMenuItem";
+            this.iesireToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
+            this.iesireToolStripMenuItem.Text = "Iesire";
+            this.iesireToolStripMenuItem.Click += new System.EventHandler(this.iesireToolStripMenuItem_Click);
             // 
             // openFileDialog1
             // 
@@ -1073,13 +1080,6 @@ namespace InterfataUtilizator_WindowsForms
             this.dataGridAfisare.Size = new System.Drawing.Size(674, 234);
             this.dataGridAfisare.TabIndex = 48;
             this.dataGridAfisare.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridAfisare_CellContentClick);
-            // 
-            // eliminaAutoturismToolStripMenuItem
-            // 
-            this.eliminaAutoturismToolStripMenuItem.Name = "eliminaAutoturismToolStripMenuItem";
-            this.eliminaAutoturismToolStripMenuItem.Size = new System.Drawing.Size(149, 24);
-            this.eliminaAutoturismToolStripMenuItem.Text = "Elimina Autoturism";
-            this.eliminaAutoturismToolStripMenuItem.Click += new System.EventHandler(this.eliminaAutoturismToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -1132,6 +1132,7 @@ namespace InterfataUtilizator_WindowsForms
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Administrare Autoturisme";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBoxCombustibil.ResumeLayout(false);
             this.groupBoxCombustibil.PerformLayout();
             this.gpbCutie.ResumeLayout(false);

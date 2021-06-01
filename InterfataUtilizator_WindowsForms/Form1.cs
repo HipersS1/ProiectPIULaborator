@@ -685,7 +685,6 @@ namespace InterfataUtilizator_WindowsForms
                 listAutoturismeFisier.ElementAt(listBoxAfisare.SelectedIndex - 1).Nume_Cumparator = textBoxNumeCumparator.Text.ToUpper().Trim();
                 listAutoturismeFisier.ElementAt(listBoxAfisare.SelectedIndex - 1).Prenume_Cumparator = textBoxPrenumeCumparator.Text.ToUpper().Trim();
 
-
                 adminAutoturisme.RewriteCars(listAutoturismeFisier);
                 listBoxAfisare.Items.Clear();
                 listBoxAfisare.Items.Add(String.Format($"{"Marca",-20}{"Model",-15}{"An",-5}{"CC",-7}" +
@@ -734,8 +733,6 @@ namespace InterfataUtilizator_WindowsForms
 
         }
         #endregion
-
-
 
         ///laborator 8 filedialog
         private void deschideFisierToolStripMenuItem_Click(object sender, EventArgs e)
@@ -924,7 +921,6 @@ namespace InterfataUtilizator_WindowsForms
             }
         }
         #endregion
-
         private void eliminaAutoturismToolStripMenuItem_Click(object sender, EventArgs e)
         {
             bool succes = false;
@@ -949,6 +945,11 @@ namespace InterfataUtilizator_WindowsForms
                 rtbAfisare.Text = "Eliminarea a avut succes";
                 adminAutoturisme.RewriteCars(listAutoturismeFisier);
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
