@@ -160,6 +160,7 @@ namespace InterfataUtilizator_WindowsForms
                     return;
                 ModificaElement(dataGridAfisare.CurrentRow.Index);
             }
+            labelConfirmareAdaugare.Text = "Autoturismul a fost modificat";
             labelConfirmareAdaugare.Visible = true;
             adminAutoturisme.RewriteCars(listAutoturismeFisier);
         }
@@ -577,12 +578,6 @@ namespace InterfataUtilizator_WindowsForms
                 return;
             if (listAutoturismeFisier.Count == 0)
                 return;
-
-            //if (dataGridAfisare.DataSource != null)
-            //{
-            //    dataGridAfisare.DataSource = null;
-            //    return;
-            //}
             labelConfirmareAdaugare.Visible = false;
             labelEroareIntroducere.Visible = false;
             buttonSelecteaza.Visible = false;
@@ -601,6 +596,7 @@ namespace InterfataUtilizator_WindowsForms
                 return;
             if (dataGridAfisare.DataSource == null)
                 return;
+            labelConfirmareAdaugare.Visible = false;
             if (dataGridAfisare.CurrentRow.Selected == true)
             {
                 listAutoturismeFisier.RemoveAt(dataGridAfisare.CurrentRow.Index);
@@ -613,6 +609,8 @@ namespace InterfataUtilizator_WindowsForms
                 ResetControls();
                 ResetColors();
                 adminAutoturisme.RewriteCars(listAutoturismeFisier);
+                labelConfirmareAdaugare.Text = "Autoturismul a fost eliminat";
+                labelConfirmareAdaugare.Visible = true;
             }
         }
 

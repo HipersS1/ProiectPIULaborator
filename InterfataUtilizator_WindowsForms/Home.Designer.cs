@@ -247,7 +247,7 @@ namespace InterfataUtilizator_WindowsForms
             this.buttonAdauga.Name = "buttonAdauga";
             this.buttonAdauga.Size = new System.Drawing.Size(187, 57);
             this.buttonAdauga.TabIndex = 2;
-            this.buttonAdauga.Text = "Adauga";
+            this.buttonAdauga.Text = "Adaugare";
             this.buttonAdauga.UseVisualStyleBackColor = false;
             this.buttonAdauga.Click += new System.EventHandler(this.buttonAdauga_Click);
             // 

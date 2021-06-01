@@ -661,7 +661,6 @@ namespace InterfataUtilizator_WindowsForms
             this.panelBackground.Name = "panelBackground";
             this.panelBackground.Size = new System.Drawing.Size(1009, 467);
             this.panelBackground.TabIndex = 2;
-            this.panelBackground.Paint += new System.Windows.Forms.PaintEventHandler(this.panelBackground_Paint);
             // 
             // labelConfirmareAdaugare
             // 
@@ -1169,7 +1168,6 @@ namespace InterfataUtilizator_WindowsForms
             this.labelCaroserie.Size = new System.Drawing.Size(98, 14);
             this.labelCaroserie.TabIndex = 75;
             this.labelCaroserie.Text = "Caroserie";
-            this.labelCaroserie.Click += new System.EventHandler(this.labelCaroserie_Click);
             // 
             // panelCutie
             // 

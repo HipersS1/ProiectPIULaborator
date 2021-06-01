@@ -33,30 +33,12 @@ namespace InterfataUtilizator_WindowsForms
             Environment.Exit(1);
         }
 
-        private void panelBackground_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void buttonAfisare_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelCaroserie_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button6_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         #region Resetare Controale/Culori
         public void ResetControls()
