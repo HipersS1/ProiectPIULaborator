@@ -64,6 +64,7 @@ namespace InterfataUtilizator_WindowsForms
 
         private void buttonCautare_Click(object sender, EventArgs e)
         {
+            dataGridAfisare.DataSource = null;
             using (FereastraCautare Form = new FereastraCautare())
             {
                 this.Hide();
@@ -74,6 +75,7 @@ namespace InterfataUtilizator_WindowsForms
 
         private void buttonModificare_Click(object sender, EventArgs e)
         {
+            dataGridAfisare.DataSource = null;
             using (FereastraModificare Form = new FereastraModificare())
             {
                 this.Hide();
